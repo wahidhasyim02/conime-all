@@ -1,0 +1,22 @@
+<figure class="w-full flex flex-col bg-gray-50 mb-4 dark:bg-gray-900/30 rounded ">
+  {{ $src := .Get "src" }}
+  {{ $alt := .Get "alt" | default "Post image" }}
+  {{ $source := .Get "source" }}
+  {{ $sourceURL := .Get "source_url" }}
+
+  {{ with $src }}
+    <img loading="lazy"  src="{{ . | relURL }}" alt="gambar {{ $alt }}" class="h-96 w-full rounded  object-cover" />
+  {{ end }}
+
+  {{ if or $source $sourceURL }}
+    <figcaption class="text-sm flex gap-2 px-4 py-4">
+      {{ if $sourceURL }}
+        <a href="{{ $sourceURL }}" target="_blank"
+          class="text-gray-600 dark:text-gray-700 hover:text-conime-400 dark:hover:text-conime-400 hover:underline"
+          rel="noopener noreferrer">{{ $source }}</a>
+      {{ else if $source }}
+        {{ $source }}
+      {{ end }}
+    </figcaption>
+  {{ end }}
+</figure>

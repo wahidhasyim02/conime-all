@@ -1,0 +1,13 @@
+{{ with .page }}
+<div class="p-2 absolute {{ $.position }} {{ $.rotate }} bg-white text-gray-800 rounded  shadow md:shadow-xl  shadow-gray-950/10 lg:shadow-gray-950/20 hover:shadow-gray-950/40 w-[340px] md:w-[440px] h-fit">
+  <div class="w-full h-48 rounded  bg-cover overflow-hidden">
+    <a href="{{ .RelPermalink }}">
+      <img src="{{ .Params.image }}" alt="gambar {{ .Title }}" class="w-full h-full object-cover brightness-75 hover:brightness-100 transition duration-300" />
+    </a>
+  </div>
+  <div class="pt-4 pb-2 px-2 flex flex-col gap-8">
+    <a href="{{ .RelPermalink }}" class="text-xl h-fit line-clamp-2 overflow-hidden overflow-ellipsis hover:underline font-medium dark:font-normal">{{ .Title }}</a>
+    {{ partial "date.html" . }}
+  </div>
+</div>
+{{ end }}

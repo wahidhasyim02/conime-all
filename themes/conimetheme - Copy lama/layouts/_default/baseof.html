@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class=" " lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+
+<head>
+  <script>
+    try {
+      if (localStorage.getItem("darkmode") === "true") {
+        document.documentElement.classList.add("dark");
+      }
+    } catch (e) { }
+  </script>
+
+  <link rel="stylesheet" href="/css/main.css" />
+
+  {{ partial "head.html" . }}
+</head>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"
+  nonce="YourNonceValue"></script>
+
+<body
+  class="font-inter text-base left-0 top-0 right-0 bottom-0 font-medium dark:font-normal  w-screen  h-screen bg-white dark:bg-gray-950 md:dark:bg-gray-950    text-gray-800 dark:text-gray-300 overscroll-y-auto md:overflow-y-scroll overflow-style-y overflow-x-hidden transition duration-300 ease-in-out">
+  <header
+    class="w-full z-[1000] flex fixed left-0 top-0 right-0 bg-white dark:bg-gray-950 md:dark:bg-gray-950 text-gray-800 dark:text-gray-300 transition duration-300 ease-in-out px-6 md:px-32 py-4 flex-row justify-between items-center">
+    {{ partial "header.html" . }}
+  </header>
+
+ 
+
+
+
+  <!--Menu Kiri-->
+  <div id="main-menu"
+  class="z-50 w-fit h-screen hidden sm:flex bg-white dark:bg-gray-950  md:dark:bg-gray-950 
+         fixed left-0 top-1/2 transform -translate-y-1/2 px-4 py-4 flex-col justify-center items-center
+         transition duration-300 ease-in-out">
+  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+</div>
+
+  <!--Menu Kiri end-->
+
+  
+  <!--Menu bawah-->
+  <div id="menu-bawah"
+    class="z-50 w-full h-fit flex sm:hidden bg-white dark:bg-gray-950  md:dark:bg-gray-950   fixed left-0 bottom-0 right-0 px-6 py-4 flex-row   justify-center items-center transition duration-300 ease-in-out">
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  </div>
+  <!--Menu bawah end-->
+
+
+
+  <main class="pt-20 md:pt-24 mx-auto sm:mx-20 md:mx-36 z-20 p-0 md:p-6 h-auto rounded-3xl transition duration-300 ease-in-out">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+
+  <!--Loading Animasi-->
+  <div id="preloader"
+    class="absolute left-0 right-0 top-0 z-[9999] h-screen w-screen  flex transition-transform duration-1000 ease-in-out items-center justify-center bg-gray-100 dark:bg-gray-950">
+    <div>
+      <svg id="svg-conime" class="w-auto h-16 opacity-0 transition-opacity duration-1000 ease-in-out"
+        viewBox="0 0 336 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M266.658 48L181.98 168H5.66016L90.3379 48H266.658Z" fill="#A00123" />
+        <path d="M330.34 288L245.661 168H5.66016L90.3389 288H330.34Z" fill="#CF012B" />
+      </svg>
+    </div>
+    <div id="container-scroll"
+      class="overflow-hidden  opacity-0 transition-opacity duration-1000 ease-in-out h-8 font-medium  flex flex-col items-center justify-start">
+      <div id="animate-scroll"
+        class="inline-block font-ysabeu transition-transform duration-1000 ease-in-out   text-xl uppercase">
+        <span class="mx-2 h-8 opacity-0 block">Conime</span>
+        <span class="mx-2 h-8 block">Anime</span>
+        <span class="mx-2 h-8 block">Comic</span>
+        <span class="mx-2 h-8 block">Movie</span>
+        <span class="mx-2 h-8 block">Game</span>
+        <span class="mx-2 h-8 block">Review</span>
+        <span class="mx-2 h-8 block">Conime</span>
+
+      </div>
+    </div>
+  </div>
+  <!--Loading Animasi end-->
+
+
+
+
+
+  <!-- SearchModal -->
+ {{ partial "search-modal.html" . }} 
+
+
+  <footer
+    class="text-sm my-12 sm:my-8 relative text-gray-800 dark:text-gray-300   items-center justify-center transition duration-300 ease-in-out px-6 sm:px-20 md:px-32">
+    <section class="absolute hidden  left-0 right-0 bottom-0 h-full w-full text-gray-800 dark:text-gray-300  ">
+    <div
+      class="w-full h-full grid  grid-cols-3 gap-[1px] bg-[radial-gradient(circle_at_center,_#CF012B,_#CF012B,_#FF1545,_#fff,_#fff,_#fff,_#fff)] dark:bg-[radial-gradient(circle_at_center,_#CF012B,_#CF012B,_#5C0317,_#0A0A0A,_#0A0A0A,_#0A0A0A,_#0A0A0A)] md:dark:bg-[radial-gradient(circle_at_center,_#CF012B,_#CF012B,_#5C0317,_#000,_#000,_#000,_#000)]">
+      <div
+        class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+      </div>
+      <div
+        class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+      </div>
+      <div
+        class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+      </div>
+      <div
+        class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+      </div>
+      <div
+        class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+      </div>
+      <div
+        class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+      </div>
+      <div
+        class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+      </div>
+      <div
+        class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+      </div>
+      <div
+        class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+      </div>
+      
+    </div>
+  </section>
+   
+   <div class="z-10 grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-2 lg:gap-4 p-4 border-t border-conime-400 dark:border-conime-400">
+  <div class="col-span-2 lg:col-span-1"> {{ partial "menu-footer.html" (dict "menuID" "main" "page" .) }}</div> 
+     <div class="text-center md:text-start justify-center text-sm  col-span-2 md:col-span-1   px-6 py-2">
+      <p>All names, logos, images, and trademarks belong to their respective owners. Images used on this site are for informational and editorial purposes only. No copyright infringement intended.
+      </p>
+    </div>
+   <div class="col-span-2 p-2 sm:p-6 pb-24 sm:pb-6 w-full text-center   border-t border-gray-300 dark:border-gray-800/50 ">{{ partial "footer.html" . }}</div> 
+</div>
+
+
+    <script src="/js/main.js"></script>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const isHome = window.location.pathname === "/" || window.location.pathname === "/index.html";
+        const preloader = document.querySelector("#preloader");
+        const header = document.querySelector("header");
+        const menuKiri = document.querySelector("#main-menu");
+        const menuBawah = document.querySelector("#menu-bawah");
+        const main = document.querySelector("main");
+        const footer = document.querySelector("footer");
+
+        const svgConime = document.querySelector("#svg-conime");
+        const containerScroll = document.querySelector("#container-scroll");
+        const animateScroll = document.querySelector("#animate-scroll");
+
+        if (isHome) {
+          const alreadyShown = sessionStorage.getItem("shownPreloader");
+
+          if (!alreadyShown) {
+            // Tampilkan preloader
+            preloader.classList.remove("hidden");
+            preloader.classList.add("flex", "transition-transform", "duration-500");
+
+            // Sembunyikan elemen lain
+            header?.classList.add("hidden");
+            menuKiri?.classList.add("md:hidden");
+             menuBawah?.classList.add("hidden");
+            main?.classList.add("hidden");
+            footer?.classList.add("hidden");
+            header?.classList.remove("flex");
+            menuKiri?.classList.remove("flex");
+             menuBawah?.classList.remove("flex");
+            footer?.classList.remove("flex");
+
+            // Fade-in svg-conime dan container-scroll
+            setTimeout(() => {
+              svgConime?.classList.remove("opacity-0");
+              containerScroll?.classList.remove("opacity-0");
+
+              // Tambahkan animasi scroll setelah 1 detik
+              setTimeout(() => {
+                svgConime?.classList.add("opacity-100");
+                containerScroll?.classList.add("opacity-100");
+                animateScroll?.classList.add("animate-scroll");
+              }, 1000);
+            }, 1000);
+
+            // Setelah 8 detik, sembunyikan preloader secara bertahap
+            setTimeout(() => {
+              svgConime?.classList.add("opacity-0");
+              containerScroll?.classList.add("opacity-0");
+
+              // Tunda translate-y agar animasi smooth
+              setTimeout(() => {
+                preloader.classList.add("-translate-y-full");
+
+                // Setelah translate selesai, sembunyikan preloader
+                setTimeout(() => {
+                  preloader.classList.remove("flex");
+                  preloader.classList.add("hidden");
+                }, 500);
+              }, 1500); // delay sebelum geser ke atas
+
+              // Tampilkan elemen utama
+              header?.classList.remove("hidden");
+              header?.classList.add("flex");
+              menuKiri?.classList.remove("md:hidden");
+              menuKiri?.classList.add("md:flex");
+               menuBawah?.classList.remove("hidden");
+              menuBawah?.classList.add("flex");
+              footer?.classList.remove("hidden");
+              footer?.classList.add("flex");
+              main?.classList.remove("hidden");
+
+              sessionStorage.setItem("shownPreloader", "true");
+            }, 12000);
+          } else {
+            // Jika preloader sudah ditampilkan sebelumnya
+            preloader.classList.add("hidden");
+
+            header?.classList.remove("hidden");
+            header?.classList.add("flex");
+            menuKiri?.classList.remove("md:hidden");
+            menuKiri?.classList.add("md:flex");
+            menuBawah?.classList.remove("hidden");
+            menuBawah?.classList.add("flex");
+            main?.classList.remove("hidden");
+            footer?.classList.remove("hidden");
+            footer?.classList.add("flex");
+
+            // Tampilkan langsung animasi scroll
+            svgConime?.classList.remove("opacity-0");
+            containerScroll?.classList.remove("opacity-0");
+            containerScroll?.classList.add("animate-scroll");
+          }
+        } else {
+          preloader.classList.add("hidden");
+        }
+      });
+    </script>
+
+
+
+    <script>
+      function copyShareLink() {
+        const linkInput = document.getElementById("shareLink");
+        linkInput.select();
+        linkInput.setSelectionRange(0, 99999); // for mobile
+
+        navigator.clipboard.writeText(linkInput.value).then(() => {
+          const popup = document.getElementById("popup-copy");
+
+          // Tampilkan popup
+
+          setTimeout(() => {
+            popup.classList.remove("hidden");
+            popup.classList.add("flex");
+          }, 1000);
+
+
+          // Sembunyikan kembali setelah 3 detik
+          setTimeout(() => {
+            popup.classList.remove("flex");
+            popup.classList.add("hidden");
+          }, 3000); // 3000ms = 3 detik
+        });
+      }
+    </script>
+
+
+    <script>
+      function toggleShareModal() {
+        const modal = document.getElementById('shareModal');
+        modal.classList.toggle('hidden');
+      }
+
+      // Tutup modal saat tombol close diklik
+      document.getElementById('closeModal').addEventListener('click', () => {
+        document.getElementById('shareModal').classList.add('hidden');
+      });
+
+      // Tutup modal jika klik di luar modal
+      document.addEventListener('click', function (event) {
+        const modal = document.getElementById('shareModal');
+
+        // Cek jika modal sedang terbuka dan klik terjadi di luar modal serta bukan tombol pembuka
+        if (!modal.classList.contains('hidden') &&
+          !modal.contains(event.target) &&
+          !event.target.closest('button[onclick="toggleShareModal()"]')) {
+          modal.classList.add('hidden');
+        }
+      }); 
+    </script>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+
+        const searchInput = document.getElementById('searchInput');
+        const searchTriggerBtn = document.getElementById('letsSearch'); // tombol pencarian
+        const searchResults = document.getElementById('searchResults');
+        const loadingMsg = document.getElementById('loadingMsg');
+        let fuse;
+
+        // Disable tombol search saat menunggu data
+        searchTriggerBtn.disabled = true;
+
+        // Fetch data dari index.json
+        fetch('/index.json')
+          .then(res => {
+            if (!res.ok) {
+              throw new Error('Gagal mengambil index.json');
+            }
+            return res.json();
+          })
+          .then(data => {
+            console.log("Data JSON berhasil dimuat:", data); // Pastikan data terlihat di log
+            fuse = new Fuse(data, {
+              keys: ['title', 'content'],
+              includeMatches: true,
+              threshold: 0.3,
+            });
+            searchTriggerBtn.disabled = false; // Enable tombol setelah fuse siap
+            loadingMsg.style.display = 'none'; // Sembunyikan pesan loading
+          })
+          .catch(err => {
+            console.error("Gagal fetch index.json:", err);
+            loadingMsg.textContent = 'Gagal memuat data pencarian.';
+          });
+
+        // Event listener untuk tombol pencarian
+        searchTriggerBtn.addEventListener('click', () => {
+          const keyword = searchInput.value.trim();
+          console.log("Kata kunci pencarian:", keyword);
+
+          if (!keyword || !fuse) {
+            console.log("Fuse belum siap atau keyword kosong");
+            return;
+          }
+
+          const results = fuse.search(keyword);
+          console.log("Hasil pencarian:", results); // Debug hasil pencarian
+
+          searchResults.innerHTML = ''; // Bersihkan hasil pencarian sebelumnya
+
+          if (results.length === 0) {
+            searchResults.innerHTML = '<p class="text-sm text-gray-500">No results found.</p>';
+            return;
+          }
+
+          results.forEach(result => {
+            const { item } = result;
+            const match = result.matches?.[0]?.value || '';
+            const snippetIndex = match.toLowerCase().indexOf(keyword.toLowerCase());
+            const snippet = match.substring(Math.max(0, snippetIndex - 30), snippetIndex + keyword.length + 30);
+
+            const p = document.createElement('p');
+            p.innerHTML = `
+        <a href="${item.url}" class="font-medium text-conime-400 hover:underline">${item.title}</a><br>
+        <span>...${highlight(snippet, keyword)}...</span>
+      `;
+            searchResults.appendChild(p);
+          });
+        });
+
+        // Fungsi untuk menyoroti kata kunci yang ditemukan dalam snippet
+        function highlight(text, keyword) {
+          const regex = new RegExp(`(${keyword})`, 'gi');
+          return text.replace(regex, '<mark>$1</mark>');
+        }// your code here
+      });
+
+    </script>
+
+   <script>
+  // Cari elemen dengan ID 'btnSearch' (meskipun ada lebih dari satu, ID sebaiknya unik, tapi ini handle-nya)
+  const btnSearchElements = document.querySelectorAll('#searchBtn');
+  const searchModal = document.getElementById('searchModal');
+
+  // Tambahkan class 'tombol' ke semua elemen dengan ID 'btnSearch'
+  btnSearchElements.forEach((el) => {
+    el.classList.add('tombol');
+
+    // Tambahkan event listener untuk membuka modal
+    el.addEventListener('click', () => {
+      searchModal.classList.remove('hidden');
+    });
+  });
+
+  // Tutup modal jika klik di luar area modal dan tombol
+  document.addEventListener('click', (e) => {
+    const isClickInside =
+      searchModal.contains(e.target) ||
+      Array.from(btnSearchElements).some(btn => btn.contains(e.target));
+
+    if (!isClickInside) {
+      searchModal.classList.add('hidden');
+    }
+  });
+</script>
+
+
+
+  </footer>
+</body>
+
+</html>

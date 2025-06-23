@@ -1,0 +1,129 @@
+{{ define "main" }} {{ $recommended := where .Site.RegularPages "Params.tags"
+"intersect" (slice "Recommended") }} {{ $sorted := sort $recommended "Date"
+"desc" }} {{ $first := index $sorted 0 }} {{ $nextThree := first 3 (after 1
+$sorted) }}
+
+<div class="w-full h-[500px] py-2 mb-8 relative flex justify-center items-center">
+  <div class="w-1/2 flex flex-col gap-3">
+    <!--Ini akan diisi data tags "Recomended" paling terbaru-->
+    <div>
+      <label class="flex flex-row items-center gap-2">
+        {{ range $first.Params.tags }}
+        <a src="/tags/{{ . | urlize }}" alt="Category {{ . }}"
+          class="text-sm px-2 text-conime-400 bg-conime-100 dark:bg-conime-100/10 rounded">{{ . }}</a>
+        {{ end }}
+      </label>
+      <h1 class="text-3xl font-medium">{{ $first.Title }}</h1>
+      <p class="text-gray-600 dark:text-gray-700">
+        {{ $first.Summary }}
+        <a src="{{ $first.RelPermalink }}" class="text-conime-400 ml-2">Baca Selengkapnya</a>
+      </p>
+    </div>
+    <!--sampai di sini paling terbaru-->
+    <div class="h-full flex flex-col gap-0 divide-y divide-gray-400 dark:divide-gray-800">
+      {{ range $nextThree }}
+      <!--Ini akan diisi data tags "Recomended" terbaru ke dua sampai empat, jadi hanya menampilan 3-->
+      <div class="relative flex flex-row py-1 gap-2 w-fit">
+        <div class="px-1 h-full flex flex-col justify-center items-start">
+          <label class="flex flex-row items-center gap-2">
+            {{ range .Params.tags }}
+            <a src="/tags/{{ . | urlize }}" alt="Category {{ . }}"
+              class="text-sm px-2 text-conime-400 bg-conime-100 dark:bg-conime-100/10 rounded">{{ . }}</a>
+            <a src="/tags/{{ . | urlize }}" alt="Category {{ . }}"
+              class="text-sm px-2 text-conime-400 bg-conime-100 dark:bg-conime-100/10 rounded">{{ . }}</a>
+
+            ></label>
+          <h4 class=" ">{{ .RelPermalink }}</h4>
+          <p class="text-xs text-gray-600 dark:text-gray-700">
+            {{ .Date.Format "Mon, 02 Jan 2006" }} — {{ .Date.Format "15:04" }}
+          </p>
+        </div>
+      </div>
+      {{ end }}
+      <!--sampai di sini terbaru ke dua sampai ke empat-->
+    </div>
+  </div>
+  <div class="w-1/2 flex justify-center items-center">
+    {{ range $nextThree }}
+    <!--Ini akan diisi data tags "Recomended" terbaru ke dua sampai empat, jadi hanya menampilan 3-->
+    <div
+      class="p-2 absolute right-14 -rotate-6 bottom-4 bg-white text-gray-800 rounded-xl shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20    w-[416px] h-fit">
+      <div class="w-[440] h-48 rounded-xl bg-cover overflow-hidden">
+        <img loading="lazy"  src="/{{ .Params.image }}" class="w-full h-full object-cover" alt="{{ .Title }}" />
+      </div>
+      <div class="pt-4 pb-2 px-2 flex flex-col gap-8 justify-between items-start">
+        <h4 class="text-xl h-16">
+          {{ .Title }}
+          <p class="text-xs text-gray-600 dark:text-gray-700">
+            {{ .Date.Format "Mon, 02 Jan 2006" }} — {{ .Date.Format "15:04" }}
+          </p>
+      </div>
+    </div>{{ end }}
+    <div
+      class="p-2 absolute right-2 rotate-12 bottom-12 bg-white text-gray-800 rounded-xl shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20    w-[416px] h-fit">
+      <div class="w-[440] h-48 rounded-xl bg-cover overflow-hidden">
+        <img loading="lazy"  src="/posts/anime/deku.webp" class="w-full h-full object-cover" alt="" />
+      </div>
+      <div class="pt-4 pb-2 px-2 flex flex-col gap-8 justify-between items-start">
+        <h4 class="text-xl h-16">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aut
+        </h4>
+        <p class="text-xs text-gray-600 dark:text-gray-700">
+          Mon, 12 Feb 2025
+        </p>
+      </div>
+    </div>
+    <div
+      class="p-2 absolute right-4 top-4 rotate-6 bg-white text-gray-800 rounded-xl shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20    w-[416px] h-fit">
+      <div class="w-[440] h-48 rounded-xl bg-cover overflow-hidden">
+        <img loading="lazy"  src="/posts/anime/deku.webp" class="w-full h-full object-cover" alt="" />
+      </div>
+      <div class="pt-4 pb-2 px-2 flex flex-col gap-8 justify-between items-start">
+        <h4 class="text-xl h-16">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aut
+        </h4>
+        <p class="text-xs text-gray-600 dark:text-gray-700">
+          Mon, 12 Feb 2025
+        </p>
+      </div>
+    </div>
+    <!--sampai di sini terbaru ke dua sampai ke empat-->
+    <!--Ini akan diisi data tags "Recomended" paling terbaru-->
+    <div
+      class="p-2 relative top-0 right-0 bg-white text-gray-800 rounded-xl shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20    w-[416px] h-fit">
+      <div class="w-[440] h-48 rounded-xl bg-cover overflow-hidden">
+        <img loading="lazy"  src="/posts/anime/deku.webp" class="w-full h-full object-cover" alt="" />
+      </div>
+      <div class="pt-4 pb-2 px-2 flex flex-col gap-8 justify-between items-start">
+        <h4 class="text-xl h-16">
+          20+ Anime Horor Terbaik dengan Unsur Gore yang Mengerikan
+        </h4>
+        <p class="text-xs text-gray-600 dark:text-gray-700">
+          Mon, 12 Feb 2025
+        </p>
+      </div>
+    </div>
+    <!--sampai di sini paling terbaru-->
+    <div class="absolute bottom-24 right-12 flex gap-2 justify-center items-center">
+      <div
+        class="p-2 flex justify-center w-fit h-fit rounded-full items-center text-gray-400 bg-gray-950 shadow-xl shadow-gray-950/70">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 19.9201L8.47997 13.4001C7.70997 12.6301 7.70997 11.3701 8.47997 10.6001L15 4.08008"
+            stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div
+        class="p-2 flex justify-center w-fit h-fit rounded-full items-center text-gray-400 bg-gray-950 shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20  ">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.91003 19.9201L15.43 13.4001C16.2 12.6301 16.2 11.3701 15.43 10.6001L8.91003 4.08008"
+            stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+{{ .Content }} {{ range site.RegularPages }}
+<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+{{ .Summary }} {{ end }} {{ end }}

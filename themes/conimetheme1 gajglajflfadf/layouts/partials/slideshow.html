@@ -1,0 +1,55 @@
+{{ $type := "" }}
+{{ $sections := slice "anime" "movies" "comics" "games" }}
+
+{{ with .File }}
+  {{ $path := replace .Path "\\" "/" }}
+  {{ range $sections }}
+    {{ if strings.HasPrefix $path (printf "posts/%s/" .) }}
+      {{ $type = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $type }}
+  {{ $basePath := printf "images/%s" $type }}
+  {{ $fullPath := printf "static/%s" $basePath }}
+  {{ $imgURL := printf "/%s" $basePath }}
+
+  {{ $stat := os.Stat $fullPath }}
+  {{ if and $stat (not $stat.IsDir) }}
+    <div class="relative w-full h-[420px] opacity-30 dark:opacity-30 overflow-hidden hover:opacity-0 hover:dark:opacity-0 transition duration-500 ease-in-out">
+      <img src="/images/default.png" alt="gambar default" class="w-full h-full object-cover" />
+      
+    </div>
+  {{ else }}
+    {{ with readDir $fullPath }}
+      {{ if gt (len .) 0 }}
+        <div class="relative w-full h-[420px] opacity-30 dark:opacity-30 overflow-hidden slideshow hover:opacity-0 hover:dark:opacity-0 transition duration-500 ease-in-out">
+          {{ range . }}
+            <img src="{{ printf "%s/%s" $imgURL .Name | safeURL }}" alt="gambar {{ $.Title }}"
+                 class="absolute w-full h-full object-cover slide-img opacity-0 translate-x-full transition-all duration-700" />
+          {{ end }}
+          <div class="absolute w-full h-full inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-transparent dark:via-transparent to-white/70 dark:to-gray-900 z-10"></div>
+        </div>
+      {{ else }}
+        <div class="relative w-full h-[420px] opacity-30 dark:opacity-30 overflow-hidden hover:opacity-0 hover:dark:opacity-0 transition duration-500 ease-in-out">
+          <img src="/images/default.png" alt="gambar default" class="w-full h-full object-cover" />
+          <div class="absolute w-full h-full inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-transparent dark:via-transparent to-white/70 dark:to-gray-900 z-10"></div>
+          
+        </div>
+      {{ end }}
+    {{ else }}
+      <div class="relative w-full h-[420px] opacity-30 dark:opacity-30 overflow-hidden hover:opacity-0 hover:dark:opacity-0 transition duration-500 ease-in-out">
+        <img src="/images/default.png" alt="gambar default" class="w-full h-full object-cover" />
+          <div class="absolute w-full h-full inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-transparent dark:via-transparent to-white/70 dark:to-gray-900 z-10"></div>
+        
+      </div>
+    {{ end }}
+  {{ end }}
+{{ else }}
+  <div class="relative w-full h-[420px] opacity-30 dark:opacity-30 overflow-hidden hover:opacity-0 hover:dark:opacity-0 transition duration-500 ease-in-out">
+    <img src="/images/default.png" alt="gambar default" class="w-full h-full object-cover" />
+    <div class="absolute w-full h-full inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-transparent dark:via-transparent to-white/70 dark:to-gray-900 z-10"></div>
+          
+  </div>
+{{ end }}

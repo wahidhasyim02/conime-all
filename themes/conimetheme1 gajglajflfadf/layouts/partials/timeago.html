@@ -1,0 +1,19 @@
+
+{{ $now := now }}
+{{ $date := . }}
+{{ $diff := sub $now.Unix $date.Unix }}
+
+<time datetime="{{ $date | time.Format "2006-01-02T15:04:05-07:00" }}"
+      class="text-xl inline-block font-light dark:font-extralight">
+{{ if lt $diff 60 }}
+  {{ printf "%ds ago" $diff }}
+{{ else if lt $diff 3600 }}
+  {{ printf "%dm ago" (div $diff 60) }}
+{{ else if lt $diff 86400 }}
+  {{ printf "%dh ago" (div $diff 3600) }}
+{{ else if lt $diff 604800 }}
+  {{ printf "%dd ago" (div $diff 86400) }}
+{{ else }}
+  {{ $date.Format "02.01.2006" }}
+{{ end }}
+</time>

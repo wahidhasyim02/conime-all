@@ -1,0 +1,29 @@
+{{ with . }}
+
+
+{{ $recommendedPages := where .Site.RegularPages "Params.tags" "intersect" (slice "Recommended") }}
+{{ $sortedRecommended := sort $recommendedPages "Date" "desc" }}
+{{ $subset := first 3 $sortedRecommended }}
+
+{{ if gt (len $subset) 0 }}
+<div>
+  <h2 class="text-xl uppercase font-medium border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
+    Popular News
+  </h2>
+  <ul class="flex flex-col gap-4 ">
+    {{ range $i, $page := $subset }}
+    <li class="relative flex flex-row justify-start items-center gap-x-0 w-full h-full bg-white dark:bg-gray-900/20  border border-gray-300 dark:border-gray-800/50 ">
+      <h2 class="text-2xl w-14 text-center text-gray-500 dark:text-gray-900  font-medium">
+        #{{ add $i 1 }}
+      </h2>
+      <div class="px-2 py-2 h-full min-h-[60px] w-full flex flex-col justify-center items-start">
+        <a href="{{ $page.RelPermalink }}" class="hover:underline transition duration-300 ease-in-out h-fit line-clamp-3 font-medium dark:font-normal">   {{ $page.Title }}
+        </a>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
+{{ end }}

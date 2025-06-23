@@ -1,0 +1,41 @@
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" /> 
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="description" content="{{ .Params.summary }}"> 
+<title>
+  {{ if .IsHome }}{{ site.Title }} - Portal Berita Anime & Komik Indonesia{{ else }}{{
+  printf "%s - %s" site.Title .Title }}{{ end }}
+</title>
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="{{ .Title }} - {{ site.Title }}">
+<meta property="og:description" content="{{ .Params.summary }}">
+<meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "images/logo_conime.og.webp" | absURL }}{{ end }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ .Params.summary }}"> 
+<meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "images/logo_conime.og.webp" | absURL }}{{ end }}">
+
+ <script>
+    try {
+      if (localStorage.getItem("darkmode") === "true") {
+        document.documentElement.classList.add("dark");
+      }
+    } catch (e) { }
+  </script>
+ {{- /* === CSS Main dengan fingerprint & integrity === */ -}}
+{{- $css := resources.Get "css/main.css" }}
+{{- if $css }}
+  {{- if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{- else }}
+    {{- $css = $css | resources.PostCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+  {{- end }}
+{{- else }}
+  {{ warnf "❌ File css/main.css tidak ditemukan!" }}
+{{- end }} 
+{{ partialCached "head/css.html" . }} 

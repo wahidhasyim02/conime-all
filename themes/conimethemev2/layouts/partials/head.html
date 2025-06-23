@@ -1,0 +1,184 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="description" content="{{ .Params.summary }}">
+<title>
+  {{ if .IsHome }}{{ site.Title }} - Portal Berita Anime & Komik Indonesia{{ else }}{{ printf "%s - %s" site.Title .Title }}{{ end }}
+</title>
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }} - Portal Berita Anime & Komik Indonesia{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}">
+<meta property="og:description" content="{{ .Params.summary }}">
+<meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "images/logo_conime.og.webp" | absURL }}{{ end }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }} - Portal Berita Anime & Komik Indonesia{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}">
+<meta name="twitter:description" content="{{ .Params.summary }}">
+<meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "images/logo_conime.og.webp" | absURL }}{{ end }}">
+<meta name="twitter:url" content="{{ .Permalink }}">
+
+<!-- Dark mode class preload --> 
+<script>
+  try {
+    const darkPref = localStorage.getItem("darkmode");
+    if (darkPref !== "true") {
+      // Hapus dark jika bukan "true" (yaitu "false" atau null)
+      document.documentElement.classList.remove("dark");
+    }
+  } catch (e) {}
+</script>
+
+
+
+<!-- CSS -->
+{{- $css := resources.Get "css/main.css" }}
+{{- if $css }}
+{{- if eq hugo.Environment "development" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{- else }}
+{{- $css = $css | resources.PostCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+{{- end }}
+{{- else }}
+  {{ warnf "❌ File css/main.css tidak ditemukan!" }}
+{{- end }}
+
+<!-- Icon, Fonts, AOS, JS, dll --> 
+{{- /* === Ikon situs === */ -}}
+<link rel="icon" href="/images/icons/logo_conime_square.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/images/icons/logo_conime_square_100.webp">
+<link rel="shortcut icon" href="/images/icons/logo_conime_square_100.webp">
+
+{{- /* === Font Optimization === */ -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Dosis:wght@200..800&family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Dosis:wght@200..800&family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+
+{{- /* === AOS === */ -}}
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+{{- /* === Import Map untuk Three.js dan GSAP === */ -}}
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.153/build/three.module.js",
+    "three/addons/controls/": "https://unpkg.com/three@0.153/examples/jsm/controls/",
+    "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js"
+  }
+}
+</script>
+
+{{- /* === Modul HoverEffect & Initiation === */ -}}
+<script type="module">
+  import * as THREE from "three";
+  import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+  import hoverEffect from "/js/hover-effect.js";
+  import { gsap } from "gsap";
+
+  console.log("✅ Semua modul berhasil diimpor:", { THREE, OrbitControls, hoverEffect, gsap });
+
+  if (sessionStorage.getItem('hoverReloaded') === 'true') {
+    console.log("🔁 Halaman ini adalah hasil reload otomatis karena hoverEffect sebelumnya gagal.");
+  }
+
+  window.addEventListener("load", () => {
+    const isFirstVisit = !sessionStorage.getItem("hoverEffectInitialized");
+    const navType = performance.getEntriesByType("navigation")[0].type;
+    const isHome = location.pathname === "/";
+    const delayTime = (isFirstVisit && isHome && navType === "navigate") ? 9000 : 100;
+
+    console.log(`⏳ Delay hoverEffect: ${delayTime}ms`);
+
+    setTimeout(() => {
+      document.querySelectorAll('.divDistortion').forEach((el) => {
+        applyHoverEffect(el, 0.3, "/images/distortion/ramen.webp");
+      });
+
+      document.querySelectorAll('.divDistortion2').forEach((el) => {
+        applyHoverEffect(el, 0.3, "/images/distortion/heightMap.webp");
+      });
+
+      sessionStorage.setItem("hoverEffectInitialized", "true");
+    }, delayTime);
+
+    function applyHoverEffect(el, intensity, displacementPath) {
+      const defaultImage = "/images/default.png";
+      const img1Src = el.dataset.image1 || el.querySelector('.image1')?.src || defaultImage;
+      const img2Src = el.dataset.image2 || el.querySelector('.image2')?.src || defaultImage;
+
+      const img1 = new Image();
+      const img2 = new Image();
+      img1.src = img1Src;
+      img2.src = img2Src;
+
+      let img1Loaded = false;
+      let img2Loaded = false;
+
+      const checkBothLoaded = () => {
+        if (img1Loaded && img2Loaded) {
+          if (img1.src.includes(defaultImage) && img2.src.includes(defaultImage)) {
+            console.warn("⚠️ Semua gambar fallback — hoverEffect dilewati:", el);
+            return;
+          }
+
+          const imgRatio = img1.naturalHeight / img1.naturalWidth;
+
+          setTimeout(() => {
+            try {
+              new hoverEffect({
+                parent: el,
+                angle: Math.PI / 4,
+                intensity1: intensity,
+                intensity2: intensity,
+                image1: img1.src,
+                image2: img2.src,
+                displacementImage: displacementPath,
+                imagesRatio: imgRatio,
+                speedIn: 1.0,
+                speedOut: 1.0
+              });
+
+              setTimeout(() => {
+                el.querySelectorAll('.image1, .image2').forEach(img => {
+                  img.classList.add('lg:w-[0.1px]', 'lg:h-[0.1px]', 'pointer-events-none');
+                });
+              }, 500);
+
+              sessionStorage.removeItem("hoverReloaded");
+              console.log("✅ Hover effect diterapkan ke:", el);
+            } catch (error) {
+              console.warn("❌ hoverEffect gagal dibuat:", error);
+            }
+          }, 0);
+        }
+      };
+
+      img1.onload = () => { img1Loaded = true; checkBothLoaded(); };
+      img1.onerror = () => fallbackHandler(img1, el, '.image1');
+      img1.src = img1Src;
+
+      img2.onload = () => { img2Loaded = true; checkBothLoaded(); };
+      img2.onerror = () => fallbackHandler(img2, el, '.image2');
+      img2.src = img2Src;
+
+      function fallbackHandler(img, el, selector) {
+        console.warn(`⚠️ Gagal load (${img.src}) → fallback digunakan`);
+        img.src = defaultImage;
+        const domImg = el.querySelector(selector);
+        if (domImg) domImg.src = defaultImage;
+        if (selector.includes("1")) img1Loaded = true;
+        if (selector.includes("2")) img2Loaded = true;
+        checkBothLoaded();
+      }
+    }
+  });
+</script>

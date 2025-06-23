@@ -1,0 +1,58 @@
+{{- /*
+Renders a menu for the given menu ID.
+
+@context {page} page The current page.
+@context {string} menuID The menu ID.
+
+@example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+*/}}
+
+{{- $page := .page }}
+{{- $menuID := .menuID }}
+
+{{- with index site.Menus $menuID }}
+<nav>
+  <ul class="flex flex-row sm:flex-col gap-4 sm:gap-4 justify-between [&>*:nth-child(5)]:hidden [&>*:nth-child(6)]:hidden [&>*:nth-child(7)]:hidden [&>*:nth-child(5)]:md:flex [&>*:nth-child(6)]:md:flex [&>*:nth-child(7)]:md:flex [&>*:nth-child(8)]:md:hidden ">
+    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+  </ul>
+</nav>
+{{- end }}
+
+{{- define "partials/inline/menu/walk.html" }}
+{{- $page := .page }}
+{{- range .menuEntries }}
+{{- $attrs := dict "href" .URL }}
+{{- if $page.IsMenuCurrent .Menu . }}
+{{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+{{- else if $page.HasMenuCurrent .Menu .}}
+{{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+{{- end }}
+{{- $name := .Name }}
+{{- with .Identifier }}
+{{- with T . }}
+{{- $name = . }}
+{{- end }}
+{{- end }}
+<li
+  class="group relative w-fit h-fit">
+  <a class="p-2 md:p-3 flex flex-row md:flex-col justify-center items-center hover:shadow bg-white/0 hover:bg-gray-300 dark:bg-gray-950/0 hover:dark:bg-gray-950/50 backdrop-blur-sm   transition duration-500 ease-in-out rounded-xl" {{- with .Identifier }} id="{{ . }}" {{- end }}
+    
+    {{- range $k, $v :=$attrs }} {{- with $v }} {{- printf " %s=%q" $k $v | safeHTMLAttr }} {{- end }} {{- end -}}>
+    <span class="block group-hover:text-conime-400 text-gray-700 dark:text-gray-400 group group-dark:hover:text-conime-400 group-hover:scale-110  transition duration-500 ease-in-out ">
+    {{ with .Params.svg }}
+    {{ . | safeHTML }}
+    {{ end }}
+    </span>
+
+  </a>
+  <span
+    class="absolute left-1/2 -translate-x-1/2 md:top-1/2 md:-translate-y-1/2  w-fit bottom-12  md:left-[86px] p-2 md:p-4 text-xs bg-gray-200 dark:bg-gray-900/50 backdrop-blur-sm  text-gray-700 dark:text-gray-400 flex justify-center items-center opacity-0 group-hover:opacity-100 transition  duration-1000 ease-in-out  shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20    rounded-lg ">{{
+    $name }}</span>
+  {{- with .Children }}
+  <ul>
+    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+  </ul>
+  {{- end }}
+</li>
+{{- end }}
+{{- end }}

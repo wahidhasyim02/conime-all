@@ -1,0 +1,8 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="description" content="{{ .Params.summary }}"> 
+<title>
+  {{ if .IsHome }}CoNime - Portal Berita Anime & Komik Indonesia{{ else }}{{
+  printf "%s - %s" site.Title .Title }}{{ end }}
+</title>
+{{ partialCached "head/css.html" . }}

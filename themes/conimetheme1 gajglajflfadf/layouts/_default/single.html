@@ -1,0 +1,201 @@
+{{ define "main" }}
+<div class="relative rounded-xl mx-auto py-8 grid grid-cols-1  lg:grid-cols-12 gap-4">
+  <!-- Artikel Utama -->
+
+  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date.Format "Mon, 02 Jan 2006 — 03:04 PM" }}
+
+  <main class="col-span-12 lg:col-span-8   w-full">
+    <article class="prose lg:prose-xl max-w-none w-full">
+      <h1 class="font-medium text-3xl mb-2 md:mb-0 post-title">{{ .Title }}</h1>
+      {{ $path := .RelPermalink }}
+      {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path)
+      }}
+      <div
+        class="text-lg flex flex-row items-end justify-between font-light dark:font-extralight  text-gray-700 dark:text-gray-600 mb-4">
+
+        <div class="flex w-fit flex-col justify-start items-start">
+          <label class="flex flex-row text-sm items-center ">
+            <h2 class="flex justify-between gap-4 flex-1 line-clamp-1 uppercase">
+              {{ range .Params.categories }}
+              <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}"
+                class="hover:underline  hover:text-conime-400 dark:hover:text-conime-500">
+                {{ . }}
+              </a>
+              {{ end }}
+            </h2>
+          </label>
+          <div class="flex flex-row w-full mx-0 text-sm px-0 gap-2 justify-between items-center">
+            <span class="flex flex-row justify-center items-center gap-2">
+              <span>{{ partial "author.html" . }}</span>
+              <span class="hidden md:inline-block">|</span>
+              {{ partial "date.html" . }}
+            </span>
+          </div>
+
+        </div>
+        <!-- Tombol untuk membuka modal -->
+        {{ $path := .RelPermalink }}
+        {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path)
+        }}
+        <div class="flex gap-2 except justify-end items-center">
+          {{ partial "share-btn.html" . }}
+        </div>
+        {{ end }}
+      </div> {{ end }}
+
+
+      {{ $path := .RelPermalink }}
+      {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path) }}
+      <!-- Gambar Utama -->
+      {{ with .Params.image }}
+      <figure class="w-full flex flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl">
+        <img src="{{ . | relURL }}" alt="gambar {{ $.Title }}"
+          class="post-img h-96 sm:h-auto w-full rounded-t-3xl object-cover" />
+
+        <figcaption class="text-sm font-light dark:font-extralight text-left italic flex flex-wrap gap-2 px-4 py-4">
+          {{ with $.Params.imageSources }}
+          <span>
+            Image:
+            {{ $total := len . }}
+            {{ range $index, $source := . }}
+            {{ if gt $index 0 }}, {{ end }}
+            <a href="{{ $source.url }}" class="underline hover:text-conime-400 hover:dark:text-conime-500 inline"
+              target="_blank" rel="noopener noreferrer">{{ $source.name }}</a>
+            {{ end }}
+            {{ with (index . 0).studio }}
+            Image © {{ . }}. Used for editorial purposes only.
+            {{ else }}. Used for editorial purposes only.
+            {{ end }}
+            {{ else }}
+            Image used for illustration purposes only.</span>
+          {{ end }}
+
+        </figcaption>
+      </figure>
+      {{ end }}
+      {{ end }}
+
+
+
+
+      <div class="flex flex-col">
+        <div class="content-article leading-8 font-normal dark:font-light
+       [&>p]:text-justify [&>ul]:list-disc [&>ul]:ml-8 [&>h3]:uppercase [&>h3]:tracking-wide [&>p]:[text-indent:2em] [&>h3]:my-3
+       border-b border-gray-300 dark:border-gray-800/50 pb-4 mb-6">
+          {{ .Content }}
+        </div>
+        <!-- Ringkasan --> 
+        {{ if .Params.synopsis }}
+        <h2 class="font-medium uppercase tracking-wide">
+          Sinopsis
+          {{ if .Params.nameAnime }}{{ .Params.nameAnime }}:{{ end }}
+          {{ if .Params.nameComic }}{{ .Params.nameComic }}:{{ end }}
+          {{ if .Params.nameGame }}{{ .Params.nameGame }}:{{ end }}
+          {{ if .Params.nameMovie }}{{ .Params.nameMovie }}:{{ end }} </h2>
+        {{ end }}
+        {{ if .Params.synopsis }}
+        <div class="border-l-4 italic border-gray-300 dark:border-gray-800/50
+         px-4 mx-2 md:mx-4 my-4 font-normal dark:font-light leading-8
+         [&>p]:text-justify [&>p]:[text-indent:2em] [&>p]:my-3">
+          {{ .Params.synopsis | safeHTML }}
+        </div> 
+        {{ end }} 
+        {{ with .Params.videos }}
+        {{ range . }}
+        <div class="w-full h-fit flex flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl ">
+          <iframe width="auto" height="315px" src="{{ .url | safeURL }}" title="{{ .title | default " YouTube video player" }}" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          {{ with .title }}
+          <p class="text-sm text-left font-light dark:font-extralight italic mt-2 px-4">{{ . }}</p>
+          {{ end }}
+          {{ with .source }}
+          <p class="text-sm text-left font-light dark:font-extralight italic mb-2 px-4">Source Video: {{ . }}</p>
+          {{ end }}
+        </div>
+        {{ end }}
+        {{ end }}
+        
+        {{ with .Params.conclusion }}
+        <h2 class="font-medium uppercase tracking-wide">Kesimpulan :</h2>
+        <div class="border-l-4 border-gray-300 dark:border-gray-800/50
+         px-4  mx-2 md:mx-4 my-4 font-normal dark:font-light leading-8
+         [&>p]:text-justify [&>p]:[text-indent:2em] [&>p]:my-3">
+          {{ . | safeHTML }}
+        </div> 
+        {{ end }}
+        
+        {{ with .Params.sources }}
+        <p class="mb-4 italic font-normal dark:font-light">
+          Artikel ini pertama kali dipublikasikan di
+          {{ $total := len . }}
+          {{ range $index, $source := . }}
+          {{ if gt $index 0 }}
+          {{ if eq $index (sub $total 1) }} dan {{ else }}, {{ end }}
+          {{ end }}
+          <a href="{{ $source.url }}" target="_blank"
+            class="text-gray-900 inline dark:text-gray-400 hover:text-conime-400 hover:dark:text-conime-500 underline"
+            rel="noopener noreferrer">{{ $source.name }}</a>
+          {{ end }}.
+        </p>
+        {{ end }} 
+      </div>
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+
+      {{ if not (strings.HasPrefix .Site.BaseURL "https://conime2025.github.io/") }}
+      {{ partial "slug-warning.html" . }}
+      {{ end }}
+
+      
+      <!-- Artikel panjang lainnya -->
+      <!-- Tombol untuk membuka modal -->
+      {{ $path := .RelPermalink }}
+      {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path) }}
+
+      <div class="w-full h-fit except    flex justify-end mt-2">
+        <!-- Tombol untuk membuka modal -->
+        <div class="flex gap-2 justify-end items-center"> 
+          {{ partial "share-btn.html" . }}
+        </div> 
+      </div>
+      {{ end }}
+    </article>
+
+    <!-- Bagian Bawah Artikel -->
+    {{ $path := .RelPermalink }}
+    {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path) }}
+    <section class="mt-4 md:mt-12 w-full border-t border-gray-300  dark:border-gray-800/50 pt-6">
+ 
+      <!--Kolom Komentar-->
+      {{ partial "comments.html" . }}
+
+      <!-- Related Articles -->
+      {{ partial "related-articles.html" . }}
+
+
+      <!-- Modal -->
+      {{ partial "share-modal.html" . }} 
+    </section>
+    {{ end }}
+  </main>
+
+  <!-- Sidebar --> 
+  <aside class="col-span-12 w-full lg:col-span-4 space-y-6"> 
+    <!-- Berita yang baru dilihat -->
+    {{ partial "last-viewed.html" . }}
+    <!-- Berita Populer -->
+    {{ partial "popular.html" . }} 
+    <!-- SUGGESTED ARTICLES -->
+    {{ partial "suggested.html" . }} 
+    <!-- Kategori -->
+    {{ partial "categories.html" . }} 
+    <!-- Tags Popular -->
+    {{ partial "popular-tags.html" . }} 
+    <!-- Newsletter -->
+    {{ partial "newsletter.html" . }} 
+  </aside> 
+</div> 
+{{ end }}

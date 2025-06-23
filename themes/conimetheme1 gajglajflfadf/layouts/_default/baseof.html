@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="dark" lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+
+<head>
+  <script>
+    try {
+      if (localStorage.getItem("darkmode") === "false") {
+        document.documentElement.classList.remove("dark");
+      }
+    } catch (e) { }
+  </script>
+
+  <link rel="stylesheet" href="/css/main.css" />
+
+  {{ partial "head.html" . }}
+</head>
+
+<body data-page-type="{{ .Kind }}" class="grid grid-rows-[auto_1fr_auto] demo-3  
+  font-poppins text-base font-medium dark:font-normal
+  inset-0 w-screen min-h-screen h-full 
+  bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300 
+  overscroll-y-auto md:overflow-y-scroll overflow-style-y overflow-x-hidden transition duration-300 ease-in-out">
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"
+    nonce="YourNonceValue"></script>
+
+
+    {{ if eq .RelPermalink "/" }}
+  <!--Loading Animasi-->
+   
+  <div id="loading-screen"
+  class="absolute inset-0 z-[9999] h-screen w-screen flex transition-opacity opacity-100 duration-1000 ease-in-out items-center justify-center bg-gray-100 dark:bg-gray-950">
+<script>
+    if (sessionStorage.getItem('loadingShown') === 'true') {
+      document.getElementById('loading-screen').style.display = 'none';
+      console.log("🔁 Halaman ini adalah hasil dari reload otomatis karena loading animasi sebelumnya gagal.");
+    }
+  </script>
+    <div class="gooey-container fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div class="dot dot1"></div>
+      <div class="dot dot2"></div>
+      <div class="dot dot3"></div> 
+    </div>
+   
+
+<svg>
+  <filter id="gooey">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+    <feColorMatrix in="blur" mode="matrix"
+      values="1 0 0 0 0  
+              0 1 0 0 0  
+              0 0 1 0 0  
+              0 0 0 20 -10" result="goo" />
+    <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+  </filter>
+</svg> 
+  </div>
+  <!--Loading Animasi end-->
+ {{ end }}
+
+  <header
+    class="w-full z-[1000] {{ if .IsHome }}hidden{{ else }}flex{{ end }} fixed  left-0 top-0 right-0  bg-white/50 dark:bg-gray-900/70   md:bg-white/50 md:dark:bg-gray-900/80 backdrop-blur-lg  text-gray-800 dark:text-gray-300 transition duration-300 ease-in-out px-6 sm:24 md:px-32 py-2 md:py-4 flex-row justify-between items-center">
+    {{ partial "header.html" . }}
+  </header>
+
+
+  <!--Menu Kiri-->
+  <div id="main-menu" class="z-50 w-screen h-fit lg:w-fit lg:h-screen {{ if .IsHome }}hidden{{ else }}flex{{ end }}
+         fixed  bottom-2 lg:bottom-0 left-0 md:left-2 right-0 lg:top-1/2 lg:-translate-y-1/2  transform flex-row lg:flex-col justify-center items-center
+         transition duration-300 ease-in-out">
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  </div>
+
+  <!--Menu Kiri end-->
+
+ 
+
+  <main
+    class="container w-full {{ if .IsHome }}hidden{{ else }}block{{ end }} pt-20 md:pt-24 px-4 sm:px-24 md:px-32 lg:px-20 mx-auto z-20 h-auto rounded-3xl transition duration-300 ease-in-out">
+   
+    {{ block "main" . }}{{ end }}
+ 
+  </main>
+
+
+
+
+
+
+  <!-- SearchModal -->
+  {{ partial "search-modal.html" . }}
+
+
+{{ if .IsHome }}
+ <script type="application/json" id="post-metadata">
+[
+{{- $pages := where .Site.RegularPages "Section" "posts" -}}
+{{- range $i, $page := $pages }}
+  {{- if gt $i 0 }},{{ end }}
+  {
+    "permalink": "{{ $page.RelPermalink }}",
+    "title": {{ $page.Title | jsonify }},
+    "image": "{{ $page.Params.image | default "/images/default.png" }}"
+  }
+{{- end }}
+]
+</script> 
+{{ end }}
+
+
+
+  <footer
+    class="text-sm mt-12 sm:mt-6 {{ if .IsHome }}hidden{{ else }}flex{{ end }}  relative text-gray-800 dark:text-gray-300   items-center justify-center transition duration-300 ease-in-out px-6 sm:px-20 md:px-32">
+    <section class="absolute hidden  left-0 right-0 bottom-0 h-full w-full text-gray-800 dark:text-gray-300  ">
+      <div
+        class="w-full h-full grid  grid-cols-3 gap-[1px] bg-[radial-gradient(circle_at_center,_#CF012B,_#CF012B,_#FF1545,_#fff,_#fff,_#fff,_#fff)] dark:bg-[radial-gradient(circle_at_center,_#CF012B,_#CF012B,_#5C0317,_#0A0A0A,_#0A0A0A,_#0A0A0A,_#0A0A0A)] md:dark:bg-[radial-gradient(circle_at_center,_#CF012B,_#CF012B,_#5C0317,_#000,_#000,_#000,_#000)]">
+        <div
+          class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+        </div>
+        <div
+          class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+        </div>
+        <div
+          class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+        </div>
+        <div
+          class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+        </div>
+        <div
+          class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+        </div>
+        <div
+          class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+        </div>
+        <div
+          class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+        </div>
+        <div
+          class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+        </div>
+        <div
+          class="w-full h-full overflow-hidden bg-cover bg-white dark:bg-gray-950  md:dark:bg-gray-950    p-6    flex items-center justify-center">
+        </div>
+
+      </div>
+    </section>
+ 
+    <div
+      class="z-10 grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-2 lg:gap-2 p-4 border-t border-conime-400 dark:border-conime-500">
+      <div class="col-span-2 lg:col-span-1"> {{ partial "menu-footer.html" (dict "menuID" "main" "page" .) }}</div>
+      <div class="text-start justify-center text-sm  col-span-2 md:col-span-1 px-0 md:px-6 py-2">
+        <p>All names, logos, images, and trademarks belong to their respective owners. Images used on this site are for
+          informational and editorial purposes only. No copyright infringement intended.
+        </p>
+      </div>
+      {{ partial "footer.html" . }}
+    </div>
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<script src="/js/main.js" defer></script>
+
+<script src="/js/moreMenu.js" defer></script>
+<!--
+<script src="/js/popular.js" defer></script>-->
+  </footer>
+</body>
+
+</html>

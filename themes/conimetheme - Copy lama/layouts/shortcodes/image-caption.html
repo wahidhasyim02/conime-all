@@ -1,0 +1,29 @@
+{{- $image := .Get "src" -}}
+{{- $alt := .Get "alt" | default "Gambar" -}}
+{{- $sources := .Get "sources" | default "" -}}
+{{- $studio := .Get "studio" | default "" -}}
+
+<figure class="w-full flex flex-col my-4 bg-gray-100 dark:bg-gray-900/20 border border-gray-300 dark:border-gray-800/50 backdrop-blur-sm rounded ">
+  <img src="{{ $image | relURL }}" alt="{{ $alt }}" class="h-96 w-full rounded  object-cover" />
+  <figcaption class="text-sm text-left italic flex gap-2 px-4 py-4">
+    Image:
+    {{ if $sources }}
+      {{ $list := split $sources ";" }}
+      {{ range $index, $item := $list }}
+        {{ $pair := split $item "," }}
+        {{ $name := index $pair 0 }}
+        {{ $url := index $pair 1 }}
+        {{ if gt $index 0 }}, {{ end }}
+        <span>
+        <a href="{{ $url }}" target="_blank"
+          class="hover:text-conime-400 hover:dark:text-conime-400 hover:underline"
+          rel="noopener noreferrer">{{ $name }}</a>
+      {{ end }}
+    {{ end }}
+    {{ if $studio }}
+      Image © Studio {{ $studio }}.
+    {{ end }}
+    Used for editorial purposes only.
+    </span>
+  </figcaption>
+</figure>

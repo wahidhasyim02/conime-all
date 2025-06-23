@@ -1,0 +1,126 @@
+{{ define "main" }}
+
+
+<div class="mx-auto py-8 md:py-0 grid grid-cols-1   lg:grid-cols-12 gap-4">
+    <div class="col-span-12  h-fit {{ if or (eq .Section "categories") (eq .Section "tags") (eq .RelPermalink "/posts/") }}hidden{{ end }}">
+       
+        <div class="w-full overflow-hidden absolute left-1/2 -translate-x-1/2">
+            <figure class="w-full  h-fit overflow-hidden rounded-xl">
+                <h2
+            class="justify-center items-center w-full h-fit z-10 pl-20 pr-20 absolute tracking-[0.5em] transition-opacity duration-500 ease-in-out top-[20%] left-0 right-0 text-4xl font-light uppercase  flex">
+            {{ .Title }}
+           </h2>
+            {{ if .Content }}
+                <div class="w-fit h-fit   z-10 top-[30%] absolute px-8 md:px-3 py-3 md:mr-[10%] md:ml-[15%] md:py-4">
+                    <div class="w-full h-fit leading-8 ">
+                        {{ .Content }}</div>
+                </div>
+                {{ end }}
+                {{ partial "slideshow.html" . }} 
+ 
+               
+            </figure>
+        </div>
+    </div>
+
+    <main class="col-span-12 lg:col-span-8 h-fit   relative z-10 {{ if and (eq .Section "posts") (ne .RelPermalink "/posts/") }}mt-96 lg:mt-60{{ end }}">
+        <h2 class=" text-lg font-medium border-b uppercase border-gray-300 dark:border-gray-800/50 pb-2 mb-4 hidden{{
+        if in .Permalink "/categories/" }}flex{{ end }}">
+            Category: {{ .Title }}
+        </h2>
+        <h2 class="text-lg font-medium border-b uppercase  border-gray-300  dark:border-gray-800/50  pb-2 mb-4 hidden{{ if in .Permalink "/tags/" }}flex{{ end }}">
+            Tags: #{{ .Title }}
+        </h2>
+<ul
+  class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-3 
+         md:[&>*:nth-child(1)]:col-span-4 
+         md:[&>*:nth-child(8)]:col-span-4 
+         md:[&>*:nth-child(13)]:col-span-4 
+         md:[&>*:nth-child(18)]:col-span-4 
+         md:[&>*:nth-child(20)]:col-span-4
+         ">
+
+  {{ range .Pages }}
+  <li
+    class="relative group flex flex-col col-span-2 w-full h-full 
+           bg-gradient-to-br from-white via-gray-50 to-gray-300 
+           dark:from-gray-900 dark:via-gray-950 dark:to-gray-950 
+           overflow-hidden rounded-xl shadow-lg 
+           shadow-gray-700/40 dark:shadow-gray-950/40 
+           transition duration-300 ease-in-out {{ if eq $.RelPermalink "/posts/" }}col-span-2 shadow-gray-700/0 dark:shadow-gray-950/0 bg-gradient-to-br from-white/0 via-gray-50/0 to-gray-300/0 
+           dark:from-gray-900/0 dark:via-gray-950/0 dark:to-gray-950/0  {{ end }}
+           ">
+
+    <a href="{{ .RelPermalink }}"
+       class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
+
+      {{ with .Params.image }}
+      <img loading="lazy" src="{{ . }}" alt="gambar {{ $.Title }}"
+        class="w-full h-[360px] object-cover rounded-t-xl 
+               {{ if eq $.RelPermalink "/posts/" }}opacity-80 blur-lg brightness-100{{ end }} 
+               brightness-75 hover:brightness-100 
+               transition duration-300 ease-in-out" />
+      {{ end }}
+
+    </a>
+
+    <!-- Bagian teks -->
+    <div
+      class="w-[70%] h-[70%] absolute bottom-0 left-0 rounded-tr-3xl 
+             group-hover:-translate-x-full transition duration-500 ease-in-out 
+             font-light dark:font-extralight flex flex-col 
+             items-start justify-start gap-2 p-4 
+             bg-gradient-to-br from-white via-gray-50 to-gray-300 
+             dark:from-gray-900 dark:via-gray-950 dark:to-gray-950">
+
+      <h2 class="w-full h-full flex-1  {{ if eq $.RelPermalink "/posts/" }}flex text-4xl justify-center items-center {{ else }} text-2xl {{ end }} line-clamp-4">
+        <a href="{{ .RelPermalink }}" class="hover:underline break-words line-clamp-4">
+          {{ .Title }}
+        </a>
+      </h2>
+
+      <h2 class="hidden justify-between flex-1 gap-4 text-sm line-clamp-1 uppercase">
+        {{ range .Params.categories }}
+        <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+          {{ . }}
+        </a>
+        {{ end }}
+      </h2>
+
+      <p class="bottom-4 {{ if eq $.RelPermalink "/posts/" }}hidden{{ end }} justify-end items-end w-full left-6 z-10 text-xl h-auto flex gap-0">
+        <span>—</span>{{ partial "dateNew.html" . }}
+      </p>
+    </div>
+  </li>
+  {{ end }}
+</ul>
+
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="col-span-12 lg:col-span-4 relative space-y-6 {{ if and (eq .Section "posts") (ne .RelPermalink "/posts/") }}mt-0 lg:mt-60{{ end }}">
+
+        <!-- Berita yang baru dilihat -->
+        {{ partial "last-viewed.html" . }}
+   
+   
+        {{ partial "popular.html" . }}
+
+
+        <!-- SUGGESTED ARTICLES -->
+        {{ partial "suggested.html" . }}
+
+        <!-- Kategori -->
+        {{ partial "categories.html" . }}
+        
+        <!-- Tags Popular -->
+        {{ partial "popular-tags.html" . }}
+
+        <!-- Newsletter -->
+        {{ partial "newsletter.html" . }}
+
+
+    </aside>
+
+</div>
+{{ end }}
