@@ -4,17 +4,17 @@
     </div> 
     <div class="flex flex-col w-full lg:w-[680px] h-full rounded-3xl overflow-hidden z-10">
       <!-- Bagian gambar -->
-       <a href="{{ .RelPermalink }}" class="h-1/2 w-full overflow-hidden bg-cover"> 
+       <a href="{{ .RelPermalink }}" class="h-1/2 w-full overflow-hidden bg-cover" title="Gambar {{ .Title }}"> 
         {{ $img := (.Params.image | default "/images/default.png") | relURL }}
       <div class="h-full w-full divDistortion2 overflow-hidden bg-cover" data-image1="{{ $img }}" data-image2="{{ $img }}">
-        <img src="{{ $img }}" alt="gambar {{ .Title }}" class="w-full h-full left-0 top-0  image-distor image1 image2 object-cover brightness-75 hover:brightness-100 transition duration-300"  onerror="this.classList.remove('sm:w-[0.1px]', 'sm:h-[0.1px]')"/>
+        <img src="{{ $img }}" alt="Gambar {{ .Title }}" title="{{ .Title }}" class="w-full h-full left-0 top-0  image-distor image1 image2 object-cover brightness-75 hover:brightness-100 transition duration-300"  onerror="this.classList.remove('sm:w-[0.1px]', 'sm:h-[0.1px]')"/>
         </div>
        </a>
       
       <!-- Bagian teks -->
       <div class="relative h-1/2 font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-gradient-to-br from-white dark:from-gray-900 from-0% via-gray-50 dark:via-gray-950 via-70% to-gray-300 dark:to-gray-950 to-100%">
         <h2 class="w-full">
-          <a href="{{ .RelPermalink }}" class="hover:underline text-3xl line-clamp-4">{{ .Title }}</a></h2>
+          <a href="{{ .RelPermalink }}" class="hover:underline text-3xl line-clamp-4" title="{{ .Title }}">{{ .Title }}</a></h2>
         <h2 class="flex justify-between h-full gap-4 text-sm line-clamp-1 uppercase">
           {{ range .Params.categories }}
             <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">

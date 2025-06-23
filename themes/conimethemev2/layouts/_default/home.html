@@ -72,7 +72,7 @@
       </div>
       {{ end }}
     </div>
-    <a href="/posts/"
+    <a href="/posts/" title="View All Posts"
       class="inline-flex group items-center gap-2 text-sm font-medium text-gray-800 dark:text-gray-300 hover:text-gray-950 hover:dark:text-white border-b border-gray-800 dark:border-gray-400 hover:border-gray-950 hover:dark:border-white transition">
       <!-- + dengan efek rotate saat hover -->
       <span class="inline-block transition-transform duration-300 group-hover:rotate-90">+</span>
@@ -100,21 +100,21 @@
           class="relative popular-html flex flex-col  w-full h-full bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-950/20 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out  ">
           <a href="{{ .RelPermalink }}"
             class=" bg-cover w-full h-full  overflow-hidden transition duration-500 ease-in-out">
-            {{ with .Params.image }}
-            <img loading="lazy" src="{{ . }}" alt="gambar {{ $.Title }}"
+            
+            <img loading="lazy" {{ with .Params.image }} src="{{ . }}" {{ else }}
+            {{ end }} alt="Gambar {{ .Title }}" title="Gambar {{ .Title }}"
               class="w-full h-[360px]  object-cover rounded-t-xl    brightness-75  hover:brightness-100 transition  duration-300    ease-in-out" />
-            {{ else }}
-            {{ end }}
+            
 
           </a>
 
           <!-- Bagian teks -->
           <div
             class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0  left-0 rounded-tr-3xl   transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
-            <h2 class="w-full inline-block lg:hidden"> —0{{ add $i 1 }}</h2>
+            <h2 class="w-fit inline-block lg:hidden"> —0{{ add $i 1 }}</h2>
             <h2
               class="w-[80%] lg:w-full h-fit text-2xl line-clamp-3  opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
-              <a href="{{ .RelPermalink }}" class="hover:underline  break-words">{{ .Title }}</a>
+              <a href="{{ .RelPermalink }}" class="hover:underline  break-words" title="{{ .Title }}">{{ .Title }}</a>
             </h2>
             <h2
               class="flex justify-between   opacity-100 lg:opacity-0 group-hover:lg:opacity-100  group-hover:z-10 transition duration-500 ease-in-out  gap-4 text-sm line-clamp-1 uppercase">
@@ -130,7 +130,7 @@
               "dateNew.html" . }}
             </p>
             <h2
-              class="absolute inset-0 text-transparent text-stroke-gray-950 dark:text-stroke-white text-5xl w-full h-full flex items-center justify-center font-bold opacity-0 lg:opacity-80 dark:lg:opacity-20 group-hover:lg:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
+              class="absolute inset-0 text-transparent text-stroke-gray-950 dark:text-stroke-white text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-80 dark:lg:opacity-20 group-hover:lg:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
               #{{ add $i 1 }}
             </h2>
           </div>
@@ -172,29 +172,29 @@
           class="relative flex flex-col w-full h-[360px] rounded-3xl z-10 bg-gray-300 dark:bg-gray-950/50 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
 
           <!-- Bagian gambar -->
-          <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover ">
+          <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover" >
             <div
               class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
               <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img3.Title }}"
+                alt="Gambar {{ $img3.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[85%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-10">
               <img loading="lazy" src="{{ $img2.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img2.Title }}"
+                alt="Gambar {{ $img2.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[75%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-14">
               <img loading="lazy" src="{{ $img1.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img1.Title }}"
+                alt="Gambar {{ $img1.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[65%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-16">
               <img loading="lazy" src="{{ $img0.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img0.Title }}"
+                alt="Gambar {{ $img0.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
           </a>
@@ -202,14 +202,12 @@
           <div
             class="w-full h-[55%] absolute z-10 flex flex-col justify-between bottom-0 -left-8 right-8 rounded-t-[32px] font-light dark:font-extralight   bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
             <h2 class="w-full h-full text-2xl p-4 line-clamp-4 lg:line-clamp-4">
-              <a href="{{ $discoverPage.RelPermalink }}" class="hover:underline uppercase break-words">{{
-                $discoverPage.Title
-                }}</a>
+              <a href="{{ $discoverPage.RelPermalink }}" class="hover:underline uppercase break-words" title="{{ $discoverPage.Title }}">{{ $discoverPage.Title }}</a>
             </h2>
             <a href="{{ $discoverPage.RelPermalink }}"
               class="flex flex-col group items-end justify-end gap-2 w-full h-fit px-4 py-0  text-sm font-medium text-gray-800 dark:text-gray-300 hover:text-gray-950 hover:dark:text-white">
               <!-- + dengan efek rotate saat hover -->
-              <h2
+              <h2 title="View All"
                 class="mb-4  border-b border-gray-800 dark:border-gray-400 hover:border-gray-950 hover:dark:border-white transition">
                 <span class="inline-block transition-transform duration-300 group-hover:rotate-90">+</span>
                 <!-- hanya teks yang di-underline -->
@@ -248,25 +246,25 @@
             <div
               class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
               <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img3.Title }}"
+                alt="Gambar {{ $img3.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[85%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-10">
               <img loading="lazy" src="{{ $img2.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img2.Title }}"
+                alt="Gambar {{ $img2.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[75%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-14">
               <img loading="lazy" src="{{ $img1.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img1.Title }}"
+                alt="Gambar {{ $img1.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[65%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-16">
               <img loading="lazy" src="{{ $img0.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img0.Title }}"
+                alt="Gambar {{ $img0.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
           </a>
@@ -320,25 +318,25 @@
             <div
               class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
               <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img3.Title }}"
+                alt="Gambar {{ $img3.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[85%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-10">
               <img loading="lazy" src="{{ $img2.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img2.Title }}"
+                alt="Gambar {{ $img2.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[75%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-14">
               <img loading="lazy" src="{{ $img1.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img1.Title }}"
+                alt="Gambar {{ $img1.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[65%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-16">
               <img loading="lazy" src="{{ $img0.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img0.Title }}"
+                alt="Gambar {{ $img0.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
           </a>
@@ -392,25 +390,25 @@
             <div
               class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
               <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img3.Title }}"
+                alt="Gambar {{ $img3.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[85%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-10">
               <img loading="lazy" src="{{ $img2.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img2.Title }}"
+                alt="Gambar {{ $img2.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[75%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-14">
               <img loading="lazy" src="{{ $img1.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img1.Title }}"
+                alt="Gambar {{ $img1.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[65%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-16">
               <img loading="lazy" src="{{ $img0.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img0.Title }}"
+                alt="Gambar {{ $img0.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
           </a>
@@ -464,25 +462,25 @@
             <div
               class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
               <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img3.Title }}"
+                alt="Gambar {{ $img3.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[85%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-10">
               <img loading="lazy" src="{{ $img2.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img2.Title }}"
+                alt="Gambar {{ $img2.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[75%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-14">
               <img loading="lazy" src="{{ $img1.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img1.Title }}"
+                alt="Gambar {{ $img1.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[65%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-16">
               <img loading="lazy" src="{{ $img0.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img0.Title }}"
+                alt="Gambar {{ $img0.Title }}"
                 class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
           </a>
@@ -539,25 +537,25 @@
             <div
               class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
               <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img3.Title }}"
+                alt="Gambar {{ $img3.Title }}"
                 class="w-full h-full object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[85%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-10">
               <img loading="lazy" src="{{ $img2.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img2.Title }}"
+                alt="Gambar {{ $img2.Title }}"
                 class="w-full h-full object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[75%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-14">
               <img loading="lazy" src="{{ $img1.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img1.Title }}"
+                alt="Gambar {{ $img1.Title }}"
                 class="w-full h-full object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
             <div
               class="w-[98%] h-[65%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-16">
               <img loading="lazy" src="{{ $img0.Params.image | default " /images/default.png" }}"
-                alt="gambar {{ $img0.Title }}"
+                alt="Gambar {{ $img0.Title }}"
                 class="w-full h-full object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </div>
           </a>
@@ -629,7 +627,7 @@
           <!-- Bagian gambar -->
           <div class="w-full flex-1">
             <a href="{{ .RelPermalink }}">
-              <img src="{{ .Params.image }}" alt="gambar {{ .Title }}"
+              <img src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
                 class="w-full h-[300px] object-cover rounded-3xl brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </a>
           </div>
@@ -699,7 +697,7 @@
           <div
             class="w-full h-[40%] lg:h-full flex-1 {{ if $isSpecial }} inset-0 opacity-100 lg:opacity-0 group-hover:opacity-100 group-hover:z-50 {{ end }} transition duration-500 ease-in-out">
             <a href="{{ .RelPermalink }}">
-              <img src="{{ .Params.image }}" alt="gambar {{ .Title }}"
+              <img src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
                 class="w-full h-[300px] object-cover rounded-3xl brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </a>
           </div>
@@ -772,7 +770,7 @@
           <!-- Bagian gambar -->
           <div class="w-full flex-1">
             <a href="{{ .RelPermalink }}">
-              <img src="{{ .Params.image }}" alt="gambar {{ .Title }}"
+              <img src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
                 class="w-full h-[300px] object-cover rounded-3xl brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </a>
           </div>
@@ -836,7 +834,7 @@
           class="relative w-full h-full flex flex-col rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40">
           <div class="w-full h-full transition duration-500 ease-in-out flex-1">
             <a href="{{ .RelPermalink }}">
-              <img src="{{ .Params.image }}" alt="gambar {{ .Title }}"
+              <img src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
                 class="w-full h-full object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </a>
           </div>
@@ -870,7 +868,7 @@
           <div
             class="w-full h-full opacity-100 lg:group-hover:opacity-0 absolute inset-0 transition duration-500 ease-in-out flex-1">
             <a href="{{ .RelPermalink }}">
-              <img src="{{ .Params.image }}" alt="gambar {{ .Title }}"
+              <img src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
                 class="w-full h-full object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </a>
           </div>
@@ -902,7 +900,7 @@
           <div
             class="w-full h-full opacity-100 group-hover:opacity-0 absolute inset-0 transition duration-500 ease-in-out flex-1">
             <a href="{{ .RelPermalink }}">
-              <img src="{{ .Params.image }}" alt="gambar {{ .Title }}"
+              <img src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
                 class="w-full h-full object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </a>
           </div>

@@ -42,7 +42,7 @@
     {{ if .Params.image }}
 <figure class="w-full except flex flex-col mb-4 bg-gray-100  dark:bg-gray-900/40 rounded-xl">
   <!-- Gambar -->
-  <img src="{{ .Params.image | relURL }}" alt="gambar {{ .Title }}" class="h-96 w-full rounded-xl object-cover" />
+  <img src="{{ .Params.image | relURL }}" alt="Gambar {{ .Title }}" class="h-96 w-full rounded-xl object-cover" />
   
   <figcaption class="text-sm flex gap-2 px-4 py-4">
     {{ with .Params.src }}
@@ -138,7 +138,7 @@
           <div class="overflow-hidden w-full h-48 bg-cover"> <a href="{{ .RelPermalink }}"
               class=" bg-cover w-fit h-full rounded">
               {{ with .Params.image }}
-              <img loading="lazy"  src="{{ . }}" alt="gambar {{ $.Title }}"
+              <img loading="lazy"  src="{{ . }}" alt="Gambar {{ $.Title }}"
                 class="w-full h-full object-cover rounded-t    transition  duration-1000    ease-in-out" />
               {{ else }}
               {{ end }}
@@ -334,7 +334,7 @@
     <li class="group bg-white dark:bg-gray-950/50 backdrop-blur-sm rounded shadow hover:shadow-lg transition overflow-hidden">
       <a href="{{ .RelPermalink }}" class="block">
         {{ with .Params.image }}
-        <img loading="lazy"  src="{{ . }}" alt="gambar {{ $.Title }}" class="w-full h-40 object-cover   brightness-75   group-hover:brightness-100 transition" />
+        <img loading="lazy"  src="{{ . }}" alt="Gambar {{ $.Title }}" class="w-full h-40 object-cover   brightness-75   group-hover:brightness-100 transition" />
         {{ end }}
       </a>
 

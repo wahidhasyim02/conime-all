@@ -14,7 +14,7 @@
     {{ if eq .RelPermalink "/" }}
   <!--Loading Animasi--> 
   <div id="loading-screen"
-  class="absolute inset-0 z-[9999] h-screen w-screen flex transition-opacity opacity-100 duration-1000 ease-in-out items-center justify-center bg-gray-100 dark:bg-gray-950">
+  class="absolute inset-0 z-[999999] h-screen w-screen flex transition-opacity opacity-100 duration-1000 ease-in-out items-center justify-center bg-gray-100 dark:bg-gray-950">
     <div class="gooey-container fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
       <div class="dot dot1"></div>
       <div class="dot dot2"></div>
@@ -116,7 +116,9 @@
 <script src="/js/loading-animation.js" defer></script>
 <script src="/js/timeago.js" defer></script>
 <script src="/js/notif.js" defer></script>
- 
+<script src="/js/tooltip.js" defer></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+
 <!--
 <script src="/js/popular.js" defer></script>-->
   </footer>

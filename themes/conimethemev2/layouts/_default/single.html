@@ -50,7 +50,7 @@
       <!-- Gambar Utama -->
       {{ with .Params.image }}
       <figure class="w-full flex flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl">
-        <img src="{{ . | relURL }}" alt="gambar {{ $.Title }}"
+        <img src="{{ . | relURL }}" alt="Gambar {{ $.Title }}" title="Gambar {{ $.Title }}"
           class="post-img h-96 sm:h-auto w-full rounded-t-3xl object-cover" />
 
         <figcaption class="text-sm font-light dark:font-extralight text-left italic flex flex-wrap gap-2 px-4 py-4">
@@ -60,7 +60,7 @@
             {{ $total := len . }}
             {{ range $index, $source := . }}
             {{ if gt $index 0 }}, {{ end }}
-            <a href="{{ $source.url }}" class="underline hover:text-conime-400 hover:dark:text-conime-500 inline"
+            <a href="{{ $source.url }}" title="{{ $source.url }}" class="underline hover:text-conime-400 hover:dark:text-conime-500 inline"
               target="_blank" rel="noopener noreferrer">{{ $source.name }}</a>
             {{ end }}
             {{ with (index . 0).studio }}

@@ -242,7 +242,7 @@ window.addEventListener("DOMContentLoaded", function () {
             const imageSrc = item.image ? item.image : "/images/default-thumbnail.jpg"; // fallback
 
             li.innerHTML = `
-          <img src="${imageSrc}" alt="gambar-${item.title}" class="w-auto h-32 lg:h-20 group-hover:opacity-0 opacity-30 lg:opacity-100 transition duration-500 ease-in-out object-cover"/>
+          <img src="${imageSrc}" alt="Gambar-${item.title}" class="w-auto h-32 lg:h-20 group-hover:opacity-0 opacity-30 lg:opacity-100 transition duration-500 ease-in-out object-cover"/>
           <h2 class="w-full h-full flex justify-center items-center inset-0 opacity-100 lg:opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out  absolute px-4 text-2xl">
             <a href="${item.url}" class="hover:underline break-words line-clamp-2 h-fit text-xl font-light dark:font-extralight">
               ${item.title}

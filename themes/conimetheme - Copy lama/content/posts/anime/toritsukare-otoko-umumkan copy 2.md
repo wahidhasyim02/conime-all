@@ -46,7 +46,7 @@ Penggemar anime dan film musikal Jepang dapat mengunjungi situs resmi dan kanal 
  
  {{< image-caption
   src="/images/anime/toritsukare-otoko.webp"
-  alt="gambar anime"
+  alt="Gambar anime"
   sources="Pixiv,https://pixiv.net/art123;Danbooru,https://danbooru.donmai.us/posts/456"
   studio="Ufotable"
 >}}

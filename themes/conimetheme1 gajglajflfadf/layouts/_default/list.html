@@ -66,7 +66,7 @@
       <li class="relative group flex flex-col col-span-2 w-full h-full bg-gradient-to-br from-white via-gray-50 to-gray-300 dark:from-gray-900 dark:via-gray-950 dark:to-gray-950 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out {{ if eq $.RelPermalink "/posts/" }}col-span-2 shadow-gray-700/0 dark:shadow-gray-950/0 bg-gradient-to-br from-white/0 via-gray-50/0 to-gray-300/0 dark:from-gray-900/0 dark:via-gray-950/0 dark:to-gray-950/0{{ end }}">
         <a href="{{ .RelPermalink }}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
           {{ with .Params.image }}
-          <img loading="lazy" src="{{ . }}" alt="gambar {{ $.Title }}" class="w-full h-[360px] object-cover rounded-t-xl {{ if eq $.RelPermalink "/posts/" }}opacity-80 blur-lg brightness-100{{ end }} brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
+          <img loading="lazy" src="{{ . }}" alt="Gambar {{ $.Title }}" class="w-full h-[360px] object-cover rounded-t-xl {{ if eq $.RelPermalink "/posts/" }}opacity-80 blur-lg brightness-100{{ end }} brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
           {{ end }}
         </a>
 

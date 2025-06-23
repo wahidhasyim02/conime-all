@@ -51,7 +51,7 @@
       {{ if and .Params.image .Params.sources }}
       <figure
         class="w-full flex flex-col mb-4 bg-gray-100 dark:bg-gray-900/20 border border-gray-300 dark:border-gray-800/50 backdrop-blur-sm rounded ">
-        <img src="{{ .Params.image | relURL }}" alt="gambar {{ .Title }}" class="h-96 w-full rounded object-cover" />
+        <img src="{{ .Params.image | relURL }}" alt="Gambar {{ .Title }}" class="h-96 w-full rounded object-cover" />
         <figcaption class="text-sm text-left italic flex gap-2 px-4 py-4">
           Image:
           {{ $total := len .Params.sources }}

@@ -7,7 +7,7 @@
        <a href="{{ .RelPermalink }}" class="h-1/2 w-full overflow-hidden bg-cover"> 
         {{ $img := (.Params.image | default "/images/default.png") | relURL }}
       <div class="h-full w-full divDistortion overflow-hidden bg-cover" data-image1="{{ $img }}" data-image2="{{ $img }}">
-        <img src="{{ $img }}" alt="gambar {{ .Title }}" class="w-full h-full left-0 top-0  image-distor image1 image2 object-cover brightness-75 hover:brightness-100 transition duration-300"  onerror="this.classList.remove('sm:w-[0.1px]', 'sm:h-[0.1px]')"/>
+        <img src="{{ $img }}" alt="Gambar {{ .Title }}" class="w-full h-full left-0 top-0  image-distor image1 image2 object-cover brightness-75 hover:brightness-100 transition duration-300"  onerror="this.classList.remove('sm:w-[0.1px]', 'sm:h-[0.1px]')"/>
         </div>
        </a>
       

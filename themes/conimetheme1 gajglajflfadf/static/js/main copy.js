@@ -145,7 +145,7 @@ console.log(lastViewed);
             const imageSrc = item.image ? item.image : "/images/default-thumbnail.jpg"; // fallback
 
             li.innerHTML = `
-          <img src="${imageSrc}" alt="gambar-${item.title}" class="w-full h-full  group-hover:opacity-0 opacity-30 lg:opacity-100 transition duration-500 ease-in-out object-cover"/>
+          <img src="${imageSrc}" alt="Gambar-${item.title}" class="w-full h-full  group-hover:opacity-0 opacity-30 lg:opacity-100 transition duration-500 ease-in-out object-cover"/>
           <div class="absolute inset-0 w-full h-full flex justify-center items-center opacity-100 lg:opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out px-4 text-2xl">
            <h2> <a href="${item.url}" class="hover:underline break-words line-clamp-2  text-xl font-light dark:font-extralight">
               ${item.title}

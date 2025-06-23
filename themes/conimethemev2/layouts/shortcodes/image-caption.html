@@ -18,7 +18,7 @@
         {{ $url := index $pair 1 }}
         {{ if gt $index 0 }}, {{ end }}
         <span>
-        <a href="{{ $url }}" target="_blank"
+        <a href="{{ $url }}" target="_blank" title="{{ $url }}"
           class="hover:text-conime-400 dark:hover:text-conime-500 underline"
           rel="noopener noreferrer">{{ $name }}</a>
       {{ end }}

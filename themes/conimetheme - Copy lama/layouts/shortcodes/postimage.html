@@ -5,7 +5,7 @@
   {{ $sourceURL := .Get "source_url" }}
 
   {{ with $src }}
-    <img loading="lazy"  src="{{ . | relURL }}" alt="gambar {{ $alt }}" class="h-96 w-full rounded  object-cover" />
+    <img loading="lazy"  src="{{ . | relURL }}" alt="Gambar {{ $alt }}" class="h-96 w-full rounded  object-cover" />
   {{ end }}
 
   {{ if or $source $sourceURL }}

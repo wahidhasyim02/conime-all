@@ -17,6 +17,7 @@
     "tailwindcss": "3.4.17"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "gsap": "3.13.0",
     "tailwind-scrollbar": "3.1.0",
     "three": "0.177.0"

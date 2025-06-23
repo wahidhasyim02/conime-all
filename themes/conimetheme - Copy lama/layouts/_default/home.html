@@ -89,7 +89,7 @@
         class="relative flex-shrink-0 min-w-[250px] w-[250px] min-h-[398px] flex flex-col group transition duration-500 ease-in-out rounded bg-white  dark:bg-gray-900/20 backdrop-blur-sm h-fit  shadow-none md:shadow-xl  shadow-gray-900/10 hover:shadow-gray-900/20   border border-gray-300 dark:border-gray-800/50">
         <!-- Gambar + Badge -->
         <a href="{{ .RelPermalink }}" class="w-full h-fit rounded z-10 overflow-hidden bg-cover relative">
-          <img loading="lazy" src="{{ .Params.image }}" alt="gambar {{ .Title }}"
+          <img loading="lazy" src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
             class="w-full h-80 hover:scale-110   brightness-75  hover:brightness-100   transition duration-300    ease-in-out rounded object-cover" />
           <!-- Badge kategori utama -->
           {{ $path := replace .File.Path "\\" "/" }}
@@ -140,7 +140,7 @@
           class="bg-cover w-fit h-fit relative  {{ if $isSpecial }} w-full  h-fit md:h-full group {{ end }}">
           {{ with $post.Params.image }}
           <div class="w-full h-56 rounded-t bg-cover overflow-hidden  {{ if $isSpecial }} h-56 md:h-full  {{ end }}">
-            <img loading="lazy" src="{{ . }}" alt="gambar-{{ $post.Title }}"
+            <img loading="lazy" src="{{ . }}" alt="Gambar-{{ $post.Title }}"
               class="w-full h-full object-cover rounded-t brightness-75 hover:brightness-100 transition duration-300" />
           </div>
           {{ end }}
@@ -200,7 +200,7 @@
         <a href="{{ $post.RelPermalink }}" class="bg-cover w-fit h-fit relative">
           {{ with $post.Params.image }}
           <div class="w-full h-56 rounded-t bg-cover overflow-hidden  {{ if $isSpecial }} md:hidden {{ end }}">
-            <img loading="lazy" src="{{ . }}" alt="gambar-{{ $post.Title }}"
+            <img loading="lazy" src="{{ . }}" alt="Gambar-{{ $post.Title }}"
               class="w-full h-full object-cover rounded-t brightness-75 hover:brightness-100 transition duration-300" />
           </div>
           {{ end }}
@@ -256,7 +256,7 @@
           class="bg-cover w-fit h-fit relative  {{ if $isSpecial }} w-full  h-fit md:h-full group {{ end }}">
           {{ with $post.Params.image }}
           <div class="w-full h-56 rounded-t bg-cover overflow-hidden  {{ if $isSpecial }} h-56 md:h-full  {{ end }}">
-            <img loading="lazy" src="{{ . }}" alt="gambar-{{ $post.Title }}"
+            <img loading="lazy" src="{{ . }}" alt="Gambar-{{ $post.Title }}"
               class="w-full h-full object-cover rounded-t brightness-75 hover:brightness-100 transition duration-300" />
           </div>
           {{ end }}
@@ -315,7 +315,7 @@
           class="bg-cover w-fit h-fit relative {{ if $isSpecial }} w-full h-fit md:h-full group {{ end }}">
           {{ with $post.Params.image }}
           <div class="w-full h-56 rounded-t bg-cover overflow-hidden {{ if $isSpecial }} h-56 md:h-full {{ end }}">
-            <img loading="lazy" src="{{ . }}" alt="gambar-{{ $post.Title }}"
+            <img loading="lazy" src="{{ . }}" alt="Gambar-{{ $post.Title }}"
               class="w-full h-full object-cover rounded-t brightness-75 hover:brightness-100 transition duration-300" />
           </div>
           {{ end }}
@@ -366,7 +366,7 @@
         <a href="{{ $post.RelPermalink }}" class="bg-cover w-fit h-fit relative">
           {{ with $post.Params.image }}
           <div class="w-full h-56 rounded-t bg-cover overflow-hidden {{ if $isSpecial }}md:hidden{{ end }}">
-            <img loading="lazy" src="{{ . }}" alt="gambar-{{ $post.Title }}"
+            <img loading="lazy" src="{{ . }}" alt="Gambar-{{ $post.Title }}"
               class="w-full h-full object-cover rounded-t brightness-75 hover:brightness-100 transition duration-300" />
           </div>
           {{ end }}

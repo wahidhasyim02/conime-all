@@ -217,7 +217,7 @@ weight = 80
     min = "0.116.0"
     
  [outputs]
-home = ["HTML", "JSON"]
+home = ["HTML"]
 
 [markup]
   [markup.goldmark]
