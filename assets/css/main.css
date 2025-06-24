@@ -559,6 +559,22 @@ strong {
   /* Medium */
 }
 
+.tippy-box {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity, 1));
+}
+
+.dark .tippy-box:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity, 1));
+}
+
 .text-stroke-gray-950 {
   color: transparent;
   -webkit-text-stroke: 1px black;
@@ -1048,6 +1064,11 @@ img {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .my-4 {
@@ -1599,6 +1620,10 @@ img {
   justify-content: space-between;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .gap-0 {
   gap: 0px;
 }
@@ -1961,6 +1986,10 @@ img {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
 }
 
+.bg-gray-200\/0 {
+  background-color: rgb(229 231 235 / 0);
+}
+
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
@@ -2223,6 +2252,10 @@ img {
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .text-left {
@@ -2953,6 +2986,32 @@ img {
   writing-mode: horizontal;
 }
 
+/* Set ukuran arrow */
+
+.tippy-box > .tippy-arrow {
+  width: 10px;
+  height: 10px;
+}
+
+/* Segitiga arrow — ini yang perlu diwarnai */
+
+.tippy-box > .tippy-arrow::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #111827 !important;
+  /* bg-gray-800 */
+  transform: rotate(0deg);
+  z-index: -4;
+  box-shadow: none !important;
+}
+
+.dark .tippy-box > .tippy-arrow::before {
+  color: #1f2937 !important;
+  /* Tailwind gray-800 */
+}
+
 .dark\:text-stroke-white:is(.dark *) {
   color: transparent;
   -webkit-text-stroke: 1px white;
@@ -3016,6 +3075,11 @@ img {
 .hover\:text-conime-400:hover {
   --tw-text-opacity: 1;
   color: rgb(233 51 90 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-conime-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 21 69 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-gray-950:hover {
@@ -3118,8 +3182,8 @@ img {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.group\/tooltip:hover .group-hover\/tooltip\:opacity-100 {
-  opacity: 1;
+.group\/tooltip:hover .group-hover\/tooltip\:opacity-0 {
+  opacity: 0;
 }
 
 .group:hover .group-hover\:opacity-0 {
@@ -3128,10 +3192,6 @@ img {
 
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
-}
-
-.group\/tooltip:hover .group-hover\/tooltip\:opacity-0 {
-  opacity: 0;
 }
 
 .group:hover .group-hover\:brightness-100 {

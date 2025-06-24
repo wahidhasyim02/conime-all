@@ -18,6 +18,9 @@ module.exports = {
       pattern:
         /^(dark:)?(hover:|group-hover:|focus:)?(bg|text|border|ring)-(gray|conime)-(50|100|200|300|400|500|600|700|800|900|950)$/,
     },
+    {
+    pattern: /tippy-box/,
+  },
   ],
   theme: {
     extend: {

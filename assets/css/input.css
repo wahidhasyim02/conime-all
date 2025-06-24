@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer components {
+  .tippy-box {
+    @apply bg-gray-900 text-gray-100 text-sm;
+} 
+.dark .tippy-box {
+  @apply dark:bg-gray-800 dark:text-gray-100 ;
+}
+
   .text-stroke-white {
     color: transparent;
     -webkit-text-stroke: 1px white;
@@ -368,4 +375,25 @@ img {
   strong {
     font-weight: 500; /* Medium */ 
 }
+}
+
+/* Set ukuran arrow */
+.tippy-box > .tippy-arrow {
+  width: 10px;
+  height: 10px;
+}
+
+/* Segitiga arrow — ini yang perlu diwarnai */
+.tippy-box > .tippy-arrow::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #111827 !important; /* bg-gray-800 */
+  transform: rotate(0deg);
+  z-index: -4;
+  box-shadow: none !important; 
+}
+.dark .tippy-box > .tippy-arrow::before {
+  color: #1f2937 !important; /* Tailwind gray-800 */ 
 }

@@ -38,7 +38,17 @@
 </noscript>
 
 <script defer src="https://cloud.umami.is/script.js" data-website-id="fabe1eb6-5122-4712-b095-5ec2ab778540"></script>
+<!-- Load Tippy via CDN --> 
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+
+<script>
+  tippy('[data-tippy-content]');
+</script>
+
+
 <!-- 
+
 <script>
  const postData = document.getElementById('post-metadata');
 const posts = postData ? JSON.parse(postData.textContent.replace(/\\\//g, '/')) : [];

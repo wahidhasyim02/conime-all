@@ -9,7 +9,7 @@
 
           <!-- Bagian gambar -->
           <div class="w-full h-full opacity-100  flex-1">
-            <a href="{{ .RelPermalink }}" title="Gambar {{ .Title }}">
+            <a href="{{ .RelPermalink }}" data-tippy-content="Gambar {{ .Title }}">
               <img src="{{ .Params.image | default "/images/default.png" }}" alt="Gambar {{ .Title }}"
                 class="w-full h-full object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </a>
@@ -19,7 +19,7 @@
           <!-- Bagian teks -->
          <div class="w-[80%] h-[80%] absolute  right-0 bottom-0 rounded-tl-3xl opacity-100   transition duration-500 ease-in-out  font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 ">
         <h2 class="w-full h-fit text-2xl line-clamp-4">
-          <a href="{{ .RelPermalink }}" class="hover:underline break-words" title="{{ .Title }}">{{ .Title }}</a>
+          <a href="{{ .RelPermalink }}" class="hover:underline break-words" data-tippy-content="{{ .Title }}">{{ .Title }}</a>
         </h2>
         <h2 class="flex justify-between gap-4 text-sm line-clamp-1 uppercase">
           {{ range .Params.categories }}

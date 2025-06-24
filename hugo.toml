@@ -188,6 +188,51 @@ pageRef = '/tags'
 weight = 6
 
 
+[params]
+
+  [[params.share]]
+  name = "Facebook"
+  link = "https://www.facebook.com/sharer/sharer.php?u="
+  svg = """<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.25 6.125V9.75H16.5C16.75 9.75 16.875 10 16.875 10.25L16.375 12.625C16.375 12.75 16.125 12.875 16 12.875H13.25V22H9.5V13H7.375C7.125 13 7 12.875 7 12.625V10.25C7 10 7.125 9.875 7.375 9.875H9.5V5.75C9.5 3.625 11.125 2 13.25 2H16.625C16.875 2 17 2.125 17 2.375V5.375C17 5.625 16.875 5.75 16.625 5.75H13.625C13.375 5.75 13.25 5.875 13.25 6.125Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+</svg>"""
+
+  [[params.share]]
+  name = "WhatsApp"
+  link = "https://wa.me/?text="
+  svg = """<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6.9 20.6C8.4 21.5 10.2 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 13.8 2.5 15.5 3.3 17L2.44 20.31C2.25 21.05 2.94 21.73 3.68 21.52L6.9 20.6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16.5 14.85C16.5 15.01 16.46 15.18 16.39 15.34C16.31 15.5 16.21 15.65 16.08 15.8C15.86 16.04 15.62 16.22 15.34 16.33C15.07 16.44 14.78 16.5 14.46 16.5C14 16.5 13.51 16.39 12.99 16.17C12.48 15.95 11.96 15.65 11.44 15.28C10.93 14.9 10.43 14.48 9.97 14.02C9.5 13.55 9.08 13.06 8.71 12.55C8.34 12.04 8.04 11.52 7.82 11.01C7.61 10.5 7.5 10.01 7.5 9.54C7.5 9.24 7.55 8.94 7.66 8.67C7.77 8.4 7.94 8.15 8.18 7.92C8.47 7.64 8.78 7.5 9.12 7.5C9.24 7.5 9.37 7.53 9.48 7.58C9.6 7.63 9.7 7.71 9.78 7.83L10.83 9.3C10.91 9.42 10.97 9.52 11.01 9.62C11.05 9.71 11.07 9.81 11.07 9.89C11.07 10 11.04 10.11 10.98 10.21C10.92 10.32 10.83 10.43 10.73 10.53L10.38 10.89C10.33 10.94 10.31 11 10.31 11.07C10.31 11.1 10.32 11.14 10.33 11.17C10.34 11.21 10.35 11.23 10.36 11.26C10.44 11.41 10.58 11.6 10.78 11.84C10.98 12.07 11.2 12.31 11.43 12.55C11.68 12.79 11.91 13.01 12.15 13.21C12.39 13.41 12.58 13.54 12.73 13.62C12.75 13.63 12.78 13.65 12.81 13.66C12.85 13.67 12.89 13.68 12.93 13.68C13 13.68 13.06 13.65 13.11 13.6L13.45 13.26C13.57 13.15 13.67 13.07 13.78 13.01C13.88 12.95 13.99 12.92 14.1 12.92C14.18 12.92 14.27 12.94 14.37 12.98C14.47 13.02 14.58 13.08 14.69 13.15L16.18 14.21C16.3 14.29 16.38 14.38 16.43 14.5C16.47 14.61 16.5 14.72 16.5 14.85Z" stroke="currentColor" stroke-width="1.5"/>
+</svg>"""
+
+  [[params.share]]
+  name = "Telegram"
+  link = "https://t.me/share/url?url="
+  svg = """<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+  <path d="M21.43 2.62 2.99 10.54c-1.24.52-1.23 1.25-.22 1.57l4.65 1.45 2.18 6.7c.27.83.49.93 1.01.93.66 0 .93-.3 1.29-.65l3.09-3.01 4.91 3.64c.9.5 1.55.24 1.78-.84l3.22-15.18c.28-1.3-.5-1.8-1.57-1.33Z"/>
+  <path d="m7.73 13.56 10.6-8.1c.5-.35.97-.15.59.2L10.3 16.4"/>
+</svg>"""
+
+  [[params.share]]
+  name = "X"
+  link = "https://twitter.com/intent/tweet?url="
+  svg = """<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 4C22 4 21.3 6.1 20 7.4C21.6 17.4 10.6 24.7 2 19C4.2 19.1 6.4 18.4 8 17C3 15.5 0.5 9.6 3 5C5.2 7.6 8.6 9.1 12 9C11.1 4.8 16 2.4 19 5.2C20.1 5.2 22 4 22 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>"""
+
+  [[params.share]]
+  name = "Email"
+  link = "mailto:?subject="
+  svg = """<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M2 8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5H7" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M2 16.5H8" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M2 12.5H5" stroke="currentColor" stroke-width="1.5"/>
+</svg>"""
+
+
+
+
 [taxonomies]
 category = "categories"
 tag = "tags"
