@@ -110,7 +110,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const imageSrc = item.image || "/images/default.png";
 
       li.innerHTML = `
-        <img src="${imageSrc}" alt="Gambar-${item.title}" class="w-full h-full  opacity-40 lg:opacity-100 group-hover:opacity-0 lg:group-hover:opacity-0 transition duration-500 ease-in-out object-cover"/>
+        <img src="${imageSrc}" alt="gambar-${item.title}" class="w-full h-full  opacity-40 lg:opacity-100 group-hover:opacity-0 lg:group-hover:opacity-0 transition duration-500 ease-in-out object-cover"/>
         <div class="absolute inset-0 w-full h-full flex justify-center items-center opacity-100 lg:opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out px-4 text-2xl">
           <h2><a href="${item.url}" class="hover:underline break-words line-clamp-2 text-xl font-light dark:font-extralight">${item.title}</a></h2>
         </div>

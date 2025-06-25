@@ -1,12 +1,14 @@
----
-title: "Disclaimer"
-url: "/disclaimer"
-slug: "disclaimer"
-layout: "page"
----
++++
+title = "Disclaimer"
+url = "/disclaimer"
+slug = "disclaimer"
+layout = "page"
++++
 
-**CoNime Disclaimer**
+**Disclaimer CoNime**
 
-{{< site-title >}} is an informational portal covering anime and comics. We are not affiliated with any official content owners or trademarks mentioned. All images, videos, and excerpts are copyrights of their respective owners.
+{{< site-title >}} adalah portal informasi yang mengulas budaya pop visual dari berbagai negara, termasuk anime, komik, manhwa, donghua, film, game, dan karya lokal dari Indonesia. Kami tidak berafiliasi dengan pemilik konten resmi atau merek dagang mana pun yang disebutkan. Seluruh gambar, video, dan kutipan adalah hak cipta dari pemilik aslinya.
 
-Any leaks, predictions, or fan-made content are for entertainment purposes only and are not official references. We strive for accuracy but cannot guarantee all information is completely correct.
+Setiap bocoran, prediksi, atau konten buatan penggemar ditampilkan semata-mata untuk tujuan hiburan dan bukan merupakan referensi resmi. Kami berupaya menyajikan informasi yang akurat, namun tidak dapat menjamin bahwa seluruh konten selalu benar dan terbaru.
+
+Sebagian konten di situs ini dibuat dengan bantuan teknologi AI (seperti ChatGPT), dan telah dikurasi, disunting, serta diterbitkan oleh editor manusia untuk memastikan keakuratan dan kelayakan publikasi.

@@ -61,7 +61,7 @@
 {{ with .Page.Params.videos }}
   {{ range . }}
     <div class="w-full h-fit flex flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl">
-      <iframe width="auto" height="315px" src="{{ .url | safeURL }}" data-tippy-content="{{ .title | default "YouTube video player" }}" frameborder="0"
+      <iframe width="auto" height="315px" src="{{ .url | safeURL }}" data-tippy-content="Tonton {{ .title | default "YouTube video player" }}" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>

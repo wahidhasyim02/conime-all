@@ -152,10 +152,10 @@ function copyShareLink() {
   function setDisabledStyle(disabled) {
     if (disabled) {
       btn.classList.add("bg-gray-400", "dark:bg-gray-800", "hover:bg-gray-600", "hover:dark:bg-gray-800", "cursor-not-allowed");
-      btn.classList.remove("bg-conime-500", "dark:bg-conime-500", "hover:bg-conime-600", "dark:hover:bg-conime-300");
+      btn.classList.remove("bg-conime-400", "dark:bg-conime-500", "hover:bg-conime-600", "dark:hover:bg-conime-300");
     } else {
       btn.classList.remove("bg-gray-400", "dark:bg-gray-800", "hover:bg-gray-600", "hover:dark:bg-gray-800", "cursor-not-allowed");
-      btn.classList.add("bg-conime-500", "dark:bg-conime-500", "hover:bg-conime-600", "dark:hover:bg-conime-300");
+      btn.classList.add("bg-conime-400", "dark:bg-conime-500", "hover:bg-conime-600", "dark:hover:bg-conime-300");
     }
   }
 });

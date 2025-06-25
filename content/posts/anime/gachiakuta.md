@@ -3,7 +3,7 @@ title = "Gachiakuta Umumkan Penayangan Perdana Global, Lagu Tema, dan Karakter B
 typeContent = "anime"
 nameAnime = "Gachiakuta"
 slug = "anime-gachiakuta-penayangan-global-lagu-tema-karakter-baru-20250606"
-date = 2025-06-06T06:00:00+07:00
+date = 2025-06-25T06:00:00+07:00
 author = "Eins"
 draft = false
 

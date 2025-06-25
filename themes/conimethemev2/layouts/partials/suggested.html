@@ -18,8 +18,8 @@
 
           <!-- Bagian gambar -->
           <div class="w-full flex-1">
-            <a href="{{ .RelPermalink }}" data-tippy-content="Gambar {{ .Title }}">
-              <img src="{{ .Params.image | default "/images/default.png" }}" alt="Gambar {{ .Title }}" data-tippy-content="Gambar {{ .Title }}"
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ .Params.image | default "/images/default.png" }}" alt="Gambar {{ .Title }}"  
                 class="w-full h-[300px] object-cover rounded-3xl brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </a>
           </div>

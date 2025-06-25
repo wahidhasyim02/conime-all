@@ -1,16 +1,14 @@
----
-title: "About Us"
-url: "/about-us" 
-slug: "about-us"
-layout: "page"
----
++++
+title = "Tentang Kami"
+url = "/about-us"
+slug = "about-us"
+layout = "page"
++++
 
-**About CoNime**
+**Tentang CoNime**
 
-{{< site-title >}} is an online news portal delivering the latest updates from the world of anime, comics, movies, and games, especially for Indonesian readers. We are committed to providing up-to-date news, episode reviews, anime and comic recommendations, movie and game reviews, as well as thought-provoking opinions for fans.
+{{< site-title >}} adalah portal berita daring yang menyajikan informasi dan ulasan seputar karya budaya pop visual dari berbagai negara, termasuk Jepang (anime, manga), Korea (manhwa, K-drama), China (donghua), Barat (film & game), serta karya orisinal dari Indonesia seperti webtoon, film animasi, dan komik lokal.
 
-We are not an official website of any publisher, anime studio, or game developer. All content is for informational purposes only and aims to enrich the pop culture community.
+Kami menghadirkan berita terkini, review episode, rekomendasi, dan opini menarik yang dikurasi untuk pembaca Indonesia. Seluruh konten kami ditulis secara kolaboratif menggunakan bantuan AI (seperti ChatGPT), kemudian disunting oleh editor manusia untuk memastikan kualitas dan orisinalitas.
 
-Our team consists of passionate writers and editors who love anime, comics, movies, and games. We strive to deliver content that is accurate, engaging, and high-quality.
-
-If you have any feedback, suggestions, or would like to collaborate, please reach out to us via the [Contact](/contact) page.
+Jika Anda memiliki saran, kritik, atau ingin menjalin kerja sama, silakan hubungi kami melalui halaman [Kontak](/contact).

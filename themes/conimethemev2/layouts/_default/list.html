@@ -104,18 +104,17 @@
         </a>
 
         <!-- Info Teks -->
-        <div class="w-[70%] h-[70%] absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
-          <h2 class="w-full h-full flex-1 {{ if eq $.RelPermalink "/posts/" }}flex text-4xl justify-center items-center{{ else }}text-2xl{{ end }} line-clamp-4">
+        <div class="w-[70%] h-[70%] absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
+          <h2 class="w-full h-fit {{ if eq $.RelPermalink "/posts/" }} text-4xl justify-center items-center {{ else }} text-2xl {{ end }} line-clamp-4">
             <a href="{{ .RelPermalink }}" class="hover:underline break-words line-clamp-4">{{ .Title }}</a>
           </h2>
-          <h2 class="justify-start flex-1 w-full flex gap-4 text-sm line-clamp-1 uppercase">
+          <h2 class="justify-start h-fit w-full flex gap-4 text-sm line-clamp-1 uppercase">
             {{ range .Params.categories }}
             <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">{{ . }}</a>
             {{ end }}
           </h2>
-          <p class="bottom-4 {{ if eq $.RelPermalink "/posts/" }}hidden{{ end }} justify-end items-end w-full left-6 z-10 text-xl h-auto flex gap-0">
-            <span>—</span>{{ partial "dateNew.html" . }}
-          </p>
+          <p class="bottom-4 items-end justify-end w-full left-6 z-10 text-xl h-full flex-1  flex gap-0 transition duration-500 ease-in-out">   <span>—</span>{{ partial "dateNew.html" . }}
+          </p> 
         </div>
       </li>
       {{ end }}

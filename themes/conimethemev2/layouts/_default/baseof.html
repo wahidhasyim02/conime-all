@@ -44,7 +44,7 @@
   
 <div class="flex gap-2 w-screen h-full  relative">
   <!-- Main menu -->
-  <div id="main-menu" class="w-full lg:w-[15%] z-[500] fixed left-0 right-0 sm:right-auto bottom-0  px-0 lg:px-2
+  <div id="main-menu" class="w-full lg:w-[15%] overflow-y-auto z-[500] fixed left-0 right-0 sm:right-auto bottom-0  px-0 lg:px-2
    h-fit lg:h-screen bg-white/50 dark:bg-gray-900/70  lg:bg-white/50 lg:dark:bg-gray-900/80 backdrop-blur-lg lg:backdrop-blur-none 
   flex flex-row lg:flex-col justify-center items-center border-r border-gray-300 dark:border-gray-800/50
     {{ if .IsHome }}hidden{{ else }}flex{{ end }} ">
@@ -98,27 +98,7 @@
       </div>
       {{ partial "footer.html" . }}
     </div>
-
-
-
-
-
-
-
-
-
- 
-
-
-
-<script src="/js/main.js" defer></script> 
-<script src="/js/last-view.js" defer></script>
-<script src="/js/loading-animation.js" defer></script>
-<script src="/js/timeago.js" defer></script>
-<script src="/js/notif.js" defer></script>
-<script src="/js/tooltip.js" defer></script>
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-
+    
 <!--
 <script src="/js/popular.js" defer></script>-->
   </footer>

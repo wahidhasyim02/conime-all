@@ -1,14 +1,14 @@
----
-title: "Terms of Service"
-url: "/terms-of-service"
-slug: "terms-of-service"
-layout: "page"
----
++++
+title = "Ketentuan Layanan"
+url = "/terms-of-service"
+slug = "terms-of-service"
+layout = "page"
++++
 
-**CoNime Terms of Service**
+**Ketentuan Layanan CoNime**
 
-By accessing {{< site-title >}}, you agree to use the content responsibly and not for any illegal or harmful purposes.
+Dengan mengakses {{< site-title >}}, Anda menyetujui untuk menggunakan konten secara bertanggung jawab dan tidak untuk tujuan ilegal atau merugikan.
 
-Copying or redistributing content from this site without permission is prohibited. We reserve the right to modify or terminate any part of the service without prior notice.
+Dilarang menyalin atau menyebarluaskan konten dari situs ini tanpa izin. Kami berhak mengubah atau menghentikan sebagian layanan kapan pun tanpa pemberitahuan.
 
-If you do not agree with these terms, please do not use our website.
+Sebagian konten di situs ini dibuat dengan bantuan AI sebagai alat pendukung penulisan. Semua konten tetap melalui proses editorial oleh tim manusia. Jika Anda tidak menyetujui ketentuan ini, mohon untuk tidak menggunakan situs kami.

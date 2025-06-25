@@ -8,20 +8,7 @@ module.exports = {
     "./assets/**/*.{html,js}",
     "./layouts/**/*.html",
   ],
-  darkMode: "class", 
-  safelist: [
-    'animate-growY',
-    {
-      pattern: /^(opacity|hover:opacity|group-hover:opacity|focus:opacity|dark:opacity)-\d+$/,
-    },
-    {
-      pattern:
-        /^(dark:)?(hover:|group-hover:|focus:)?(bg|text|border|ring)-(gray|conime)-(50|100|200|300|400|500|600|700|800|900|950)$/,
-    },
-    {
-    pattern: /tippy-box/,
-  },
-  ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -53,7 +40,7 @@ module.exports = {
           950: '#030712',
         },
       },
-      keyframes: { 
+      keyframes: {
         scroll: {
           '0%': { transform: 'translateY(-12%)' },
           '100%': { transform: 'translateY(-85%)' },
@@ -76,22 +63,118 @@ module.exports = {
       animation: {
         scroll: 'scroll 6s ease-in forwards',
         glitch: 'glitch 2s infinite',
-        glitch2: 'glitch2 2s infinite', 
-      },
-      fontFamily: {
-        sans: ["ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-        inter: ["Inter", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-        fredoka: ["Fredoka", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-        openSans: ["Open Sans", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-        manrope: ["Manrope", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-        raleway: ["Raleway", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-        AncizarSans: ["Ancizar Sans", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-        poppins: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-        noto: ["Noto Sans", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-        dosis: ["Dosis", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
-        serif: ["Noto Serif", "ui-serif", "serif"],
+        glitch2: 'glitch2 2s infinite',
       },
     },
+    fontFamily: {
+      sans: [
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
+      inter: [
+        "Inter",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
+
+      fredoka: [
+        "Fredoka",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
+      openSans: [
+        "Open Sans",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
+
+      manrope: [
+        "Manrope",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
+      raleway: [
+        "Raleway",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
+
+      AncizarSans: [
+        "Ancizar Sans",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
+      poppins: [
+        "Poppins",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
+      noto: [
+        "Noto Sans",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
+      dosis: ["Dosis",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",],
+      serif: ["Noto Serif", "ui-serif", "serif"],
+    },
+
   },
+  safelist: [
+    {
+      pattern: /^(dark:)?(hover:|group-hover:|focus:)?(bg|text)-(gray|conime)-(50|100|200|300|400|500|600|700|800|900|950)$/
+    }
+  ], 
   plugins: [],
 };

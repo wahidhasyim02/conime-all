@@ -47,7 +47,17 @@
 </script>
 
 
-<!-- 
+
+
+
+<script src="/js/main.js" defer></script> 
+<script src="/js/last-view.js" defer></script>
+<script src="/js/loading-animation.js" defer></script>
+<script src="/js/timeago.js" defer></script>
+<script src="/js/notif.js" defer></script> 
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+{{ if hugo.IsServer }}
+<!--  
 
 <script>
  const postData = document.getElementById('post-metadata');
@@ -134,3 +144,5 @@ if (popularContainer && posts.length > 0) {
 
 </script>
 --> 
+
+{{ end }}

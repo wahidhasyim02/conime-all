@@ -80,16 +80,13 @@
       <div class="flex flex-col">
         <div class="content-article leading-8 font-normal dark:font-light
        [&>p]:text-justify [&>ul]:list-disc [&>ul]:ml-8 [&>h3]:uppercase [&>h3]:tracking-wide [&>p]:[text-indent:2em] [&>h3]:my-3
-       border-b border-gray-300 dark:border-gray-800/50 pb-4 mb-6">
+       mb-6">
           {{ .Content }}
         </div>
       </div>
-      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-
-
-      {{ if not (strings.HasPrefix .Site.BaseURL "https://conime2025.github.io/") }}
-      {{ partial "slug-warning.html" . }}
-      {{ end }}
+      <div class="pb-4 mb-2">
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}</div>
+ 
 
 
       <!-- Artikel panjang lainnya -->

@@ -1,14 +1,14 @@
----
-title: "Privacy Policy"
-url: "/privacy-policy" 
-slug: "privacy-policy"
-layout: "page"
----
++++
+title = "Kebijakan Privasi"
+url = "/privacy-policy"
+slug = "privacy-policy"
+layout = "page"
++++
 
-**CoNime Privacy Policy**
+**Kebijakan Privasi CoNime**
 
-Your privacy is important to us. {{< site-title >}} does not collect any personal data without your permission. If you contact us via a form, your information is only used for communication purposes.
+Privasi Anda penting bagi kami. {{< site-title >}} tidak mengumpulkan data pribadi tanpa izin Anda. Jika Anda menghubungi kami melalui formulir, informasi yang Anda berikan hanya akan digunakan untuk keperluan komunikasi.
 
-This website displays third-party advertisements, including Google AdSense, which may use cookies to serve relevant ads. You can disable cookies in your browser settings.
+Situs ini menampilkan iklan dari pihak ketiga, termasuk Google AdSense, yang mungkin menggunakan cookie untuk menampilkan iklan yang relevan. Anda dapat menonaktifkan cookie melalui pengaturan browser Anda.
 
-By using this site, you agree to this privacy policy.
+Dengan menggunakan situs ini, Anda menyetujui kebijakan privasi ini.
