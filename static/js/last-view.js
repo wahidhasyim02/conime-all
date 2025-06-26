@@ -3,7 +3,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   const maxItems = 5;
   const currentUrl = window.location.pathname;
-  const isValidSinglePage = /^\/posts\/(animes|comics|movies|games)\/.+$/.test(currentUrl);
+  const isValidSinglePage = /^\/posts\/(anime|comics|movies|games)\/.+$/.test(currentUrl);
 
   if (isValidSinglePage) {
     const contentTitle = $(".post-title")?.innerText.trim();

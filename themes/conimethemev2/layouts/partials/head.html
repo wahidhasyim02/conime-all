@@ -18,7 +18,7 @@
 <!-- Open Graph -->
 <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }} - Portal Berita Anime & Komik Indonesia{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
-<meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "images/logo_conime.og.png" | absURL }}{{ end }}">
+<meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "/images/logo_conime.og.png" | absURL }}{{ end }}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ site.Title }}">
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }} - Portal Berita Anime & Komik Indonesia{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
-<meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "images/logo_conime.og.png" | absURL }}{{ end }}">
+<meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "/images/logo_conime.og.png" | absURL }}{{ end }}">
 <meta name="twitter:url" content="{{ .Permalink }}">
 
 <!-- Dark mode class preload -->
@@ -54,14 +54,15 @@
 {{ end }}
 
 <!-- Ikon -->
-<link rel="icon" href="images/logo_conime_square.png" type="image/png">
-<link rel="apple-touch-icon" href="images/logo_conime_square.png">
-<link rel="shortcut icon" href="images/logo_conime_square.png">
+<link rel="icon" href="/images/logo_conime_square.png" type="image/png">
+<link rel="apple-touch-icon" href="/images/logo_conime_square.png">
+<link rel="shortcut icon" href="/images/logo_conime_square.png">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Dosis:wght@200..800&family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 
 <!-- AOS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
@@ -78,147 +79,5 @@
 </script>
 
 <!-- Hover Effect Module -->
-<script type="module">
-  import * as THREE from "three";
-  import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-  import hoverEffect from "/js/hover-effect.js";
-  import { gsap } from "gsap";
+<script type="module" src="/js/hover-init.js"></script>
 
-  console.log("✅ Modul terimpor:", { THREE, OrbitControls, hoverEffect, gsap });
-
-  // Deteksi apakah browser mendukung importmap
-const importMapSupported = () => {
-  const script = document.createElement("script");
-  return "importmap" in script;
-};
-
-const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-// Jalankan fallback hanya di Safari jika importmap tidak didukung
-if (isSafari && !importMapSupported()) {
-  console.warn("⚠️ Safari tanpa importmap support — hoverEffect dinonaktifkan.");
-  document.querySelectorAll(".divDistortion2").forEach(el => {
-    const img1 = el.querySelector(".image1");
-    const img2 = el.querySelector(".image2");
-    if (img1 && img2) {
-      img1.classList.remove("lg:w-[0.1px]", "lg:h-[0.1px]", "pointer-events-none");
-      img1.classList.add("w-full", "h-full");
-      img2.classList.add("hidden");
-    }
-  });
-  sessionStorage.setItem("hoverEffectInitialized", "true");
-}
-
-
-
-  // Fallback jika browser tidak support importmap
-  if (!importMapSupported) {
-    console.warn("⚠️ Browser tidak support importmap → hoverEffect dinonaktifkan.");
-    document.querySelectorAll(".divDistortion2").forEach(el => {
-      const img1 = el.querySelector(".image1");
-      const img2 = el.querySelector(".image2");
-      if (img1 && img2) {
-        img1.classList.remove("lg:w-[0.1px]", "lg:h-[0.1px]", "pointer-events-none");
-        img1.classList.add("w-full", "h-full");
-        img2.classList.add("hidden");
-      }
-    });
-    sessionStorage.setItem("hoverEffectInitialized", "true");
-  }
-
-  window.addEventListener("load", () => {
-    const isFirstVisit = !sessionStorage.getItem("hoverEffectInitialized");
-    const navType = performance.getEntriesByType("navigation")[0].type;
-    const isHome = location.pathname === "/";
-    const delayTime = (isFirstVisit && isHome && navType === "navigate") ? 9000 : 100;
-
-    console.log(`⏳ Delay hoverEffect: ${delayTime}ms`);
-
-    setTimeout(() => {
-      if (!importMapSupported) return;
-
-      document.querySelectorAll('.divDistortion').forEach((el) => {
-        applyHoverEffect(el, 0.3, "/images/distortion/ramen.jpg");
-      });
-      document.querySelectorAll('.divDistortion2').forEach((el) => {
-        applyHoverEffect(el, 0.3, "/images/distortion/heightMap.png");
-      });
-
-      sessionStorage.setItem("hoverEffectInitialized", "true");
-    }, delayTime);
-
-    function applyHoverEffect(el, intensity, displacementPath) {
-      const defaultImage = "/images/default.png";
-      const img1Src = el.dataset.image1 || el.querySelector('.image1')?.src || defaultImage;
-      let img2Src = el.dataset.image2 || el.querySelector('.image2')?.src;
-
-      // Jika tidak ada image2 → fallback ke image1
-      if (!img2Src || img2Src === "") {
-        img2Src = img1Src;
-        console.log("🌀 Hanya satu gambar tersedia → image2 diisi dari image1:", img2Src);
-      }
-
-      const img1 = new Image();
-      const img2 = new Image();
-      img1.src = img1Src;
-      img2.src = img2Src;
-
-      let img1Loaded = false;
-      let img2Loaded = false;
-
-      const checkBothLoaded = () => {
-        if (img1Loaded && img2Loaded) {
-          if (img1.src.includes(defaultImage) && img2.src.includes(defaultImage)) {
-            console.warn("⚠️ Semua gambar fallback — hoverEffect dilewati:", el);
-            return;
-          }
-
-          const imgRatio = img1.naturalHeight / img1.naturalWidth;
-
-          setTimeout(() => {
-            try {
-              new hoverEffect({
-                parent: el,
-                angle: Math.PI / 4,
-                intensity1: intensity,
-                intensity2: intensity,
-                image1: img1.src,
-                image2: img2.src,
-                displacementImage: displacementPath,
-                imagesRatio: imgRatio,
-                speedIn: 1.0,
-                speedOut: 1.0
-              });
-
-              setTimeout(() => {
-                el.querySelectorAll('.image1, .image2').forEach(img => {
-                  img.classList.add('lg:w-[0.1px]', 'lg:h-[0.1px]', 'pointer-events-none');
-                });
-              }, 500);
-
-              sessionStorage.removeItem("hoverReloaded");
-              console.log("✅ Hover effect diterapkan:", el);
-            } catch (error) {
-              console.warn("❌ hoverEffect gagal:", error);
-            }
-          }, 0);
-        }
-      };
-
-      img1.onload = () => { img1Loaded = true; checkBothLoaded(); };
-      img1.onerror = () => fallbackHandler(img1, el, '.image1');
-      img2.onload = () => { img2Loaded = true; checkBothLoaded(); };
-      img2.onerror = () => fallbackHandler(img2, el, '.image2');
-
-      function fallbackHandler(img, el, selector) {
-        console.warn(`⚠️ Gagal load (${img.src}) → fallback ke default.png`);
-        img.src = defaultImage;
-        const domImg = el.querySelector(selector);
-        if (domImg) domImg.src = defaultImage;
-        if (selector.includes("1")) img1Loaded = true;
-        if (selector.includes("2")) img2Loaded = true;
-        checkBothLoaded();
-      }
-    }
-  });
-</script>
