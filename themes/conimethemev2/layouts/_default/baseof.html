@@ -55,6 +55,7 @@
 
     {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
     {{ partial "notif-modal.html" . }}
+     {{ partial "notif-modal copy.html" . }}
   </div> 
   <!-- Konten Utama -->
   <main class="overflow-hidden relative mt-20 ml-0 lg:ml-[15%] p-3 sm:px-16 md:px-16 lg:px-20 h-fit min-h-screen-20 w-full lg:w-[85%]">
@@ -102,6 +103,7 @@
         </p>
       </div>
       {{ partial "footer.html" . }}
+      <span class="text-xs font-light"></span>
     </div>
     
 <!--

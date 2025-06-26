@@ -2,7 +2,7 @@
 title = "Review Belle: Keajaiban Suara, Visual, dan Emosi di Dunia Virtual"
 nameAnime = "Ryuu to Sobakasu no Hime (Belle)"
 slug = "review-belle-anime-20250611"
-date = 2025-06-08T12:00:00+07:00
+date = 2025-06-26T17:22:00+07:00
 author = "Eins"
 draft = false
 

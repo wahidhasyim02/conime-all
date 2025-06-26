@@ -2,7 +2,7 @@
 title = "Review Kotonoha no Niwa (2013): Keheningan yang Menghubungkan Dua Jiwa"
 nameAnime = "Kotonoha no Niwa"
 slug = "review-kotonoha-no-niwa-20250617"
-date = 2025-06-23T08:55:00+07:00
+date = 2025-06-26T17:53:00+07:00
 author = "Eins"
 draft = false
 

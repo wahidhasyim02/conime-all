@@ -793,10 +793,6 @@ img {
   will-change: transform;
 }
 
-.pointer-events-none {
-  pointer-events: none;
-}
-
 .pointer-events-auto {
   pointer-events: auto;
 }
@@ -859,6 +855,10 @@ img {
 
 .bottom-\[2px\] {
   bottom: 2px;
+}
+
+.bottom-\[50\%\] {
+  bottom: 50%;
 }
 
 .left-0 {
@@ -1357,6 +1357,10 @@ img {
   max-height: 7rem;
 }
 
+.max-h-\[300px\] {
+  max-height: 300px;
+}
+
 .max-h-\[500px\] {
   max-height: 500px;
 }
@@ -1506,6 +1510,11 @@ img {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-6 {
+  --tw-translate-y: 1.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .-rotate-45 {
   --tw-rotate: -45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1518,6 +1527,12 @@ img {
 
 .rotate-90 {
   --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-95 {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2092,6 +2107,11 @@ img {
   padding-right: 0px;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2281,11 +2301,6 @@ img {
 
 .tracking-wide {
   letter-spacing: 0.025em;
-}
-
-.text-blue-500 {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
 }
 
 .text-conime-100 {
@@ -2818,10 +2833,6 @@ img {
 
 .hover\:opacity-0:hover {
   opacity: 0;
-}
-
-.hover\:opacity-80:hover {
-  opacity: 0.8;
 }
 
 .hover\:shadow:hover {
@@ -3518,10 +3529,6 @@ img {
     display: none;
   }
 
-  .lg\:h-\[0\.1px\] {
-    height: 0.1px;
-  }
-
   .lg\:h-\[600px\] {
     height: 600px;
   }
@@ -3541,10 +3548,6 @@ img {
 
   .lg\:h-full {
     height: 100%;
-  }
-
-  .lg\:w-\[0\.1px\] {
-    width: 0.1px;
   }
 
   .lg\:w-\[15\%\] {

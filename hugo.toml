@@ -106,7 +106,7 @@ weight = 7
 
 [[menus.main]]
 name = 'Notification' 
-identifier = 'notification' 
+identifier = 'notifBtn' 
 weight = 8
 [menus.main.params] 
   svg = """<svg class="w-6 h-6 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
