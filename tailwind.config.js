@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./themes/conimethemev2/**/*.html",
     "./themes/conimethemev2/content/**/*.{html,md}",
-    "./themes/conimethemev2/layouts/**/*.html",
+    "./themes/conimethemev2/layouts/**/*.html", 
     "./content/**/*.{html,md}",
     "./assets/**/*.{html,js}",
     "./layouts/**/*.html",
@@ -40,11 +40,11 @@ module.exports = {
           950: '#030712',
         },
       },
-      keyframes: { 
-      flicker: {
-        '0%, 100%': { opacity: '1', transform: 'scale(1)' },
-        '50%': { opacity: '0.75', transform: 'scale(1.10) translateY(-3px)' }
-      }, 
+      keyframes: {
+        flicker: {
+          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+          '50%': { opacity: '0.75', transform: 'scale(1.10) translateY(-3px)' },
+        },
         scroll: {
           '0%': { transform: 'translateY(-12%)' },
           '100%': { transform: 'translateY(-85%)' },
@@ -67,8 +67,8 @@ module.exports = {
       animation: {
         scroll: 'scroll 6s ease-in forwards',
         glitch: 'glitch 2s infinite',
-        glitch2: 'glitch2 2s infinite', 
-      flicker: 'flicker 1s infinite ease-in-out', 
+        glitch2: 'glitch2 2s infinite',
+        flicker: 'flicker 1s infinite ease-in-out',
       },
     },
     fontFamily: {
@@ -92,12 +92,15 @@ module.exports = {
         "Noto Color Emoji",
       ],
     },
-
   },
   safelist: [
     {
-      pattern: /^(dark:)?(hover:|group-hover:|focus:)?(bg|text)-(gray|conime)-(50|100|200|300|400|500|600|700|800|900|950)$/
-    }
-  ], 
+      pattern: /^(dark:)?(hover:|group-hover:|focus:)?(bg|text)-(gray|conime)-(50|100|200|300|400|500|600|700|800|900|950)$/,
+    },
+    {
+  pattern: /^(dark:)?opacity-(10|20|30|40|50|60|70|80|90|95|100)$/,
+},
+
+  ],
   plugins: [],
 };

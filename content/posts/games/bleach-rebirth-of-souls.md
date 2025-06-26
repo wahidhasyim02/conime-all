@@ -2,7 +2,7 @@
 
 title = "Bleach: Rebirth of Souls Hadirkan Mode Ranked dan DLC Ichigo Kurosaki (Thousand-Year Blood War)"
 slug = "bleach-rebirth-of-souls-ranked-mode-dlc-ichigo-20250609"
-date = 2025-06-26T20:20:00+07:00
+date = 2025-06-26T23:20:00+07:00
 author = "Megumi"
 draft = false
 

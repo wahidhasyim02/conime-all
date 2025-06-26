@@ -7,11 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const markText = document.getElementById("textMark");
   const toggleBall = document.getElementById("toggleBall");
   const notifBadge = document.getElementById("notifBadge");
-
   const posts = document.querySelectorAll(".post-notif");
+
   const now = new Date();
   const newNotifs = [];
   let unreadCount = 0;
+
+  const getTimeAgo = (dateStr) => {
+    const seconds = Math.floor((now - new Date(dateStr)) / 1000);
+    if (seconds < 60) return `${seconds}s ago`;
+    if (seconds < 3600) return `${Math.floor(seconds / 60)}m ago`;
+    if (seconds < 86400) return `${Math.floor(seconds / 3600)}h ago`;
+    return `${Math.floor(seconds / 86400)}d ago`;
+  };
 
   posts.forEach(post => {
     const postDate = new Date(post.dataset.date);
@@ -20,16 +28,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = post.dataset.title || "Notifikasi baru";
     const isRead = localStorage.getItem(`notif-read:${slug}`) === "true";
 
-    if (diff < 3600) {
+    // Fire & Label
+    const fireEl = document.querySelector(`.fire-new[data-url="${slug}"]`);
+    const labelEl = document.querySelector(`.label-new[data-url="${slug}"]`);
+    if (diff < 10800 && !isRead) {
+      fireEl?.classList.remove("opacity-0", "hidden");
+      labelEl?.classList.remove("opacity-0", "hidden");
+    } else {
+      fireEl?.classList.add("opacity-0", "hidden");
+      labelEl?.classList.add("opacity-0", "hidden");
+    }
+
+    // Notifikasi
+    if (diff < 10800) {
       const isUnread = !isRead;
       if (isUnread) unreadCount++;
+      const badgeClass = isUnread ? "bg-conime-500 dark:bg-conime-500" : "bg-gray-600 dark:bg-gray-700";
+      const timeAgo = getTimeAgo(post.dataset.date);
 
-      const badgeClass = isUnread
-        ? "bg-conime-500 dark:bg-conime-500"
-        : "bg-gray-600 dark:bg-gray-700";
-
-      const html = `
-        <a href="${slug}" class="notif-item bg-gray-100 dark:bg-gray-950/20 rounded p-3 relative block transition hover:bg-gray-200 dark:hover:bg-gray-800 ${isRead ? 'opacity-50' : ''}" data-url="${slug}" data-date="${post.dataset.date}">
+      newNotifs.push(`
+        <a href="${slug}" class="notif-item bg-gray-100 dark:bg-gray-950/20 rounded p-3 relative block transition hover:bg-gray-200 dark:hover:bg-gray-800 ${isRead ? 'opacity-75 dark:opacity-50' : ''}" data-url="${slug}" data-date="${post.dataset.date}">
           <div class="flex justify-end items-right right-2 badge">
             <div class="flex relative justify-center items-center rounded-full">
               <div class="w-3 h-3 opacity-50 rounded-full ${badgeClass}"></div>
@@ -37,38 +55,89 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
           <h2 class="line-clamp-2 w-[80%] text-sm font-light dark:font-extralight text-gray-900 dark:text-white">${title}</h2>
-          <p class="w-full text-right text-xs font-light dark:font-extralight"><time datetime="${post.dataset.date}">Just now</time></p>
-        </a>`;
-      newNotifs.push(html);
+          <p class="w-full text-right text-xs font-light dark:font-extralight"><time datetime="${post.dataset.date}">${timeAgo}</time></p>
+        </a>
+      `);
     }
   });
 
-  if (newNotifs.length > 0 && notifContainer) {
-    notifContainer.innerHTML = newNotifs.join("");
-
-    if (unreadCount > 0) {
+  // Simpan state baca
+  const updateToggleState = () => {
+    const isAllRead = unreadCount === 0;
+    localStorage.setItem("notif-all-read", isAllRead.toString());
+    if (isAllRead) {
+      toggleBall.classList.remove("-translate-x-[85%]");
+      toggleBall.classList.add("translate-x-[85%]", "bg-gray-500", "dark:bg-gray-500");
+      toggleBall.classList.remove("bg-conime-500", "dark:bg-conime-500");
+      markText.innerText = "Mark all as unread";
+      notifBadge?.classList.add("hidden");
+    } else {
+      toggleBall.classList.remove("translate-x-[85%]");
+      toggleBall.classList.add("-translate-x-[85%]", "bg-conime-500", "dark:bg-conime-500");
+      toggleBall.classList.remove("bg-gray-500", "dark:bg-gray-500");
+      markText.innerText = "Mark all as read";
       notifBadge?.classList.remove("hidden");
     }
+  };
 
-    notifContainer.querySelectorAll(".notif-item").forEach(item => {
-      item.addEventListener("click", () => {
-        const slug = item.dataset.url;
+  if (notifContainer) {
+    notifContainer.innerHTML = newNotifs.length > 0
+      ? newNotifs.join("")
+      : `<div class="text-center text-sm py-4 text-gray-500 dark:text-gray-400">Tidak ada notifikasi baru.</div>`;
+
+    notifContainer.classList.remove("hidden");
+  }
+
+  notifContainer?.querySelectorAll(".notif-item").forEach(item => {
+    item.addEventListener("click", () => {
+      const slug = item.dataset.url;
+      localStorage.setItem(`notif-read:${slug}`, "true");
+      item.classList.add("opacity-75", "dark:opacity-50");
+      item.querySelectorAll(".badge div").forEach(dot => {
+        dot.classList.remove("bg-conime-500", "dark:bg-conime-500");
+        dot.classList.add("bg-gray-600", "dark:bg-gray-700");
+      });
+      const fireEl = document.querySelector(`.fire-new[data-url="${slug}"]`);
+      fireEl?.classList.add("opacity-0");
+
+      unreadCount--;
+      updateToggleState();
+    });
+  });
+
+  markAll?.addEventListener("click", () => {
+    const toggle = localStorage.getItem("notif-all-read") === "true";
+    const newToggle = (!toggle).toString();
+    localStorage.setItem("notif-all-read", newToggle);
+
+    notifContainer?.querySelectorAll(".notif-item").forEach(item => {
+      const slug = item.dataset.url;
+      const fireEl = document.querySelector(`.fire-new[data-url="${slug}"]`);
+      const isOld = (now - new Date(item.dataset.date)) / 1000 > 10800;
+      if (newToggle === "true") {
         localStorage.setItem(`notif-read:${slug}`, "true");
-        item.classList.add("opacity-50");
-
-        const dots = item.querySelectorAll(".badge div");
-        dots.forEach(dot => {
+        item.classList.add("opacity-75", "dark:opacity-50");
+        item.querySelectorAll(".badge div").forEach(dot => {
           dot.classList.remove("bg-conime-500", "dark:bg-conime-500");
           dot.classList.add("bg-gray-600", "dark:bg-gray-700");
         });
-
-        unreadCount--;
-        if (unreadCount <= 0) {
-          notifBadge?.classList.add("hidden");
+        fireEl?.classList.add("opacity-0");
+      } else {
+        if (!isOld) {
+          localStorage.removeItem(`notif-read:${slug}`);
+          item.classList.remove("opacity-75", "dark:opacity-50");
+          item.querySelectorAll(".badge div").forEach(dot => {
+            dot.classList.remove("bg-gray-600", "dark:bg-gray-700");
+            dot.classList.add("bg-conime-500", "dark:bg-conime-500");
+          });
+          fireEl?.classList.remove("opacity-0");
         }
-      });
+      }
     });
-  }
+
+    unreadCount = newToggle === "true" ? 0 : posts.length;
+    updateToggleState();
+  });
 
   const openModal = () => {
     notifModal?.classList.remove("hidden");
@@ -87,67 +156,15 @@ document.addEventListener("DOMContentLoaded", () => {
   notifBtn?.addEventListener("click", openModal);
   closeBtn?.addEventListener("click", closeModal);
 
-  // Klik di luar modal → tutup
   document.addEventListener("click", (e) => {
     if (
-      notifModal &&
-      !notifModal.classList.contains("hidden") &&
+      notifModal && !notifModal.classList.contains("hidden") &&
       !notifModal.contains(e.target) &&
-      e.target !== notifBtn &&
       !notifBtn.contains(e.target)
     ) {
       closeModal();
     }
   });
 
-  // Toggle Mark All
-  let isAllRead = false;
-
-  markAll?.addEventListener("click", () => {
-    isAllRead = !isAllRead;
-
-    notifContainer?.querySelectorAll(".notif-item").forEach(item => {
-      const slug = item.dataset.url;
-      const postDate = new Date(item.dataset.date);
-      const diff = (now - postDate) / 1000;
-
-      if (diff < 3600) {
-        const dots = item.querySelectorAll(".badge div");
-
-        if (isAllRead) {
-          localStorage.setItem(`notif-read:${slug}`, "true");
-          item.classList.add("opacity-80", "dark:opacity-50");
-          dots.forEach(dot => {
-            dot.classList.remove("bg-conime-500", "dark:bg-conime-600");
-            dot.classList.add("bg-gray-600", "dark:bg-gray-700");
-          });
-        } else {
-          localStorage.removeItem(`notif-read:${slug}`);
-          item.classList.remove("opacity-80", "dark:opacity-50");
-          dots.forEach(dot => {
-            dot.classList.remove("bg-gray-600", "dark:bg-gray-700");
-            dot.classList.add("bg-conime-500", "dark:bg-conime-600");
-          });
-        }
-      }
-    });
-
-    if (isAllRead) {
-      toggleBall.classList.remove("-translate-x-[85%]");
-      toggleBall.classList.add("translate-x-[85%]");
-      toggleBall.classList.remove("bg-conime-500", "dark:bg-conime-500");
-      toggleBall.classList.add("bg-gray-500", "dark:bg-gray-500");
-      markText.innerText = "Mark all as unread";
-      notifBadge?.classList.add("hidden");
-    } else {
-      toggleBall.classList.remove("translate-x-[85%]");
-      toggleBall.classList.add("-translate-x-[85%]");
-      toggleBall.classList.remove("bg-gray-500", "dark:bg-gray-500");
-      toggleBall.classList.add("bg-conime-500", "dark:bg-conime-500");
-      markText.innerText = "Mark all as read";
-      if (notifContainer.querySelectorAll(".notif-item").length > 0) {
-        notifBadge?.classList.remove("hidden");
-      }
-    }
-  });
+  updateToggleState();
 });

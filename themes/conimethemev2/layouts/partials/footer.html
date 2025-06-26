@@ -6,6 +6,9 @@
 {{ if ne .Kind "404" }}
   {{ partial "notif-data.html" . }}
 {{ end }}
+{{ if eq hugo.Environment "development" }}
+  {{ partial "_safelist.html" . }}
+{{ end }}
 
 
 <noscript>

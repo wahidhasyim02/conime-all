@@ -267,4 +267,5 @@ home = ["HTML"]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
- 
+
+aliases = ["/_safelist"]
