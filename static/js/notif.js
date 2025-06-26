@@ -33,11 +33,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const labelEl = document.querySelector(`.label-new[data-url="${slug}"]`);
     if (diff < 10800 && !isRead) {
       fireEl?.classList.remove("opacity-0", "hidden");
-      labelEl?.classList.remove("opacity-0", "hidden");
     } else {
       fireEl?.classList.add("opacity-0", "hidden");
+    }
+
+    // label hanya bergantung ke waktu
+    if (diff < 10800) {
+      labelEl?.classList.remove("opacity-0", "hidden");
+    } else {
       labelEl?.classList.add("opacity-0", "hidden");
     }
+
 
     // Notifikasi
     if (diff < 10800) {
@@ -47,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const timeAgo = getTimeAgo(post.dataset.date);
 
       newNotifs.push(`
-        <a href="${slug}" class="notif-item bg-gray-100 dark:bg-gray-950/20 rounded p-3 relative block transition hover:bg-gray-200 dark:hover:bg-gray-800 ${isRead ? 'opacity-75 dark:opacity-50' : ''}" data-url="${slug}" data-date="${post.dataset.date}">
+        <a href="${slug}" class="notif-item bg-gray-100 dark:bg-gray-800/20 rounded p-3 relative block transition hover:bg-gray-200 dark:hover:bg-gray-800 ${isRead ? 'opacity-75 dark:opacity-50' : ''}" data-url="${slug}" data-date="${post.dataset.date}">
           <div class="flex justify-end items-right right-2 badge">
             <div class="flex relative justify-center items-center rounded-full">
               <div class="w-3 h-3 opacity-50 rounded-full ${badgeClass}"></div>
@@ -98,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
         dot.classList.add("bg-gray-600", "dark:bg-gray-700");
       });
       const fireEl = document.querySelector(`.fire-new[data-url="${slug}"]`);
-      fireEl?.classList.add("opacity-0");
+      fireEl?.classList.add("opacity-0", "hidden");
 
       unreadCount--;
       updateToggleState();
@@ -121,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
           dot.classList.remove("bg-conime-500", "dark:bg-conime-500");
           dot.classList.add("bg-gray-600", "dark:bg-gray-700");
         });
-        fireEl?.classList.add("opacity-0");
+        fireEl?.classList.add("opacity-0", "hidden");
       } else {
         if (!isOld) {
           localStorage.removeItem(`notif-read:${slug}`);
@@ -130,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
             dot.classList.remove("bg-gray-600", "dark:bg-gray-700");
             dot.classList.add("bg-conime-500", "dark:bg-conime-500");
           });
-          fireEl?.classList.remove("opacity-0");
+          fireEl?.classList.remove("opacity-0", "hidden");
         }
       }
     });
