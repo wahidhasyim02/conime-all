@@ -934,13 +934,6 @@
 
 </div>
 
-{{ range first 10 (where .Site.RegularPages "Section" "posts") }}
-  <div class="post-notif hidden"
-       data-title="{{ .Title }}"
-       data-url="{{ .RelPermalink }}"
-       data-date="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-  </div>
-{{ end }}
 
 
 

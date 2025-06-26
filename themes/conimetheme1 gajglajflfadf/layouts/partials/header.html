@@ -34,7 +34,7 @@
     {{ if $isActive }}
       bg-conime-500 dark:bg-conime-500 text-white dark:text-white
     {{ else }}
-      bg-gray-300/0 dark:bg-gray-950/0 hover:bg-gray-300 hover:dark:bg-gray-950/50 text-gray-700 dark:text-gray-400 hover:text-conime-400 dark:hover:text-conime-500
+      bg-gray-300/0 dark:bg-gray-950/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 text-gray-700 dark:text-gray-400 hover:text-conime-400 dark:hover:text-conime-500
     {{ end }}">
 
     {{ with .Params.svg }}
@@ -49,7 +49,7 @@
   {{ end }}
 
   <div id="theme-toggle"
-    class="p-2 md:p-3 group relative justify-center items-center dark:bg-gray-950/0 bg-gray-300/0 hover:bg-gray-300 hover:dark:bg-gray-950/50 backdrop-blur-sm hover:text-conime-400 text-gray-700 dark:text-gray-400 dark:hover:text-conime-500  rounded-xl">
+    class="p-2 md:p-3 group relative justify-center items-center dark:bg-gray-950/0 bg-gray-300/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 backdrop-blur-sm hover:text-conime-400 text-gray-700 dark:text-gray-400 dark:hover:text-conime-500  rounded-xl">
     <span class="hidden  dark:flex w-8 h-8 md:w-6 md:h-6 group-hover:text-conime-400 text-gray-700 dark:text-gray-400 dark:group-hover:text-conime-500 justify-center   items-center">
       <svg class="group-hover:scale-110  w-8 h-8 md:w-6 md:h-6 transition duration-500 ease-in-out"   viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path

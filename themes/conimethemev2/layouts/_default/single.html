@@ -7,10 +7,9 @@
 
   <main class="col-span-12 lg:col-span-8 w-full">
     <article class="prose lg:prose-xl max-w-none w-full">
-      <h1 class="font-medium text-3xl mb-2 md:mb-0 post-title">{{ .Title }}</h1>
+      <h1 class="font-medium text-3xl mb-2 post-title md:mb-2">{{ .Title }}</h1>
       {{ $path := .RelPermalink }}
-      {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path)
-      }}
+      {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path) }}
       <div
         class="text-lg flex flex-row items-end justify-between font-light dark:font-extralight  text-gray-700 dark:text-gray-600 mb-4">
 
@@ -35,13 +34,9 @@
 
         </div>
        
-      </div> {{ end }}
- <!-- Tombol untuk membuka modal -->
-        {{ $path := .RelPermalink }}
-        {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path)
-        }}
-          {{ partial "share-modal.html" . }} 
-        {{ end }}
+      </div>
+       {{ partial "share-modal.html" . }} 
+       {{ end }}
 
       {{ $path := .RelPermalink }}
       {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path) }}
@@ -128,4 +123,9 @@
     {{ partial "newsletter.html" . }}
   </aside>
 </div>
+<script>
+  const slug = "{{ .RelPermalink }}";
+  localStorage.setItem("notif-read:" + slug, "true");
+</script>
+
 {{ end }}

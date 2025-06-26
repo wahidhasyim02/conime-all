@@ -40,7 +40,11 @@ module.exports = {
           950: '#030712',
         },
       },
-      keyframes: {
+      keyframes: { 
+      flicker: {
+        '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+        '50%': { opacity: '0.75', transform: 'scale(1.10) translateY(-3px)' }
+      }, 
         scroll: {
           '0%': { transform: 'translateY(-12%)' },
           '100%': { transform: 'translateY(-85%)' },
@@ -63,7 +67,8 @@ module.exports = {
       animation: {
         scroll: 'scroll 6s ease-in forwards',
         glitch: 'glitch 2s infinite',
-        glitch2: 'glitch2 2s infinite',
+        glitch2: 'glitch2 2s infinite', 
+      flicker: 'flicker 1s infinite ease-in-out', 
       },
     },
     fontFamily: {

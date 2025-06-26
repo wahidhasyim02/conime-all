@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = notifModal?.querySelector(".closeModal");
   const markAll = document.querySelector(".mark-all-read");
   const markText = document.getElementById("textMark");
-  const toggleTrack = document.getElementById("toggleTrack");
   const toggleBall = document.getElementById("toggleBall");
   const notifBadge = document.getElementById("notifBadge");
 
@@ -26,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isUnread) unreadCount++;
 
       const badgeClass = isUnread
-        ? "bg-conime-500 dark:bg-conime-600"
-        : "bg-gray-400 dark:bg-gray-700";
+        ? "bg-conime-500 dark:bg-conime-500"
+        : "bg-gray-600 dark:bg-gray-700";
 
       const html = `
         <a href="${slug}" class="notif-item bg-gray-100 dark:bg-gray-950/20 rounded p-3 relative block transition hover:bg-gray-200 dark:hover:bg-gray-800 ${isRead ? 'opacity-50' : ''}" data-url="${slug}" data-date="${post.dataset.date}">
@@ -37,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="w-2 h-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full ${badgeClass}"></div>
             </div>
           </div>
-          <h2 class="line-clamp-2 w-[80%] text-sm font-light text-gray-900 dark:text-white">${title}</h2>
-          <p class="w-full text-right text-xs font-light"><time datetime="${post.dataset.date}">Baru saja</time></p>
+          <h2 class="line-clamp-2 w-[80%] text-sm font-light dark:font-extralight text-gray-900 dark:text-white">${title}</h2>
+          <p class="w-full text-right text-xs font-light dark:font-extralight"><time datetime="${post.dataset.date}">Just now</time></p>
         </a>`;
       newNotifs.push(html);
     }
@@ -59,8 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const dots = item.querySelectorAll(".badge div");
         dots.forEach(dot => {
-          dot.classList.remove("bg-conime-500", "dark:bg-conime-600");
-          dot.classList.add("bg-gray-400", "dark:bg-gray-700");
+          dot.classList.remove("bg-conime-500", "dark:bg-conime-500");
+          dot.classList.add("bg-gray-600", "dark:bg-gray-700");
         });
 
         unreadCount--;
@@ -71,19 +70,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Open / close modal with animation
-  notifBtn?.addEventListener("click", () => {
+  const openModal = () => {
     notifModal?.classList.remove("hidden");
     requestAnimationFrame(() => {
       notifModal?.classList.add("scale-100", "opacity-100", "translate-y-0");
       notifModal?.classList.remove("scale-95", "opacity-0", "translate-y-6");
     });
-  });
+  };
 
-  closeBtn?.addEventListener("click", () => {
+  const closeModal = () => {
     notifModal?.classList.add("scale-95", "opacity-0", "translate-y-6");
     notifModal?.classList.remove("scale-100", "opacity-100", "translate-y-0");
     setTimeout(() => notifModal?.classList.add("hidden"), 300);
+  };
+
+  notifBtn?.addEventListener("click", openModal);
+  closeBtn?.addEventListener("click", closeModal);
+
+  // Klik di luar modal → tutup
+  document.addEventListener("click", (e) => {
+    if (
+      notifModal &&
+      !notifModal.classList.contains("hidden") &&
+      !notifModal.contains(e.target) &&
+      e.target !== notifBtn &&
+      !notifBtn.contains(e.target)
+    ) {
+      closeModal();
+    }
   });
 
   // Toggle Mark All
@@ -102,16 +116,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (isAllRead) {
           localStorage.setItem(`notif-read:${slug}`, "true");
-          item.classList.add("opacity-50");
+          item.classList.add("opacity-80", "dark:opacity-50");
           dots.forEach(dot => {
             dot.classList.remove("bg-conime-500", "dark:bg-conime-600");
-            dot.classList.add("bg-gray-400", "dark:bg-gray-700");
+            dot.classList.add("bg-gray-600", "dark:bg-gray-700");
           });
         } else {
           localStorage.removeItem(`notif-read:${slug}`);
-          item.classList.remove("opacity-50");
+          item.classList.remove("opacity-80", "dark:opacity-50");
           dots.forEach(dot => {
-            dot.classList.remove("bg-gray-400", "dark:bg-gray-700");
+            dot.classList.remove("bg-gray-600", "dark:bg-gray-700");
             dot.classList.add("bg-conime-500", "dark:bg-conime-600");
           });
         }
@@ -119,14 +133,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (isAllRead) {
-      toggleTrack.classList.remove("justify-start");
-      toggleTrack.classList.add("justify-end");
-      toggleTrack.classList.remove("bg-conime-500", "dark:bg-conime-500");
+      toggleBall.classList.remove("-translate-x-[85%]");
+      toggleBall.classList.add("translate-x-[85%]");
+      toggleBall.classList.remove("bg-conime-500", "dark:bg-conime-500");
+      toggleBall.classList.add("bg-gray-500", "dark:bg-gray-500");
       markText.innerText = "Mark all as unread";
       notifBadge?.classList.add("hidden");
     } else {
-      toggleTrack.classList.remove("justify-end");
-      toggleTrack.classList.add("justify-start", "bg-conime-500", "dark:bg-conime-500");
+      toggleBall.classList.remove("translate-x-[85%]");
+      toggleBall.classList.add("-translate-x-[85%]");
+      toggleBall.classList.remove("bg-gray-500", "dark:bg-gray-500");
+      toggleBall.classList.add("bg-conime-500", "dark:bg-conime-500");
       markText.innerText = "Mark all as read";
       if (notifContainer.querySelectorAll(".notif-item").length > 0) {
         notifBadge?.classList.remove("hidden");

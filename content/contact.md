@@ -1,18 +1,14 @@
 ---
-title: "Contact"
+title: "Kontak"
 url: "/contact"
 layout: "contact"
 ---
+Kami terbuka untuk pertanyaan, saran, dan kerja sama.
 
-**Contact Us**
-
-We’d love to hear from you!
-
-For any inquiries, suggestions, collaboration proposals, or press releases, please don’t hesitate to reach out to us through the following channels:
+Untuk pertanyaan, saran, ajakan kerja sama, atau siaran pers, jangan ragu untuk menghubungi kami melalui saluran berikut:
 
 {{< contact-info >}}
- 
 
-Our team will get back to you as soon as possible during business hours.
+Tim kami akan membalas secepat mungkin selama jam kerja.
 
-Thank you for your interest in CoNime!
+Terima kasih atas ketertarikan Anda pada CoNime!

@@ -3,6 +3,9 @@
 <div class="col-span-2 p-4 mb-8 md:mb-0 sm:p-4 w-full text-center border-t border-gray-300 dark:border-gray-800/50">
   <p>&copy; Copyright {{ now.Year }} {{ .Site.Title }}.<br class="block md:hidden">  All rights reserved.</p>
 </div>
+{{ if ne .Kind "404" }}
+  {{ partial "notif-data.html" . }}
+{{ end }}
 
 
 <noscript>

@@ -1,7 +1,7 @@
 +++
 title = "Kagurabachi Resmi Dapatkan Adaptasi Anime oleh CyberAgent dan Shochiku"
 slug = "kagurabachi-anime-adaptation-20250301"
-date = 2025-06-22T20:00:00+07:00
+date = 2025-06-26T20:00:00+07:00
 nameAnime = "Kagurabachi"
 author = "Eins"
 draft = false

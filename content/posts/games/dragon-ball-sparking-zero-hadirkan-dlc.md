@@ -1,7 +1,7 @@
 +++
 title = "Dragon Ball: Sparking! ZERO Hadirkan DLC Dragon Ball DAIMA Pack 1 dengan 8 Karakter Baru"
 slug = "dragon-ball-sparking-zero-daima-dlc-pack1-20250424"
-date = 2025-04-24T06:00:00+07:00
+date = 2025-06-26T19:00:00+07:00
 author = "Eins"
 draft = false
 

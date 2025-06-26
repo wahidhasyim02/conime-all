@@ -4,8 +4,7 @@ url = "/privacy-policy"
 slug = "privacy-policy"
 layout = "page"
 +++
-
-**Kebijakan Privasi CoNime**
+ 
 
 Privasi Anda penting bagi kami. {{< site-title >}} tidak mengumpulkan data pribadi tanpa izin Anda. Jika Anda menghubungi kami melalui formulir, informasi yang Anda berikan hanya akan digunakan untuk keperluan komunikasi.
 

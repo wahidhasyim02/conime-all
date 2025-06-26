@@ -13,7 +13,7 @@
   <ul class="flex flex-col gap-4 "> 
     {{ range $i, $page := $subset }}
             <li
-                class="relative popular-html flex flex-col col-span-2 w-full h-full  bg-white hover:bg-gray-300 dark:bg-gray-950/60 hover:dark:bg-gray-950/50 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out  ">
+                class="relative popular-html flex flex-col col-span-2 w-full h-full  bg-white hover:bg-gray-300 dark:bg-gray-950/60 hover:dark:bg-gray-800/50 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out  ">
                 <a href="{{ .RelPermalink }}"
                     class=" bg-cover w-full h-full  overflow-hidden transition duration-500 ease-in-out">
                     {{ with .Params.image }}

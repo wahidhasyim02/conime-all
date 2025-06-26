@@ -4,8 +4,7 @@ url = "/disclaimer"
 slug = "disclaimer"
 layout = "page"
 +++
-
-**Disclaimer CoNime**
+ 
 
 {{< site-title >}} adalah portal informasi yang mengulas budaya pop visual dari berbagai negara, termasuk anime, komik, manhwa, donghua, film, game, dan karya lokal dari Indonesia. Kami tidak berafiliasi dengan pemilik konten resmi atau merek dagang mana pun yang disebutkan. Seluruh gambar, video, dan kutipan adalah hak cipta dari pemilik aslinya.
 

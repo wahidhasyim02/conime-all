@@ -4,8 +4,7 @@ url = "/terms-of-service"
 slug = "terms-of-service"
 layout = "page"
 +++
-
-**Ketentuan Layanan CoNime**
+ 
 
 Dengan mengakses {{< site-title >}}, Anda menyetujui untuk menggunakan konten secara bertanggung jawab dan tidak untuk tujuan ilegal atau merugikan.
 
