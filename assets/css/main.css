@@ -797,6 +797,10 @@ img {
   pointer-events: none;
 }
 
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
 .fixed {
   position: fixed;
 }
@@ -985,16 +989,16 @@ img {
   z-index: 1000;
 }
 
-.z-\[500\] {
-  z-index: 500;
-}
-
 .z-\[999999\] {
   z-index: 999999;
 }
 
 .z-\[9999\] {
   z-index: 9999;
+}
+
+.z-\[999\] {
+  z-index: 999;
 }
 
 .order-first {
@@ -3219,10 +3223,6 @@ img {
 }
 
 @media (min-width: 640px) {
-  .sm\:right-auto {
-    right: auto;
-  }
-
   .sm\:mt-6 {
     margin-top: 1.5rem;
   }
@@ -3451,6 +3451,10 @@ img {
     left: 20%;
   }
 
+  .lg\:top-20 {
+    top: 5rem;
+  }
+
   .lg\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -3526,6 +3530,10 @@ img {
     height: 70%;
   }
 
+  .lg\:h-\[calc\(100vh-theme\(space\.40\)\)\] {
+    height: calc(100vh - 10rem);
+  }
+
   .lg\:h-fit {
     height: -moz-fit-content;
     height: fit-content;
@@ -3533,10 +3541,6 @@ img {
 
   .lg\:h-full {
     height: 100%;
-  }
-
-  .lg\:h-screen {
-    height: 100vh;
   }
 
   .lg\:w-\[0\.1px\] {
@@ -3625,8 +3629,8 @@ img {
     justify-content: flex-start;
   }
 
-  .lg\:justify-center {
-    justify-content: center;
+  .lg\:justify-evenly {
+    justify-content: space-evenly;
   }
 
   .lg\:gap-0 {
@@ -3639,10 +3643,6 @@ img {
 
   .lg\:gap-4 {
     gap: 1rem;
-  }
-
-  .lg\:overflow-y-scroll {
-    overflow-y: scroll;
   }
 
   .lg\:bg-white\/50 {
