@@ -1,6 +1,0 @@
-{{ $date := or .Date .PublishDate .Lastmod }}
-
-<time datetime="{{ $date | time.Format "2006-01-02T15:04:05-07:00" }}"
-      class="text-sm inline-block font-medium dark:font-normal">
-  {{ $date.Format "Mon, 02 Jan 2006" }}
-</time> 

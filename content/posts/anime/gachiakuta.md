@@ -9,10 +9,10 @@ draft = false
 
 summary = "Anime Gachiakuta akan tayang 6 Juli 2025. PV utama, lagu tema oleh Paledusk dan DUSTCELL, serta pemutaran global di 15 negara telah diumumkan."
 
-synopsis = """<p>Rudo hidup di area kumuh dari kota terapung yang dikuasai kelas atas. Bersama ayah angkatnya, Regto, ia mencoba bertahan hidup dengan mengais sampah yang dibuang oleh para elit ke sebuah jurang raksasa yang disebut <span class="font-bold">Abyss</span>. Sampah bukan hanya benda mati — terkadang manusia pun dibuang ke sana.</p>
-<p>Setelah suatu insiden misterius, Rudo menemukan Regto tergeletak sekarat. Tanpa sempat menjelaskan apa pun, Rudo dituduh membunuh dan langsung dijatuhi hukuman dibuang ke Abyss.</p>
-<p>Alih-alih mati, ia justru terbangun di dunia bawah yang busuk dan penuh monster yang terbuat dari sampah. Di tengah serangan makhluk-makhluk itu, ia diselamatkan oleh Enjin — seorang <span class="font-bold">Cleaner</span> yang menggunakan senjata khusus bernama <span class="font-bold">Vital Instruments</span> untuk melawan monster sampah.</p>
-<p>Rudo pun bergabung dengan para Cleaner, bukan hanya untuk bertahan, tapi juga mencari kebenaran dan membalas dendam kepada orang yang merenggut satu-satunya keluarga yang ia punya.</p>"""
+synopsis = "Anime Gachiakuta siap menembus pasar global lewat pemutaran perdana di berbagai negara dan menghadirkan tema musikal yang emosional."
+
+cta = "Jangan lupa ikuti terus {{< site-title >}} untuk berita anime terbaru, termasuk update penayangan dan rilisan musim mendatang!"
+
 
 image = "/images/anime/gachiakuta-world-takeover.webp"
 tags = ["Gachiakuta", "Anime Baru", "Bones", "Paledusk", "DUSTCELL", "Recommended", "Pemutaran Global", "Anime Musim Panas 2025"]
@@ -41,6 +41,7 @@ title = "Here Comes Gachiakuta! | Global campaign concept video"
 source = "YouTube / 'GACHIAKUTA' Anime Official Channel"
 +++
 
+
 Anime *Gachiakuta* dijadwalkan tayang pada **6 Juli 2025** pukul 23:30 JST melalui jaringan **CBC/TBS** di Jepang. Pengumuman resmi dari situs anime menyertakan perilisan **PV utama**, **visual baru**, **informasi lagu tema**, dan pemutaran perdana di **15 negara** dalam kampanye bertajuk *Gachiakuta World Takeover*.
 
 ### **Lagu Tema:**
@@ -52,7 +53,7 @@ Kedua lagu ditulis khusus untuk anime ini. Paledusk menyebut lirik mereka sebaga
 
 ### **Karakter Baru & Seiyuu:**
 
-- **Regto** (ayah angkat Rudo): **Toshiyuki Morikawa**  
+- **Regto** (ayah angkat Rudo): **Toshiyuki Morikawa**
 - **Jabber** (anggota organisasi "Arashiya"): **Yūki Shin**
 
 Keduanya mengekspresikan antusiasme mereka terhadap karakter masing-masing dan kedalaman emosi yang dibawakan dalam cerita.
@@ -76,10 +77,10 @@ Kampanye global ini juga mencakup:
 {{< image-caption
   src="/images/anime/gachiakuta-grafiti.webp"
   alt="Graffiti Maker Gachuakuta"
-  sources="Gachiakuta Official Website,https://gachiakuta-anime.com/news/detail/?id=1125461" 
+  sources="Gachiakuta Official Website,https://gachiakuta-anime.com/news/detail/?id=1125461"
 >}}
 
 *Gachiakuta* bukan sekadar anime aksi, tetapi juga refleksi sosial tentang ketimpangan dan keberanian menghadapi sistem yang membuangmu. Pastikan untuk menontonnya musim panas ini!
 
- 
+
 {{< content-end >}}

@@ -14,6 +14,7 @@ const showMainContent = () => {
     // Setelah fade-out selesai
     setTimeout(() => {
       loading.classList.add('hidden');
+      console.log('✅ Loading screen hidden');
     }, 1000);
   }
 
@@ -21,6 +22,7 @@ const showMainContent = () => {
   footer?.classList.remove('hidden'); footer?.classList.add('flex'); 
   main?.classList.remove('hidden');
   menuMain?.classList.remove('hidden'); menuMain?.classList.add('flex');
+  console.log('✅ Konten dimunculkan');
 };
 
 // Cek apakah sebelumnya sudah pernah tampil loading

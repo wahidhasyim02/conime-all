@@ -1,0 +1,86 @@
+<!--RELATED AUTO-->
+{{ $currentPage := .Page }}
+
+{{ $categories := slice }}
+{{ with $currentPage.Params.categories }}
+{{ $categories = . }}
+{{ end }}
+
+{{ $tags := slice }}
+{{ with $currentPage.Params.tags }}
+{{ $tags = . }}
+{{ end }}
+
+{{ $relatedByCat := slice }}
+{{ $relatedByTag := slice }}
+
+{{ if gt (len $categories) 0 }}
+{{ $relatedByCat = where site.RegularPages "Params.categories" "intersect" $categories }}
+{{ end }}
+
+{{ if gt (len $tags) 0 }}
+{{ $relatedByTag = where site.RegularPages "Params.tags" "intersect" $tags }}
+{{ end }}
+
+{{ $relatedCombined := union $relatedByCat $relatedByTag | uniq }}
+{{ $relatedFiltered := where $relatedCombined "RelPermalink" "ne" $currentPage.RelPermalink }}
+
+{{ if ge (len $relatedFiltered) 2 }}
+<div class="flex gap-3 mx-2 my-4 h-fit bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm ">
+  <div class="w-2 min-h-20 max-h-28 rounded bg-conime-500 dark:bg-conime-500"></div>
+  <div class="h-full p-2">
+    <p class="font-medium">Also read:</p>
+    {{ $second := index $relatedFiltered 1 }}
+    <a href="{{ $second.RelPermalink }}"
+      class="text-conime-400 dark:text-conime-500 font-normal dark:font-light hover:underline line-clamp-2">
+      {{ $second.Title }}
+    </a>
+  </div>
+</div>
+{{ end }}
+
+
+<!-- KESIMPULAN -->
+{{ with .Page.Params.conclusion }}
+<h2 class="font-medium uppercase tracking-wide">Kesimpulan :</h2>
+<div class="border-l-4 border-gray-300 dark:border-gray-800/50
+    px-4 mx-2 md:mx-4 my-4 font-normal dark:font-light leading-8
+    [&>p]:text-justify [&>p]:[text-indent:2em] [&>p]:my-3">
+  {{ . | safeHTML }}
+</div>
+{{ end }}
+
+{{ with .Page.Params.cta }}
+<p class="my-4 text-center font-medium dark:font-light">{{ . | markdownify }}</p>
+{{ end }}
+
+{{ with .Page.Params.sources }}
+<p class="mb-4 italic font-normal dark:font-light">
+  Artikel ini pertama kali dipublikasikan di
+  {{ $total := len . }}
+  {{ range $index, $source := . }}
+  {{ if gt $index 0 }}
+  {{ if eq $index (sub $total 1) }} dan {{ else }}, {{ end }}
+  {{ end }}
+  <a href="{{ $source.url }}" target="_blank" data-tippy-content="{{ $source.url }}"
+    class="text-gray-900 inline dark:text-gray-400 hover:text-conime-400 hover:dark:text-conime-500 underline"
+    rel="noopener noreferrer">{{ $source.name }}</a>
+  {{ end }}.
+</p>
+{{ end }}
+
+<!-- VIDEO TERKAIT -->
+{{ with .Page.Params.videos }}
+{{ range . }}
+<div class="w-full h-fit flex flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl">
+  <iframe width="auto" height="315px" src="{{ .url | safeURL }}" data-tippy-content="Tonton {{ .title | default "YouTube video player" }}" frameborder="0" allow="accelerometer; autoplay;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+  {{ with .title }}
+  <p class="text-sm text-left font-light dark:font-extralight italic mt-2 px-4">{{ . }}</p>
+  {{ end }}
+  {{ with .source }}
+  <p class="text-sm text-left font-light dark:font-extralight italic mb-2 px-4">Source Video: {{ . }}</p>
+  {{ end }}
+</div>
+{{ end }}
+{{ end }}
