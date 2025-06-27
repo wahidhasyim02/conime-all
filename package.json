@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch\" \"hugo server\""
+    "dev": "concurrently \"npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch\" \"hugo server\"",
+    "dev:hugo": "hugo server -D",
+    "dev:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/main.css --watch",
+    "dev2": "concurrently -k \"npm run dev:hugo\" \"npm run dev:css\""
   },
   "keywords": [],
   "author": "",
