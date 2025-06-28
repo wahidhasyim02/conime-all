@@ -1,7 +1,8 @@
-  import * as THREE from "three";
-  import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-  import hoverEffect from "/js/hover-effect.js";
-  import { gsap } from "gsap";
+// HOVER-INIT.JS
+const THREE = window.THREE;
+const gsap = window.gsap;
+const hoverEffect = window.hoverEffect;
+
 
   const importMapSupported = () => {
     const script = document.createElement("script");
@@ -129,4 +130,4 @@
         checkBothLoaded();
       }
     }
-  }); 
+  });

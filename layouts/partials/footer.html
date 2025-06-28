@@ -1,20 +1,17 @@
-<div class="col-span-2 p-4 mb-8 md:mb-0 sm:p-4 w-full text-center border-t border-gray-300 dark:border-gray-800/50">
-  <p>&copy; Copyright {{ now.Year }} {{ .Site.Title }}.<br class="block md:hidden"> All rights reserved.</p>
+<div class="col-span-2 p-4 w-full text-center border-t border-gray-300 dark:border-gray-800/50">
+  <p>&copy; Copyright {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
 </div>
+
 {{ if ne .Kind "404" }}
-{{ partial "notif-data.html" . }}
-{{ end }}
-{{ if eq hugo.Environment "development" }}
-{{ partial "_safelist.html" . }}
+  {{ partial "notif-data.html" . }}
 {{ end }}
 
+{{ if eq hugo.Environment "development" }}
+  {{ partial "_safelist.html" . }}
+{{ end }}
 
 <noscript>
   <style>
-    .divDistortion {
-      position: relative;
-    }
-
     .divDistortion::before {
       content: "⚠️ Hover effect nonaktif (JavaScript diperlukan)";
       display: block;
@@ -24,44 +21,57 @@
       text-align: center;
       background: #f0f0f0;
     }
-
-    .divDistortion img {
+    .divDistortion img, [data-aos] {
       opacity: 1 !important;
       transform: none !important;
       filter: none !important;
     }
   </style>
 </noscript>
-<noscript>
-  <style>
-    [data-aos] {
-      opacity: 1 !important;
-      transform: none !important;
-    }
-  </style>
-</noscript>
 
+<!-- Umami Analytics -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="fabe1eb6-5122-4712-b095-5ec2ab778540"></script>
-<!-- Load Tippy via CDN -->
+
+<!-- Tippy -->
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
-
 <script>
   tippy('[data-tippy-content]');
 </script>
 
+<!-- ============= MAIN BUNDLE UNTUK SEMUA HALAMAN ============= -->
+{{ $main := resources.Get "js/main.js" }}
+{{ $notif := resources.Get "js/notif.js" }}
+{{ $last := resources.Get "js/last-view.js" }}
+{{ $filtered := slice | append $main | append $notif | append $last }}
+{{ $bundle := $filtered | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" defer crossorigin="anonymous"></script>
 
+<!-- ============= LIBRARY EXTERNAL ============= -->
+{{ $three := resources.Get "js/three.min.js" | resources.Minify | resources.Copy "js/three.min.js" }}
+<script src="{{ $three.RelPermalink }}" defer></script>
 
+{{ $gsap := resources.Get "js/gsap.min.js" | resources.Minify | resources.Copy "js/gsap.min.js" }}
+<script src="{{ $gsap.RelPermalink }}" defer></script>
 
+{{ $hoverUMD := resources.Get "js/hover-effect.umd.js" | resources.Minify | resources.Copy "js/hover-effect.umd.js" }}
+<script src="{{ $hoverUMD.RelPermalink }}" defer></script>
 
-<script src="/js/main.js" defer></script>
-<script src="/js/last-view.js" defer></script>
+<!-- ============= KHUSUS HOMEPAGE ============= -->
 {{ if eq .RelPermalink "/" }}
-<script src="/js/loading-animation.js" defer></script>
+  {{ $loading := resources.Get "js/loading-animation.js" | resources.Minify | resources.Copy "js/loading-animation.js" }}
+  <script src="{{ $loading.RelPermalink }}" defer></script>
+
+  {{ $hoverInit := resources.Get "js/hover-init.js" | resources.Minify | resources.Copy "js/hover-init.js" }}
+  <script src="{{ $hoverInit.RelPermalink }}" defer></script>
 {{ end }}
-<!--<script src="/js/timeago.js" defer></script>-->
-<script src="/js/notif.js" defer></script>
+
+
+
+{{/* Optional: Remove duplicate Popper.js call
 <script src="https://unpkg.com/@popperjs/core@2"></script>
+*/}}
+
 {{ if hugo.IsServer }}
 <!--
 

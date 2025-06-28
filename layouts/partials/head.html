@@ -12,11 +12,15 @@
 
 <!-- Title -->
 <title>
-  {{ if .IsHome }}{{ site.Title }} - Portal Berita Anime & Komik Indonesia{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}
+  {{ if .IsHome }}
+  {{ site.Title }} - Portal Berita Pop Culture Indonesia
+  {{ else }}
+  {{ .Title }} - {{ site.Title }}
+  {{ end }}
 </title>
 
 <!-- Open Graph -->
-<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }} - Portal Berita Anime & Komik Indonesia{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }} - Portal Berita Pop Culture Indonesia{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "/images/logo_conime.og.png" | absURL }}{{ end }}">
 <meta property="og:type" content="article">
@@ -25,7 +29,7 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }} - Portal Berita Anime & Komik Indonesia{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }} - Portal Berita Pop Culture Indonesia{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "/images/logo_conime.og.png" | absURL }}{{ end }}">
 <meta name="twitter:url" content="{{ .Permalink }}">
@@ -34,11 +38,14 @@
 <script>
   try {
     const darkPref = localStorage.getItem("darkmode");
-    if (darkPref !== "true") {
+    if (darkPref === null || darkPref === "true") {
+      document.documentElement.classList.add("dark");
+    } else {
       document.documentElement.classList.remove("dark");
     }
   } catch (e) {}
 </script>
+
 
 <!-- CSS -->
 {{ $css := resources.Get "css/main.css" }}
@@ -51,7 +58,8 @@
   {{ end }}
 {{ else }}
   {{ warnf "❌ File css/main.css tidak ditemukan!" }}
-{{ end }} 
+{{ end }}
+
 <!-- Ikon -->
 <link rel="icon" href="/images/logo_conime_square.png" type="image/png">
 <link rel="apple-touch-icon" href="/images/logo_conime_square.png">
@@ -62,21 +70,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-
 <!-- AOS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
 
-<!-- Import Map -->
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://unpkg.com/three@0.153/build/three.module.js",
-    "three/addons/controls/": "https://unpkg.com/three@0.153/examples/jsm/controls/",
-    "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js"
-  }
-}
-</script>
-
-<!-- Hover Effect Module -->
-<script type="module" src="/js/hover-init.js"></script>
 
