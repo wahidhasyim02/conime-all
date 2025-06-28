@@ -1,13 +1,15 @@
 +++
 title = "Dragon Ball: Sparking! ZERO Hadirkan DLC Dragon Ball DAIMA Pack 1 dengan 8 Karakter Baru"
 slug = "dragon-ball-sparking-zero-daima-dlc-pack1-20250424"
-date = 2025-06-26T19:00:00+07:00
+date = 2025-04-24T19:00:00+07:00
 author = "Eins"
 draft = false
 
 summary = "Bandai Namco merilis DLC Dragon Ball DAIMA Pack 1 untuk Dragon Ball: Sparking! ZERO, menambahkan delapan karakter baru—termasuk Goku (Mini) dan Vegeta (Mini) hingga Super Saiyan 3—serta kostum teknik-baru untuk Goku (Mini). Paket ini tersedia bagi pemilik Season Pass dan bisa dibeli terpisah di PlayStation 5, Xbox Series X|S, dan PC."
 
-synopsis = ""
+synopsis = "Dragon Ball: Sparking! ZERO merilis DAIMA Pack 1 dengan 8 karakter baru termasuk Goku (Mini) dan Vegeta (Mini), melengkapi roster dengan transformasi hingga Super Saiyan 3."
+
+cta = "Jangan lewatkan update seputar game terbaru hanya di {{< site-title >}}!"
 
 conclusion = """<p>Lewat DLC <strong>Dragon Ball DAIMA Pack 1</strong>, <strong>Dragon Ball: Sparking! ZERO</strong> terus memperluas roster dan menawarkan variasi pertarungan yang segar. Kehadiran karakter-karakter “versi mini” dari <em>Dragon Ball DAIMA</em> serta teknik baru untuk Goku (Mini) memperkaya strategi pemain, sementara dukungan Season Pass memastikan konten berkelanjutan.</p>"""
 
@@ -19,7 +21,6 @@ categories = ["Berita", "Game"]
 [[imageSources]]
 name = "Bandai Namco Official Site – DAIMA DLC"
 url = "https://en.bandainamcoent.eu/dragon-ball/news/first-dragon-ball-daima-characters-now-available-dragon-ball-sparking-zero"
-
 
 [[sources]]
 name = "Bandai Namco Official Site – DAIMA DLC"
@@ -60,5 +61,4 @@ Kostum *Technique-Changing Outfit* untuk **Goku (Mini)** memungkinkan Ultimate B
 ### **Tentang Dragon Ball: Sparking! ZERO**
 Dirilis 11 Oktober 2024, *Sparking! ZERO* mengusung gameplay 3D berkecepatan tinggi ala seri *Budokai Tenkaichi*, lengkap dengan arena yang hancur-lebur mengikuti jurus pamungkas. Spike Chunsoft selaku pengembang juga menjanjikan roster masif dengan transformasi otentik untuk tiap petarung.
 
- 
 {{< content-end >}}

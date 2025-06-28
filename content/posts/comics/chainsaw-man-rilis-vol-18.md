@@ -1,22 +1,22 @@
 +++
 title = "Chainsaw Man Volume 18 Rilis di VIZ, Denji dan Nayuta Hadapi Ancaman Gereja Chainsaw"
 nameComic = "Chainsaw Man"
-slug = "chainsaw-man-volume-18-rilis-viz-20250603"
-date = 2025-06-03T06:00:00+07:00
+slug = "chainsaw-man-volume-18-rilis-viz-20250605"
+date = 2025-06-05T08:00:00+07:00
 author = "Megumi"
 draft = false
 
-summary = "VIZ Media resmi merilis volume ke-18 dari *Chainsaw Man*, manga aksi-horor karya Tatsuki Fujimoto. Dalam volume terbaru ini, Denji dan Nayuta menghadapi ancaman besar dari Gereja Chainsaw yang semakin menguasai dunia."
+summary = "VIZ Media resmi merilis volume ke-18 dari *Chainsaw Man*, menampilkan konflik baru antara Denji, Nayuta, dan Gereja Chainsaw yang berusaha menguasai dunia."
 
-synopsis = """<p><strong>Chainsaw Man Volume 18</strong> membawa pembaca ke dalam konflik besar antara Denji dan Gereja Chainsaw. Saat dunia mulai kehilangan kendali akibat rencana gelap organisasi tersebut, Denji dan Nayuta terjebak dalam situasi berbahaya. Asa dan Fami berusaha menyelamatkan mereka, tetapi mereka membutuhkan bantuan baru untuk menghadapi kekuatan Gereja Chainsaw yang semakin kuat.</p>"""
+synopsis = "Chainsaw Man Volume 18 menghadirkan babak baru penuh aksi dan ketegangan, saat Denji dan Nayuta menghadapi Gereja Chainsaw yang semakin kuat."
 
-conclusion = """<p>Dengan ilustrasi yang khas dan alur cerita yang semakin intens, <strong>Chainsaw Man Volume 18</strong> menghadirkan babak baru yang penuh aksi dan ketegangan. Volume ini menjadi titik balik bagi Denji dalam perjuangannya melawan kekuatan yang ingin mengendalikan dunia.</p>"""
+conclusion = "Dengan ilustrasi khas dan cerita intens, volume ke-18 ini menjadi titik balik penting bagi Denji, cocok untuk penggemar aksi-horor Tatsuki Fujimoto."
+
+cta = "Jangan lupa ikuti terus {{< site-title >}} untuk update rilis manga terbaru dan berita komik pilihan!"
 
 image = "/images/comics/chainsaw-man-vol18.webp"
-
 tags = ["Chainsaw Man", "Manga Baru", "VIZ Media", "Tatsuki Fujimoto", "Aksi", "Horor", "Rilis Manga"]
 categories = ["Berita", "Manga"]
-
 
 [[imageSources]]
 name = "VIZ Media Official Page"
@@ -27,16 +27,17 @@ name = "VIZ Media Official Page"
 url = "https://www.viz.com/read/manga/chainsaw-man-volume-18/product/8310"
 +++
 
-VIZ Media resmi merilis volume ke-18 dari *Chainsaw Man*, manga aksi-horor karya Tatsuki Fujimoto.
+
+VIZ Media resmi merilis volume ke-18 dari *Chainsaw Man*, manga aksi-horor karya **Tatsuki Fujimoto**. Dalam volume terbaru ini, Denji dan Nayuta menghadapi Gereja Chainsaw yang semakin mengancam dunia.
 
 ### **Pertarungan Melawan Gereja Chainsaw**
-Denji dan Nayuta menghadapi ancaman besar saat Gereja Chainsaw mulai menguasai dunia. Asa dan Fami berusaha menyelamatkan mereka, tetapi mereka membutuhkan bantuan baru untuk menghadapi kekuatan Gereja Chainsaw yang semakin kuat.
+Denji dan Nayuta terjebak dalam konflik berbahaya saat Gereja Chainsaw berusaha menguasai dunia. Asa dan Fami mencoba membantu, tetapi kekuatan Gereja Chainsaw semakin sulit dihentikan.
 
 {{< related-auto >}}
+
 ### **Dunia yang Berubah**
-Saat dunia mulai kehilangan kendali akibat rencana gelap Gereja Chainsaw, Denji harus mengambil keputusan besar yang akan menentukan masa depan semua orang.
+Saat rencana gelap Gereja Chainsaw mulai memecah belah tatanan dunia, Denji dihadapkan pada keputusan besar yang menentukan masa depan semua orang.
 
 Baca pratinjau gratis dan pre-order volume 18 di [halaman resmi VIZ](https://www.viz.com/read/manga/chainsaw-man-volume-18/product/8310).
 
- 
 {{< content-end >}}

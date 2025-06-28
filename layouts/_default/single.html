@@ -35,8 +35,9 @@
         </div>
 
       </div>
+      <div class=" border-b border-gray-300 dark:border-gray-800/50 ">
       {{ partial "share-modal.html" . }}
-      {{ end }}
+      {{ end }}</div>
 
       {{ $path := .RelPermalink }}
       {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path) }}
@@ -93,8 +94,7 @@
 
 
       <div class="flex flex-col">
-        <div class="content-article leading-8 font-normal dark:font-light
-       [&>p]:text-justify [&>ul]:list-disc [&>ul]:ml-8 [&>h3]:uppercase [&>h3]:tracking-wide [&>h3:my-4 mb-6">
+        <div class="content-article leading-8 font-normal dark:font-light mb-6">
           {{ .Content }}
         </div>
       </div>
@@ -107,15 +107,15 @@
       <!-- Tombol untuk membuka modal -->
       {{ $path := .RelPermalink }}
       {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path) }}
-
+<div class=" border-t border-gray-300 dark:border-gray-800/50 ">
       {{ partial "share-modal.html" . }}
-      {{ end }}
+      {{ end }}</div>
     </article>
 
     <!-- Bagian Bawah Artikel -->
     {{ $path := .RelPermalink }}
     {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path) }}
-    <section class="mt-4 md:mt-12 w-full border-t border-gray-300  dark:border-gray-800/50 pt-6">
+    <section class="mt-4 md:mt-6 w-full pt-6">
 
       <!--Kolom Komentar-->
       {{ partial "comments.html" . }}
@@ -127,7 +127,7 @@
   </main>
 
   <!-- Sidebar -->
-  <aside class="col-span-12 w-full lg:col-span-4 space-y-8 py-6">
+  <aside class="col-span-12 w-full lg:col-span-4 space-y-8 py-6 md:py-0">
     <!-- Berita yang baru dilihat -->
     {{ partial "last-viewed.html" . }}
     <!-- Berita Populer -->

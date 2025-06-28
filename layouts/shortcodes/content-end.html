@@ -45,13 +45,13 @@
 <h2 class="font-medium uppercase tracking-wide">Kesimpulan :</h2>
 <div class="border-l-4 border-gray-300 dark:border-gray-800/50
     px-4 mx-2 md:mx-4 my-4 font-normal dark:font-light leading-8
-    [&>p]:text-justify [&>p]:[text-indent:2em] [&>p]:my-3">
+    [&>p]:text-justify [&>p]:my-3">
   {{ . | safeHTML }}
 </div>
 {{ end }}
 
 {{ with .Page.Params.cta }}
-<p class="my-4 text-center font-medium dark:font-light">{{ . | markdownify }}</p>
+<p class="my-4 font-medium dark:font-light">{{ . | markdownify }}</p>
 {{ end }}
 
 {{ with .Page.Params.sources }}

@@ -1,6 +1,6 @@
 +++
 title = "Film Live-Action Under Ninja Umumkan Pemeran Utama & Jadwal Tayang"
-slug = "under-ninja-live-action-announcement-20250407"
+slug = "under-ninja-live-action-announcement-20240407"
 date = 2024-04-07T10:00:00+07:00
 author = "Eins"
 draft = false
@@ -51,7 +51,7 @@ source = "YouTube / 東宝MOVIEチャンネル"
 
 Menurut situs resmi *Under Ninja*, film live-action ini diproduksi dari manga karya **Kengo Hanazawa** dan diarahkan oleh **Yuichi Fukuda**. Pemeran utama:
 
-- **Kento Yamazaki** sebagai **Kurō Kumogakure**, ninja level bawah (下忍)  
+- **Kento Yamazaki** sebagai **Kurō Kumogakure**, ninja level bawah (下忍)
 - **Minami Hamabe** sebagai **Ayaka Noguchi**, siswi SMA yang ikut terlibat dalam konflik ninja modern
 
 {{< related-auto >}}
@@ -59,38 +59,38 @@ Menurut situs resmi *Under Ninja*, film live-action ini diproduksi dari manga ka
 {{< image-caption
   src="/images/movies/under-ninja-trailer.webp"
   alt="Under Ninja Cast"
-  sources="Under Ninja Official Site,https://underninja-mv.com/news/index.html" 
+  sources="Under Ninja Official Site,https://underninja-mv.com/news/index.html"
 >}}
 
 {{< image-caption
   src="/images/movies/underninja.webp"
   alt="Under Ninja Cast"
-  sources="Under Ninja Official Site,https://underninja-mv.com/news/index.html" 
+  sources="Under Ninja Official Site,https://underninja-mv.com/news/index.html"
 >}}
 
 
 ### Jadwal & Format
 
-- Film dijadwalkan tayang perdana di bioskop Jepang pada **24 Januari 2025**  
+- Film dijadwalkan tayang perdana di bioskop Jepang pada **24 Januari 2025**
 - Berdurasi sekitar **123 menit** dan diproduksi oleh Fuji TV, Kodansha, serta Toho
 
 
- 
+
 
 ### Tim Produksi & Pemeran Lengkap
 
-- **Sutradara & Penulis**: Yuichi Fukuda (Gintama, Saint Young Men)  
-- **Original Manga**: Kengo Hanazawa (sejak 2018 di Weekly Young Magazine)  
+- **Sutradara & Penulis**: Yuichi Fukuda (Gintama, Saint Young Men)
+- **Original Manga**: Kengo Hanazawa (sejak 2018 di Weekly Young Magazine)
 - **Pemeran Pendukung**: Shotaro Mamiya, Mai Shiraishi, Amane Okayama, Chihiro Yamamoto, Ryubi Miyase, Ryotaro Sakaguchi, Mitsuru Hirata, dan lainnya
 
 
 
 ### Adaptasi Sebelumnya
 
-- Anime *Under Ninja* tayang antara Oktober dan Desember 2023  
+- Anime *Under Ninja* tayang antara Oktober dan Desember 2023
 - Disiarkan di TBS dan BS11, serta ditayangkan global melalui Crunchyroll
 
- 
 
- 
+
+
 {{< content-end >}}

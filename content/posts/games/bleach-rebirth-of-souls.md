@@ -1,14 +1,15 @@
 +++
-
 title = "Bleach: Rebirth of Souls Hadirkan Mode Ranked dan DLC Ichigo Kurosaki (Thousand-Year Blood War)"
 slug = "bleach-rebirth-of-souls-ranked-mode-dlc-ichigo-20250609"
-date = 2025-06-26T23:20:00+07:00
+date = 2025-06-09T08:00:00+07:00
 author = "Megumi"
 draft = false
 
 summary = "Bandai Namco resmi mengumumkan update besar untuk Bleach: Rebirth of Souls, termasuk mode Ranked Matchmaking dan DLC Ichigo Kurosaki (Thousand-Year Blood War Arc). Pemilik Season Pass bisa mengaksesnya mulai 10 Juni, sementara perilisan umum dijadwalkan pada 17 Juni 2025."
 
-synopsis = ""
+synopsis = "Bleach: Rebirth of Souls menambah Ranked Mode dan DLC Ichigo Kurosaki untuk memperkuat persaingan online dan menghadirkan pengalaman pertarungan baru."
+
+cta = "Jangan lupa ikuti terus {{< site-title >}} untuk berita game terbaru dan update DLC lainnya!"
 
 conclusion = """<p>Dengan hadirnya mode <strong>Ranked Matchmaking</strong> dan DLC <strong>Ichigo Kurosaki</strong>, <strong>Bleach: Rebirth of Souls</strong> semakin memperkuat posisinya sebagai game fighting berbasis anime yang kompetitif. Pemain kini bisa menguji kemampuan mereka dalam pertarungan online, sementara penggemar <strong>Bleach</strong> dapat menikmati karakter terbaru dengan kekuatan penuh.</p>"""
 
@@ -16,7 +17,6 @@ image = "/images/games/bleach-rebirth-of-souls-ranked-mode-dlc.webp"
 
 tags = ["Bleach", "Rebirth of Souls", "Recommended", "Ichigo Kurosaki", "DLC", "Bandai Namco", "Tamsoft", "Game Fighting", "Ranked Mode"]
 categories = ["Berita", "Game"]
-
 
 [[imageSources]]
 name = "Bandai Namco Official Site"
@@ -37,6 +37,7 @@ title = "BLEACH Rebirth of Souls」キャラクタームービー #34｜黒崎�
 source = "YouTube / Bandai Namco Entertainment"
 +++
 
+
 Bandai Namco resmi mengumumkan update besar untuk *Bleach: Rebirth of Souls*, menghadirkan **Ranked Matchmaking Mode** dan DLC **Ichigo Kurosaki (Thousand-Year Blood War Arc)**.
 
 ### **Fitur Baru dalam Update**
@@ -46,10 +47,10 @@ Bandai Namco resmi mengumumkan update besar untuk *Bleach: Rebirth of Souls*, me
 - **Tanggal Rilis**: 10 Juni untuk pemilik Season Pass, 17 Juni untuk semua pemain.
 
 {{< related-auto >}}
+
 ### **Ranked Matchmaking Mode**
 Mode ini memungkinkan pemain bertarung secara online dengan sistem peringkat, memberikan tantangan baru bagi komunitas game fighting.
 
 Pemain dapat melihat trailer resmi update ini di kanal [YouTube Bandai Namco](https://www.youtube.com/watch?v=5KG6lbPnKKQ) dan mengunjungi [situs resmi](https://en.bandainamcoent.eu/bleach/bleach-rebirth-of-souls) untuk informasi lebih lanjut.
 
- 
 {{< content-end >}}

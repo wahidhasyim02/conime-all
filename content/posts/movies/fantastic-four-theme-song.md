@@ -16,11 +16,9 @@ image = "/images/movies/fantastic-four-first-steps-main-theme.webp"
 tags = ["Fantastic Four", "Marvel Studios", "Michael Giacchino", "Film Superhero", "Soundtrack", "Hollywood Records"]
 categories = ["Berita", "Film"]
 
-
 [[imageSources]]
 name = "Marvel Official Site"
 url = "https://www.marvel.com/articles/movies/fantastic-four-first-steps-main-theme-music"
-
 
 [[sources]]
 name = "Marvel Official Site"
@@ -40,15 +38,15 @@ Michael Giacchino, yang sebelumnya menggarap musik untuk *Spider-Man: No Way Hom
 {{< related-auto >}}
 ### **Versi Vinyl**
 Selain versi digital, Marvel juga merilis **vinyl koleksi Galactic Blue** yang berisi:
-- **Side A:** *The Fantastic Four: First Steps Main Theme* oleh Michael Giacchino  
+- **Side A:** *The Fantastic Four: First Steps Main Theme* oleh Michael Giacchino
 - **Side B:** *Let Us Be Devoured* oleh Andrea Datzman (*Inside Out 2*)
 
 Vinyl ini tersedia untuk pre-order dan akan dirilis pada **25 Juli 2025**, bersamaan dengan perilisan film.
 
-> “I hope this theme captures the same spirit of wonder and limitless potential that I felt when I first discovered Fantastic Four as a kid.”  
+> “I hope this theme captures the same spirit of wonder and limitless potential that I felt when I first discovered Fantastic Four as a kid.”
 > — Michael Giacchino, [Marvel](https://www.marvel.com/articles/movies/fantastic-four-first-steps-main-theme-music)
 
 Dengarkan lagu ini di [YouTube](https://www.youtube.com/watch?v=g2qteuFPdZQ) atau pre-order vinyl di **Disney Music Emporium**.
 
- 
+
 {{< content-end >}}

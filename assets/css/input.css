@@ -311,6 +311,23 @@
     background-color: #ff1545;
   }
 
+  /* ========= CONTENT ARTICLE HEADING STYLES ========= */
+  .content-article h2,
+  .content-article h3,
+  .content-article h4 {
+    @apply uppercase tracking-wide my-4;
+  }
+  .content-article blockquote {
+    @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic text-gray-700 dark:text-gray-300 my-4;
+  }
+  .content-article p {
+    @apply text-justify;
+  }
+
+  .content-article ul {
+    @apply list-disc ml-8;
+  }
+
   @keyframes spin1 {
     0% {
       transform: rotate(0deg) translateX(25px) rotate(0deg);

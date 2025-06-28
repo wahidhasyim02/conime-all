@@ -2,7 +2,7 @@
 title = "Review Kotonoha no Niwa (2013): Keheningan yang Menghubungkan Dua Jiwa"
 nameAnime = "Kotonoha no Niwa"
 slug = "review-kotonoha-no-niwa-20250617"
-date = 2025-06-26T17:53:00+07:00
+date = 2025-06-17T17:53:00+07:00
 author = "Eins"
 draft = false
 
@@ -32,14 +32,14 @@ source = "YouTube / コミックス・ウェーブ・フィルム CoMix Wave Cha
 +++
 
 ### **Informasi Film**
-- **Judul Internasional**: *The Garden of Words*  
-- **Sutradara**: Makoto Shinkai  
-- **Pemeran Utama**:  
-  - Takao Akizuki – Miyu Irino  
-  - Yukari Yukino – Kana Hanazawa  
-- **Durasi**: 46 menit  
-- **Rilis Jepang**: 31 Mei 2013  
-- **Studio**: CoMix Wave Films  
+- **Judul Internasional**: *The Garden of Words*
+- **Sutradara**: Makoto Shinkai
+- **Pemeran Utama**:
+  - Takao Akizuki – Miyu Irino
+  - Yukari Yukino – Kana Hanazawa
+- **Durasi**: 46 menit
+- **Rilis Jepang**: 31 Mei 2013
+- **Studio**: CoMix Wave Films
 - **Rating IMDb**: 7.4/10
 
 ### **Cerita yang Mengalir Pelan, Tapi Menyentuh**
@@ -53,7 +53,7 @@ Melalui puisi tanka klasik yang disisipkan Yukari, Takao perlahan menyadari bahw
 {{< image-caption
   src="/images/anime/kotonoha_no_niwa2.webp"
   alt="Kotonoha no Niwa - Still 1"
-  sources="CoMix Wave Films – Official Still Website,https://www.imdb.com/title/tt2591814/" 
+  sources="CoMix Wave Films – Official Still Website,https://www.imdb.com/title/tt2591814/"
 >}}
 
 {{< related-auto >}}
@@ -65,13 +65,13 @@ Detail visual dalam *Kotonoha no Niwa* sungguh luar biasa. Dari tetesan hujan, d
 {{< image-caption
   src="/images/anime/kotonoha_no_niwa3.webp"
   alt="Kotonoha no Niwa - Still 2"
-  sources="CoMix Wave Films – Official Still Website,https://www.imdb.com/title/tt2591814/" 
+  sources="CoMix Wave Films – Official Still Website,https://www.imdb.com/title/tt2591814/"
 >}}
 
 {{< image-caption
   src="/images/anime/kotonoha_no_niwa4.webp"
   alt="Kotonoha no Niwa - Still 3"
-  sources="CoMix Wave Films – Official Still Website,https://www.imdb.com/title/tt2591814/" 
+  sources="CoMix Wave Films – Official Still Website,https://www.imdb.com/title/tt2591814/"
 >}}
 
 ### **Musik dan Suara yang Mengikat Emosi**
