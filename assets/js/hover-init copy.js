@@ -3,15 +3,13 @@ const gsap = window.gsap;
 const hoverEffect = window.hoverEffect;
 
 window.addEventListener("load", () => {
-  // Cek apakah user sudah pernah lihat efek ini di device
-  const isFirstVisit = !localStorage.getItem("hoverEffectInitialized");
-
+  const isFirstVisit = !sessionStorage.getItem("hoverEffectInitialized");
   const navType = performance.getEntriesByType("navigation")[0]?.type || "navigate";
   const isHome = location.pathname === "/";
   const delayTime = (isFirstVisit && isHome && navType === "navigate") ? 9000 : 100;
 
   setTimeout(() => {
-    // Cek apakah hoverEffect library memang tersedia
+    // Cek apakah hoverEffect library memang ada
     if (!window.hoverEffect) {
       console.warn("⚠️ hoverEffect tidak tersedia. Gambar tampil apa adanya tanpa efek.");
       return;
@@ -25,8 +23,7 @@ window.addEventListener("load", () => {
       applyHoverEffect(el, 0.3, "/images/distortion/heightMap.png");
     });
 
-    // Tandai di localStorage bahwa efek sudah pernah ditampilkan
-    localStorage.setItem("hoverEffectInitialized", "true");
+    sessionStorage.setItem("hoverEffectInitialized", "true");
   }, delayTime);
 
   function applyHoverEffect(el, intensity, displacementPath) {
@@ -53,6 +50,7 @@ window.addEventListener("load", () => {
 
     const checkBothLoaded = () => {
       if (img1Loaded && img2Loaded) {
+        // Gambar fallback check — biarkan tampil apa adanya kalau gagal
         if (!img1.complete || !img2.complete) {
           console.warn("⚠️ Salah satu gambar gagal dimuat. Dibiarkan tampil normal tanpa efek:", el);
           return;
@@ -81,7 +79,7 @@ window.addEventListener("load", () => {
               });
             }, 500);
 
-            localStorage.removeItem("hoverReloaded");
+            sessionStorage.removeItem("hoverReloaded");
             console.log("✅ Hover effect diterapkan:", el);
           } catch (error) {
             console.warn("❌ hoverEffect gagal:", error);
@@ -97,6 +95,8 @@ window.addEventListener("load", () => {
 
     function fallbackHandler(img, el, selector) {
       console.warn(`⚠️ Gagal load (${img.src}) → gambar asli tetap dipakai. Tidak diubah ke default.`);
+      // Tidak ubah src
+      // Tidak hide img
       if (selector.includes("1")) img1Loaded = true;
       if (selector.includes("2")) img2Loaded = true;
       checkBothLoaded();

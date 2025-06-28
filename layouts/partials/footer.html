@@ -39,35 +39,37 @@
   tippy('[data-tippy-content]');
 </script>
 <!-- ============= MAIN BUNDLE UNTUK SEMUA HALAMAN ============= -->
-{{ $main := resources.Get "js/main.js" | resources.Copy "js/main.js" }}
+<!-- ============= MAIN BUNDLE UNTUK SEMUA HALAMAN ============= -->
+{{ $main := resources.Get "js/main.js" | resources.Minify }}
 <script src="{{ $main.RelPermalink }}" defer></script>
 
-{{ $notif := resources.Get "js/notif.js" | resources.Copy "js/notif.js" }}
+{{ $notif := resources.Get "js/notif.js" | resources.Minify }}
 <script src="{{ $notif.RelPermalink }}" defer></script>
 
-{{ $last := resources.Get "js/last-view.js" | resources.Copy "js/last-view.js" }}
+{{ $last := resources.Get "js/last-view.js" | resources.Minify }}
 <script src="{{ $last.RelPermalink }}" defer></script>
 
 
 <!-- ============= LIBRARY EXTERNAL ============= -->
-{{ $three := resources.Get "js/three.min.js" | resources.Copy "js/three.min.js" }}
+{{ $three := resources.Get "js/three.min.js" | resources.Minify }}
 <script src="{{ $three.RelPermalink }}" defer></script>
 
-{{ $gsap := resources.Get "js/gsap.min.js" | resources.Copy "js/gsap.min.js" }}
+{{ $gsap := resources.Get "js/gsap.min.js" | resources.Minify }}
 <script src="{{ $gsap.RelPermalink }}" defer></script>
 
-{{ $hoverUMD := resources.Get "js/hover-effect.umd.js" | resources.Copy "js/hover-effect.umd.js" }}
+{{ $hoverUMD := resources.Get "js/hover-effect.umd.js" | resources.Minify }}
 <script src="{{ $hoverUMD.RelPermalink }}" defer></script>
 
 
 <!-- ============= KHUSUS HOMEPAGE ============= -->
 {{ if eq .RelPermalink "/" }}
-  {{ $loading := resources.Get "js/loading-animation.js" | resources.Copy "js/loading-animation.js" }}
+  {{ $loading := resources.Get "js/loading-animation.js" | resources.Minify }}
   <script src="{{ $loading.RelPermalink }}" defer></script>
 
-  {{ $hoverInit := resources.Get "js/hover-init.js" | resources.Copy "js/hover-init.js" }}
+  {{ $hoverInit := resources.Get "js/hover-init.js" | resources.Minify }}
   <script src="{{ $hoverInit.RelPermalink }}" defer></script>
 {{ end }}
+
 
 
 {{ if hugo.IsServer }}
