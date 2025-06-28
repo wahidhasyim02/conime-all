@@ -102,29 +102,59 @@
 @layer components {
   /* Tippy.js styling */
   .tippy-box {
-    background-color: #111827; /* gray-900 */
+    background-color: #111827 !important; /* gray-900 */
     color: #f3f4f6; /* gray-100 */
     font-size: 0.875rem;
   }
   .dark .tippy-box {
-    background-color: #1f2937; /* gray-800 */
+    background-color: #1f2937 !important; /* gray-800 */
     color: #f3f4f6;
   }
-  .tippy-box > .tippy-arrow {
-    width: 10px;
-    height: 10px;
-  }
-  .tippy-box > .tippy-arrow::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    color: #111827 !important;
-    z-index: -4;
-  }
-  .dark .tippy-box > .tippy-arrow::before {
-    color: #1f2937 !important;
-  }
+
+
+
+/* Set ukuran arrow */
+.tippy-box > .tippy-arrow {
+  width: 10px;
+  height: 10px;
+}
+
+/* Segitiga arrow — ini yang perlu diwarnai */
+.tippy-box > .tippy-arrow::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #111827 !important; /* bg-gray-800 */
+  transform: rotate(0deg);
+  z-index: -4;
+  transform: translate(0, 0);
+  box-shadow: none !important;
+}
+.dark .tippy-box > .tippy-arrow::before {
+  color: #1f2937 !important; /* Tailwind gray-800 */
+}
+
+/* Tooltip di bawah (arrow di atas mengarah ke atas) */
+.tippy-box[data-placement^="top"] > .tippy-arrow::before {
+  translate: 0 8px;
+}
+
+/* Tooltip di atas (arrow di bawah mengarah ke bawah) */
+.tippy-box[data-placement^="bottom"] > .tippy-arrow::before {
+  translate: 0 -8px;
+}
+
+/* Tooltip di kiri (arrow di kanan mengarah ke kanan) */
+.tippy-box[data-placement^="right"] > .tippy-arrow::before {
+  translate: 8px 0;
+}
+
+/* Tooltip di kanan (arrow di kiri mengarah ke kiri) */
+.tippy-box[data-placement^="left"] > .tippy-arrow::before {
+  translate: -8px 0;
+}
+
 
   /* Text strokes */
   .text-stroke-white {

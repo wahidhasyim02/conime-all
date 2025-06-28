@@ -28,7 +28,7 @@ const showMainContent = () => {
 };
 
 // Cek apakah sebelumnya sudah pernah tampil loading
-if (sessionStorage.getItem('loadingShown') === 'true') {
+if (localStorage.getItem('loadingShown') === 'true') {
   showMainContent();
 } else {
   const startTime = performance.now();
@@ -37,7 +37,7 @@ if (sessionStorage.getItem('loadingShown') === 'true') {
   const maybeShow = () => {
     if (alreadyShown) return;
     alreadyShown = true;
-    sessionStorage.setItem('loadingShown', 'true');
+    localStorage.setItem('loadingShown', 'true');
     showMainContent();
   };
 

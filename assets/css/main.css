@@ -3595,12 +3595,12 @@
 }
 @layer components {
   .tippy-box {
-    background-color: #111827;
+    background-color: #111827 !important;
     color: #f3f4f6;
     font-size: 0.875rem;
   }
   .dark .tippy-box {
-    background-color: #1f2937;
+    background-color: #1f2937 !important;
     color: #f3f4f6;
   }
   .tippy-box > .tippy-arrow {
@@ -3613,10 +3613,25 @@
     width: 100%;
     height: 100%;
     color: #111827 !important;
+    transform: rotate(0deg);
     z-index: -4;
+    transform: translate(0, 0);
+    box-shadow: none !important;
   }
   .dark .tippy-box > .tippy-arrow::before {
     color: #1f2937 !important;
+  }
+  .tippy-box[data-placement^="top"] > .tippy-arrow::before {
+    translate: 0 8px;
+  }
+  .tippy-box[data-placement^="bottom"] > .tippy-arrow::before {
+    translate: 0 -8px;
+  }
+  .tippy-box[data-placement^="right"] > .tippy-arrow::before {
+    translate: 8px 0;
+  }
+  .tippy-box[data-placement^="left"] > .tippy-arrow::before {
+    translate: -8px 0;
   }
   .text-stroke-white {
     color: transparent;
