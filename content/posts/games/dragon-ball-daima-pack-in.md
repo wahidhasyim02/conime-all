@@ -37,34 +37,34 @@ source = "YouTube / Bandai Namco Entertainment"
 +++
 
 
-*Dragon Ball DAIMA Pack kini tersedia di **Dragon Ball Xenoverse 2**, hadirkan dua karakter baru, kostum, dan konten tambahan menarik.*
+*Dragon Ball DAIMA Pack kini tersedia di Dragon Ball Xenoverse 2, hadirkan dua karakter baru, kostum, dan konten tambahan menarik.*
 
-### **Karakter & Konten Baru**
-- **Super Saiyan 4 Goku (DAIMA)**
-- **Super Saiyan 3 Vegeta (DAIMA)**
-- **Kostum dan aksesori baru** dari Goku, Vegeta, Panzy, dan Glorio
-- **Parallel Quests** untuk menguji kekuatan karakter DAIMA melawan musuh besar dari dunia Dragon Ball
-- **Skill baru**, **Super Souls**, dan **ilustrasi loading screen**
+### Karakter & Konten Baru
+- Super Saiyan 4 Goku (DAIMA)
+- Super Saiyan 3 Vegeta (DAIMA)
+- Kostum dan aksesori baru dari Goku, Vegeta, Panzy, dan Glorio
+- Parallel Quests untuk menguji kekuatan karakter DAIMA melawan musuh besar dari dunia Dragon Ball
+- Skill baru, Super Souls, dan ilustrasi loading screen
 
 {{< related-auto >}}
 
-### **Update Gratis dan Paket Tambahan**
-- **Update gratis (tersedia hari ini)**:
+### Update Gratis dan Paket Tambahan
+- Update gratis (tersedia hari ini):
   - Raid Boss Battles
   - Kostum & item lobby
   - Super Souls
   - Loading screen baru
   - Skill tambahan
-- **Time Patrol Support Pack** (berbayar):
+- Time Patrol Support Pack (berbayar):
   - Item, skill, dan kostum pendukung untuk karakter utama
 
-### **Platform**
+### Platform
 Tersedia untuk:
-**PlayStation 4, PlayStation 5, Xbox One, Xbox Series X|S, Nintendo Switch, dan PC (Steam)**
+PlayStation 4, PlayStation 5, Xbox One, Xbox Series X|S, Nintendo Switch, dan PC (Steam)
 
 {{< related-auto >}}
 
-### **Tentang *Dragon Ball Xenoverse 2***
+### Tentang *Dragon Ball Xenoverse 2*
 Dirilis Oktober 2016, *Xenoverse 2* adalah RPG aksi dari Bandai Namco dan Dimps. Game ini dikenal dengan fitur kustomisasi karakter dan sistem *Time Patrol*. DLC DAIMA Pack memperluas konten cerita dan pertarungan secara signifikan.
 
 {{< content-end >}}

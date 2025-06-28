@@ -34,14 +34,14 @@ source = "YouTube / VIZ Media"
 +++
 
 
-VIZ Media resmi merilis volume pertama dari *The Bugle Call: Song of War*, manga fantasi karya **Mozuku Sora** dan **Higoro Toumori**.
+VIZ Media resmi merilis volume pertama dari *The Bugle Call: Song of War*, manga fantasi karya Mozuku Sora dan Higoro Toumori.
 
-### **Tentang Cerita**
-Luca hanyalah seorang bugler yang ingin meninggalkan medan perang dan mengejar impian sebagai musisi sejati. Namun takdir berkata lain. Setelah diselamatkan oleh Pontiff, ia bergabung dengan kelompok **Branch-hexed**—manusia dengan kekuatan unik yang digunakan untuk melawan kekaisaran saingan.
+### Tentang Cerita
+Luca hanyalah seorang bugler yang ingin meninggalkan medan perang dan mengejar impian sebagai musisi sejati. Namun takdir berkata lain. Setelah diselamatkan oleh Pontiff, ia bergabung dengan kelompok Branch-hexed—manusia dengan kekuatan unik yang digunakan untuk melawan kekaisaran saingan.
 
 {{< related-auto >}}
 
-### **Dunia yang Penuh Intrik**
+### Dunia yang Penuh Intrik
 Dunia Arboral dipenuhi menara kuno bernama Spires, peninggalan peradaban maju yang menyimpan rahasia besar. Perebutan kendali atas Spires memicu konflik global, memaksa Luca memainkan peran sebagai *muse of massacre* dalam perang yang tak bisa ia hindari.
 
 > “Prepare for music, strategy, sacrifice, and steel in *The Bugle Call: Song of War, Vol. 1!*”

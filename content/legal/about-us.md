@@ -9,4 +9,5 @@ layout = "page"
 
 Kami menghadirkan berita terkini, review episode, rekomendasi, dan opini menarik yang dikurasi untuk pembaca Indonesia. Seluruh konten kami ditulis secara kolaboratif menggunakan bantuan AI (seperti ChatGPT), kemudian disunting oleh editor manusia untuk memastikan kualitas dan orisinalitas.
 
+
 Jika Anda memiliki saran, kritik, atau ingin menjalin kerja sama, silakan hubungi kami melalui halaman [Kontak](/contact).

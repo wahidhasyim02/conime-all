@@ -19,7 +19,7 @@
         {{ if gt $index 0 }}, {{ end }}
         <span>
         <a href="{{ $url }}" target="_blank" data-tippy-content="{{ $url }}"
-          class="hover:text-conime-400 dark:hover:text-conime-500 underline"
+          class="hover:underline underline-offset-4 hover:text-conime-400 hover:dark:text-conime-500 inline"
           rel="noopener noreferrer">{{ $name }}</a>
       {{ end }}
     {{ end }}

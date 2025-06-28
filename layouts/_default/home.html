@@ -21,7 +21,7 @@
     {{ end }}
   </section>
 
-  <!-- 
+  <!--
  <div id="popular-news" class="mt-8 col-span-12 hidden"></div>
 
 <section id="recommended-fallback" class="w-full relative col-span-4 lg:col-span-12 hidden flex-col lg:flex-row items-center rounded-3xl h-fit mt-10">
@@ -72,7 +72,7 @@
       </div>
       {{ end }}
     </div>
-    <a href="/posts/"  
+    <a href="/posts/"
       class="inline-flex group items-center gap-2 text-sm font-medium text-gray-800 dark:text-gray-300 hover:text-gray-950 hover:dark:text-white border-b border-gray-800 dark:border-gray-400 hover:border-gray-950 hover:dark:border-white transition">
       <!-- + dengan efek rotate saat hover -->
       <span class="inline-block transition-transform duration-300 group-hover:rotate-90">+</span>
@@ -100,11 +100,11 @@
           class="relative popular-html flex flex-col  w-full h-full bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-950/20 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out  ">
           <a href="{{ .RelPermalink }}"
             class=" bg-cover w-full h-full  overflow-hidden transition duration-500 ease-in-out">
-            
+
             <img loading="lazy" {{ with .Params.image }} src="{{ . }}" {{ else }}
             {{ end }} alt="Gambar {{ .Title }}"
               class="w-full h-[360px]  object-cover rounded-t-xl    brightness-75  hover:brightness-100 transition  duration-300    ease-in-out" />
-            
+
 
           </a>
 
@@ -130,7 +130,7 @@
               "dateNew.html" . }}
             </p>
             <h2
-              class="absolute inset-0 text-transparent text-stroke-gray-950 dark:text-stroke-white text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-80 dark:lg:opacity-20 group-hover:lg:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
+              class="absolute inset-0 text-gray-500 dark:text-gray-900 text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-100 dark:lg:opacity-100 group-hover:lg:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
               #{{ add $i 1 }}
             </h2>
           </div>

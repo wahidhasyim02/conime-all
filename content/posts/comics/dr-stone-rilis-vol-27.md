@@ -28,14 +28,14 @@ url = "https://www.viz.com/read/manga/dr-stone-volume-27/product/8342"
 +++
 
 
-VIZ Media resmi merilis volume ke-27 dari *Dr. Stone*, manga petualangan sains karya **Riichiro Inagaki** dan **Boichi**.
+VIZ Media resmi merilis volume ke-27 dari *Dr. Stone*, manga petualangan sains karya Riichiro Inagaki dan Boichi.
 
-### **Perjalanan Waktu Dimulai**
+### Perjalanan Waktu Dimulai
 Senku dan timnya menerima pesan misterius dari masa depan, yang membuat mereka semakin yakin mesin waktu bisa menjadi kenyataan. Namun tantangan ilmiah dan moral yang muncul membuat proyek ini semakin kompleks.
 
 {{< related-auto >}}
 
-### **Misteri Masa Depan**
+### Misteri Masa Depan
 Siapa sebenarnya yang mengirim pesan itu? Apa dampaknya bagi Stone World? Volume ini menghadirkan ketegangan baru dalam eksplorasi ilmiah Senku dan timnya.
 
 Baca pratinjau gratis dan pre-order volume 27 di [halaman resmi VIZ](https://www.viz.com/read/manga/dr-stone-volume-27/product/8342).

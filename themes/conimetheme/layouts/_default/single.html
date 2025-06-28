@@ -33,9 +33,9 @@
           </div>
 
         </div>
-       
+
       </div>
-       {{ partial "share-modal.html" . }} 
+       {{ partial "share-modal.html" . }}
        {{ end }}
 
       {{ $path := .RelPermalink }}
@@ -81,7 +81,7 @@
       </div>
       <div class="pb-4 mb-2">
       {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}</div>
- 
+
 
 
       <!-- Artikel panjang lainnya -->
@@ -102,7 +102,7 @@
       {{ partial "comments.html" . }}
 
       <!-- Related Articles -->
-      {{ partial "related-articles.html" . }} 
+      {{ partial "related-articles.html" . }}
     </section>
     {{ end }}
   </main>

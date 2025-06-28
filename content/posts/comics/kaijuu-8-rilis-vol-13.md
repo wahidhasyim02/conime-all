@@ -29,14 +29,14 @@ url = "https://www.viz.com/read/manga/kaiju-no-8-volume-13/product/8340"
 +++
 
 
-VIZ Media resmi merilis volume ke-13 dari *Kaiju No. 8*, manga aksi-fantasi karya **Naoya Matsumoto**.
+VIZ Media resmi merilis volume ke-13 dari *Kaiju No. 8*, manga aksi-fantasi karya Naoya Matsumoto.
 
-### **Pertempuran Sengit**
+### Pertempuran Sengit
 Mina Ashiro jatuh ke tangan Kaiju No. 9 setelah kemunculannya di Tachikawa. Kafka berusaha menyelamatkannya, tetapi serangan daikaiju di berbagai titik kota menghambat langkahnya. Di tengah kekacauan, sebuah entitas misterius yang belum pernah terlihat sebelumnya muncul, menambah ketegangan dalam pertempuran.
 
 {{< related-auto >}}
 
-### **Ancaman Baru**
+### Ancaman Baru
 Kaiju No. 9 semakin memperkuat dominasinya, memaksa Kafka dan timnya menghadapi tantangan lebih besar. Dengan kekuatan baru yang belum sepenuhnya terungkap, pertempuran ini bisa menjadi titik balik bagi dunia Kaiju.
 
 Baca pratinjau gratis dan pre-order volume 13 di [halaman resmi VIZ](https://www.viz.com/read/manga/kaiju-no-8-volume-13/product/8340).

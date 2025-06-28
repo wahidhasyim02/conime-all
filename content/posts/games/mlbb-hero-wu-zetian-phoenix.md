@@ -30,36 +30,36 @@ title = "Wu Zetian – Backstory Trailer"
 source = "YouTube / Mobile Legends: Bang Bang"
 +++
 
-**Mobile Legends: Bang Bang** memperkenalkan hero baru **Wu Zetian**, sang *Phoenix Empress* yang menguasai kekuatan sihir phoenix dan bertarung untuk memulihkan kejayaan Divine Capital. Wu Zetian hadir pada **18 Juni 2025**, dan bisa didapatkan secara **gratis** lewat event **696**, cukup dengan menyelesaikan misi selama periode **18 Juni – 4 Juli 2025**.
+Mobile Legends: Bang Bang memperkenalkan hero baru Wu Zetian, sang *Phoenix Empress* yang menguasai kekuatan sihir phoenix dan bertarung untuk memulihkan kejayaan Divine Capital. Wu Zetian hadir pada 18 Juni 2025, dan bisa didapatkan secara gratis lewat event 696, cukup dengan menyelesaikan misi selama periode 18 Juni – 4 Juli 2025.
 
-### **Skill Set Wu Zetian**
+### Skill Set Wu Zetian
 
-- **Passive – Celestial Armament**
+- Passive – Celestial Armament
   - *Phoenix Crown*: Tambahan Spell Vamp saat skill 1 dan 2 mengenai musuh.
   - *Celestial Robe*: Shield dan efek knockback + stun pada musuh yang terlalu dekat (cooldown 2 menit).
 
-- **Skill 1 – Phoenix Strike**
+- Skill 1 – Phoenix Strike
   - Menembakkan gelombang phoenix hingga 3 kali. Gelombang terakhir memberikan damage besar, AoE lebih luas, dan menarik musuh.
 
-- **Skill 2 – Phoenix Descent**
+- Skill 2 – Phoenix Descent
   - Memanggil roh phoenix ke area target untuk memberi magic damage dan slow. Dapat diarahkan ulang untuk efek serupa.
 
 
-{{< related-auto >}}
-- **Ultimate – Fury of the Phoenix**
+- Ultimate – Fury of the Phoenix
   - Memberi buff speed ke teman dan menghantam semua musuh di map dengan magic damage serta efek stun.
 
-Wu Zetian adalah **mid-lane mage** dengan potensi tinggi dalam **crowd control, sustain magic damage**, dan **pengaruh global** lewat ultimatenya.
+{{< related-auto >}}
+Wu Zetian adalah mid-lane mage dengan potensi tinggi dalam crowd control, sustain magic damage, dan pengaruh global lewat ultimatenya.
 
 
-### **Unlock Gratis Selama Event**
+### Unlock Gratis Selama Event
 - Periode: 18 Juni – 4 Juli 2025
-- Selesaikan misi harian untuk membuka Wu Zetian **dalam 8 hari**.
-- Alternatif: beli dengan **Battle Point atau Diamond**.
+- Selesaikan misi harian untuk membuka Wu Zetian dalam 8 hari.
+- Alternatif: beli dengan Battle Point atau Diamond.
 
 
-### **Kisah Sang Empress**
-Dulunya yatim piatu tanpa nama, Wu Zetian bangkit dari bawah hingga mengklaim kembali takdirnya sebagai pendiri Divine Capital. Dengan kehendak rakyat dan semangat phoenix, ia kembali sebagai simbol **keteguhan, kebangkitan, dan persatuan**.
+### Kisah Sang Empress
+Dulunya yatim piatu tanpa nama, Wu Zetian bangkit dari bawah hingga mengklaim kembali takdirnya sebagai pendiri Divine Capital. Dengan kehendak rakyat dan semangat phoenix, ia kembali sebagai simbol keteguhan, kebangkitan, dan persatuan.
 
 > “If destiny does not favor you, forge your own path through sheer will and effort.” – Wu Zetian
 

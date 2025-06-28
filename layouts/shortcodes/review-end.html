@@ -27,7 +27,7 @@
 
 {{ if ge (len $relatedFiltered) 2 }}
 <div class="flex gap-3 mx-2 my-4 h-fit bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm ">
-  <div class="w-2 min-h-20 max-h-28 rounded bg-conime-500 dark:bg-conime-500"></div>
+  <div class="w-1 min-h-20 max-h-28 bg-conime-500 dark:bg-conime-500"></div>
   <div class="h-full p-2">
     <p class="font-medium">Also read:</p>
     {{ $second := index $relatedFiltered 1 }}
@@ -44,16 +44,42 @@
 <!-- KESIMPULAN -->
 {{ with .Page.Params.conclusion }}
 <h2 class="font-medium uppercase tracking-wide">Kesimpulan :</h2>
-<div class="border-l-4 border-gray-300 dark:border-gray-800/50
-    px-4 mx-2 md:mx-4 my-4 font-normal dark:font-light leading-8
-    [&>p]:text-justify [&>p]:my-3">
+<div class="border-l-4 border-gray-400 dark:border-gray-600 pl-4 italic text-gray-700 dark:text-gray-300 my-4 [&>p]:my-3">
   {{ . | safeHTML }}
 </div>
 {{ end }}
 
-{{ with .Page.Params.cta }}
-<p class="my-4 font-medium dark:font-light">{{ . | markdownify }}</p>
+{{ $categories := .Page.Params.categories }}
+{{ $name := "" }}
+{{ $action := "" }}
+
+{{ if in $categories "Anime" }}
+  {{ $name = .Page.Params.nameAnime }}
+  {{ $action = "tonton" }}
+{{ else if in $categories "Movies" }}
+  {{ $name = .Page.Params.nameMovie }}
+  {{ $action = "tonton" }}
+{{ else if in $categories "Game" }}
+  {{ $name = .Page.Params.nameGame }}
+  {{ $action = "mainkan" }}
+{{ else if in $categories "Manga" }}
+  {{ $name = .Page.Params.nameComic }}
+  {{ $action = "baca" }}
+{{ else }}
+  {{ $name = "" }}
+  {{ $action = "" }}
 {{ end }}
+
+{{ if and $action $name }}
+<p class="my-4 font-medium dark:font-light">
+  Ikuti terus <span class="text-conime-500">{{ .Site.Title }}</span> untuk berita dan ulasan terbaru, dan {{ $action }} {{ $name }} di platform resmi favoritmu!
+</p>
+{{ else }}
+<p class="my-4 font-medium dark:font-light">
+  Ikuti terus <span class="text-conime-500">{{ .Site.Title }}</span> untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!
+</p>
+{{ end }}
+
 
 {{ with .Page.Params.sources }}
 <p class="mb-4 italic font-normal dark:font-light">
@@ -64,7 +90,7 @@
   {{ if eq $index (sub $total 1) }} dan {{ else }}, {{ end }}
   {{ end }}
   <a href="{{ $source.url }}" target="_blank" data-tippy-content="{{ $source.url }}"
-    class="underline hover:text-conime-400 hover:dark:text-conime-500" rel="noopener noreferrer">{{ $source.name }}</a>
+    class="hover:underline underline-offset-4 hover:text-conime-400 hover:dark:text-conime-500 inline" rel="noopener noreferrer">{{ $source.name }}</a>
   {{ end }}.
 </p>
 {{ end }}

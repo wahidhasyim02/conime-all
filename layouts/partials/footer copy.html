@@ -38,35 +38,37 @@
 <script>
   tippy('[data-tippy-content]');
 </script>
+
 <!-- ============= MAIN BUNDLE UNTUK SEMUA HALAMAN ============= -->
-{{ $main := resources.Get "js/main.js" | resources.Copy "js/main.js" }}
-<script src="{{ $main.RelPermalink }}" defer></script>
+{{ $main := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}" defer crossorigin="anonymous"></script>
 
-{{ $notif := resources.Get "js/notif.js" | resources.Copy "js/notif.js" }}
-<script src="{{ $notif.RelPermalink }}" defer></script>
+{{ $notif := resources.Get "js/notif.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $notif.RelPermalink }}" integrity="{{ $notif.Data.Integrity }}" defer crossorigin="anonymous"></script>
 
-{{ $last := resources.Get "js/last-view.js" | resources.Copy "js/last-view.js" }}
-<script src="{{ $last.RelPermalink }}" defer></script>
+
+{{ $last := resources.Get "js/last-view.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $last.RelPermalink }}" integrity="{{ $last.Data.Integrity }}" defer crossorigin="anonymous"></script>
 
 
 <!-- ============= LIBRARY EXTERNAL ============= -->
-{{ $three := resources.Get "js/three.min.js" | resources.Copy "js/three.min.js" }}
-<script src="{{ $three.RelPermalink }}" defer></script>
+{{ $three := resources.Get "js/three.min.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $three.RelPermalink }}" integrity="{{ $three.Data.Integrity }}" defer crossorigin="anonymous"></script>
 
-{{ $gsap := resources.Get "js/gsap.min.js" | resources.Copy "js/gsap.min.js" }}
-<script src="{{ $gsap.RelPermalink }}" defer></script>
+{{ $gsap := resources.Get "js/gsap.min.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $gsap.RelPermalink }}" integrity="{{ $gsap.Data.Integrity }}" defer crossorigin="anonymous"></script>
 
-{{ $hoverUMD := resources.Get "js/hover-effect.umd.js" | resources.Copy "js/hover-effect.umd.js" }}
-<script src="{{ $hoverUMD.RelPermalink }}" defer></script>
+{{ $hoverUMD := resources.Get "js/hover-effect.umd.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $hoverUMD.RelPermalink }}" integrity="{{ $hoverUMD.Data.Integrity }}" defer crossorigin="anonymous"></script>
 
 
 <!-- ============= KHUSUS HOMEPAGE ============= -->
 {{ if eq .RelPermalink "/" }}
-  {{ $loading := resources.Get "js/loading-animation.js" | resources.Copy "js/loading-animation.js" }}
-  <script src="{{ $loading.RelPermalink }}" defer></script>
+  {{ $loading := resources.Get "js/loading-animation.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $loading.RelPermalink }}" integrity="{{ $loading.Data.Integrity }}" defer crossorigin="anonymous"></script>
 
-  {{ $hoverInit := resources.Get "js/hover-init.js" | resources.Copy "js/hover-init.js" }}
-  <script src="{{ $hoverInit.RelPermalink }}" defer></script>
+  {{ $hoverInit := resources.Get "js/hover-init.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $hoverInit.RelPermalink }}" integrity="{{ $hoverInit.Data.Integrity }}" defer crossorigin="anonymous"></script>
 {{ end }}
 
 

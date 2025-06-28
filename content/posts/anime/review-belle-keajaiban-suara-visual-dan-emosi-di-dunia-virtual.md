@@ -12,6 +12,8 @@ synopsis = """<p><strong>Belle</strong> adalah kisah tentang Suzu Naito, seorang
 
 conclusion = """<p><em>Belle</em> adalah pengalaman sinematik yang mendalam — bukan sekadar visual CGI dan musik yang enak didengar, tetapi kisah tentang kerentanan, solidaritas, dan cinta—baik itu persahabatan maupun asmara. Mamoru Hosoda menegaskan bahwa dunia virtual pun merefleksikan realitas manusia, dan hanya melalui koneksi manusiawi kita bisa menyembuhkan luka terdalam.</p>"""
 
+cta = "Ikuti terus {{< site-title >}} untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!"
+
 image = "/images/anime/BellePosterBlank.webp"
 
 tags = ["Belle", "Anime Movie", "Mamoru Hosoda", "Recommended", "Studio Chizu", "Soundtrack", "Virtual Reality", "Review"]
@@ -41,50 +43,50 @@ title = "BELLE (2021) - 90 Second Trailer [HQ]"
 source = "YouTube / スタジオ地図 / STUDIO CHIZU"
 +++
 
-### **Informasi Film Belle**
-- **Judul Jepang**: *Ryuu to Sobakasu no Hime*
-- **Judul Internasional**: *Belle*
-- **Sutradara & Penulis**: Mamoru Hosoda
-- **Studio Produksi**: Studio Chizu
-- **Durasi**: 124 menit
-- **Genre**: Animasi, Drama, Fantasi, Musik
-- **Perilisan**: 2021 (Japan), pemutaran perdana di Cannes
+### Informasi Film Belle
+- Judul Jepang: *Ryuu to Sobakasu no Hime*
+- Judul Internasional: *Belle*
+- Sutradara & Penulis: Mamoru Hosoda
+- Studio Produksi: Studio Chizu
+- Durasi: 124 menit
+- Genre: Animasi, Drama, Fantasi, Musik
+- Perilisan: 2021 (Japan), pemutaran perdana di Cannes
 
-### **Saya Sempat Ragu, Tapi Kini Menyesal Tidak Menonton Lebih Awal**
-Awalnya saya melihat gambar Belle dan merasa tidak tertarik. Visualnya terasa aneh, dan saya tak terpikat. Tapi karena sering muncul di berbagai rekomendasi dan komentar positif, akhirnya saya tonton juga… dan saya langsung menyesal: **kenapa tidak nonton dari dulu!**
+### Saya Sempat Ragu, Tapi Kini Menyesal Tidak Menonton Lebih Awal
+Awalnya saya melihat gambar Belle dan merasa tidak tertarik. Visualnya terasa aneh, dan saya tak terpikat. Tapi karena sering muncul di berbagai rekomendasi dan komentar positif, akhirnya saya tonton juga… dan saya langsung menyesal: kenapa tidak nonton dari dulu!
 
 Film ini begitu menyentuh. Ketika Belle mulai menyanyi, saya merinding. Musik, suara, grafik, lirik—semuanya menyatu dengan sempurna. Emosinya terasa nyata. Saya bahkan hampir menangis karena nyanyian Belle benar-benar menyuarakan isi hatinya.
 
 Saya juga merasa familiar dengan lagunya, yang ternyata sering saya dengarkan versi cover-nya dari Hana Hope. Bahkan sebelum menonton filmnya, saya sudah menyukai lagunya.
 
-### **Kekuatan Terbesar: Musik yang Menggetarkan**
+### Kekuatan Terbesar: Musik yang Menggetarkan
 Soundtrack film ini luar biasa. Vokal Kaho Nakamura sebagai Belle begitu kuat namun lembut. Lagu-lagu seperti *U*, *Lend Me Your Voice*, dan *A Million Miles Away* benar-benar menyampaikan perasaan yang tak terucap.
 
 Jika kamu pernah dengar cover lagu Belle di platform seperti YouTube, kemungkinan besar kamu sudah jatuh cinta dengan musiknya bahkan tanpa sadar.
 
-### **Cerita Emosional dengan Karakter Pendukung yang Kuat**
+### Cerita Emosional dengan Karakter Pendukung yang Kuat
 Ceritanya tidak hanya soal dunia virtual, tapi juga luka batin dan keberanian menyuarakan kebenaran. Setelah ibunya meninggal, Suzu berubah jadi pendiam dan kehilangan semangat. Tapi dengan dukungan teman-teman, terutama Hiro dan lainnya, dia mulai bangkit. Kehangatan dari mereka sangat terasa, dan jelas mereka sangat peduli padanya.
 
 Salah satu kejutan juga datang dari Lilas Ikuta (Rira Ikuta), penyanyi terkenal dari YOASOBI, yang mengisi suara Hiroka. Meski tidak bernyanyi dalam film, akting suaranya sangat natural dan hidup.
 
 {{< related-auto >}}
 
-### **Tentang Cinta: Siapa yang Disukai Suzu?**
+### Tentang Cinta: Siapa yang Disukai Suzu?
 Jujur, bagian romantis film ini agak membingungkan. Apakah Suzu menyukai Ryuu (Kei) secara romantis? Bukankah dia masih anak-anak? Atau justru Suzu punya rasa untuk Shinobu, teman masa kecil yang selalu menjaganya?
 
 Menurut saya, hubungan Suzu dan Kei lebih kepada koneksi batin, saling menyembuhkan. Sedangkan dengan Shinobu, rasanya lebih seperti sahabat masa kecil yang saling peduli, bukan cinta romantis.
 
-### **Visual yang Megah dan Dunia Virtual yang Hidup**
+### Visual yang Megah dan Dunia Virtual yang Hidup
 Dunia virtual *U* digambarkan begitu spektakuler. Penuh warna, kreatif, dan tetap menyimpan kedalaman. Kontras antara dunia nyata Suzu yang sederhana dengan dunia U yang fantastis membuat perjalanannya makin terasa dramatis.
 
 
-### **Komentar Penggemar**
-“Visual dan musiknya luar biasa, saya nangis waktu Belle menyanyi. Sungguh salah satu film terbaik dari Mamoru Hosoda.” — MyAnimeList user 'X‑**'*
+### Komentar Penggemar
+> “Visual dan musiknya luar biasa, saya nangis waktu Belle menyanyi. Sungguh salah satu film terbaik dari Mamoru Hosoda.” — MyAnimeList user 'X‑'*
 
-“Saya kasih rating 8 bintang, tapi rasanya seperti 9. Karena Mamoru Hosoda benar-benar paham jiwa manusia seperti sedikit orang mampu.” — IMDb user 'J‑**'*
+> “Saya kasih rating 8 bintang, tapi rasanya seperti 9. Karena Mamoru Hosoda benar-benar paham jiwa manusia seperti sedikit orang mampu.” — IMDb user 'J‑'*
 
-### **Catatan Penulis**
+### Catatan Penulis
 Saya tak menyangka film ini akan seberkesan itu. *Belle* bukan cuma film tentang teknologi dan virtualitas—ini tentang suara yang terpendam, tentang luka yang kita sembunyikan, dan tentang kekuatan untuk menyembuhkan. Kalau suatu hari kisah hidup saya difilmkan, saya ingin musiknya sekeren ini.
 
-> Tonton *Belle*, dan izinkan suara Belle menyentuh hatimu.
+
 {{< review-end >}}

@@ -49,10 +49,10 @@ source = "YouTube / 東宝MOVIEチャンネル"
 
 ### Pengumuman Resmi & Pemeran
 
-Menurut situs resmi *Under Ninja*, film live-action ini diproduksi dari manga karya **Kengo Hanazawa** dan diarahkan oleh **Yuichi Fukuda**. Pemeran utama:
+Menurut situs resmi *Under Ninja*, film live-action ini diproduksi dari manga karya Kengo Hanazawa dan diarahkan oleh Yuichi Fukuda. Pemeran utama:
 
-- **Kento Yamazaki** sebagai **Kurō Kumogakure**, ninja level bawah (下忍)
-- **Minami Hamabe** sebagai **Ayaka Noguchi**, siswi SMA yang ikut terlibat dalam konflik ninja modern
+- Kento Yamazaki sebagai Kurō Kumogakure, ninja level bawah (下忍)
+- Minami Hamabe sebagai Ayaka Noguchi, siswi SMA yang ikut terlibat dalam konflik ninja modern
 
 {{< related-auto >}}
 
@@ -71,17 +71,17 @@ Menurut situs resmi *Under Ninja*, film live-action ini diproduksi dari manga ka
 
 ### Jadwal & Format
 
-- Film dijadwalkan tayang perdana di bioskop Jepang pada **24 Januari 2025**
-- Berdurasi sekitar **123 menit** dan diproduksi oleh Fuji TV, Kodansha, serta Toho
+- Film dijadwalkan tayang perdana di bioskop Jepang pada 24 Januari 2025
+- Berdurasi sekitar 123 menit dan diproduksi oleh Fuji TV, Kodansha, serta Toho
 
 
 
 
 ### Tim Produksi & Pemeran Lengkap
 
-- **Sutradara & Penulis**: Yuichi Fukuda (Gintama, Saint Young Men)
-- **Original Manga**: Kengo Hanazawa (sejak 2018 di Weekly Young Magazine)
-- **Pemeran Pendukung**: Shotaro Mamiya, Mai Shiraishi, Amane Okayama, Chihiro Yamamoto, Ryubi Miyase, Ryotaro Sakaguchi, Mitsuru Hirata, dan lainnya
+- Sutradara & Penulis: Yuichi Fukuda (Gintama, Saint Young Men)
+- Original Manga: Kengo Hanazawa (sejak 2018 di Weekly Young Magazine)
+- Pemeran Pendukung: Shotaro Mamiya, Mai Shiraishi, Amane Okayama, Chihiro Yamamoto, Ryubi Miyase, Ryotaro Sakaguchi, Mitsuru Hirata, dan lainnya
 
 
 

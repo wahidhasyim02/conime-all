@@ -9,7 +9,7 @@ summary = "Studio N-Lite resmi mengumumkan film animasi original *Chiure: Child 
 
 synopsis = """<p><strong>Chiure: Child of the Sea</strong> adalah film animasi original dari N-Lite, dijadwalkan rilis pada 2026 di Jepang. Disutradarai dan ditulis oleh Daisuke Igarashi, film ini menampilkan desain karakter dan latar yang kaya detail, dengan atmosfer surealis dan tema manusia yang mendalam.</p>"""
 
-cta = "Jangan lupa ikuti terus {{< site-title >}} untuk update berita anime terbaru dan rilisan film mendatang!"
+cta = "Ikuti terus {{< site-title >}} untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!"
 
 
 image = "/images/anime/chiure-child-of-the-sea.webp"
@@ -27,7 +27,7 @@ url = "https://www.animenewsnetwork.com/news/2025-06-25/n-lite-announces-chiure-
 +++
 
 
-Studio **N-Lite** resmi mengumumkan proyek film animasi original berjudul **Chiure: Child of the Sea**, yang dijadwalkan rilis pada **2026** di Jepang. Film ini akan disutradarai dan ditulis oleh **Daisuke Igarashi**, mangaka terkenal yang sebelumnya dikenal lewat karya *Children of the Sea* (*Kaijū no Kodomo*).
+Studio N-Lite resmi mengumumkan proyek film animasi original berjudul Chiure: Child of the Sea, yang dijadwalkan rilis pada 2026 di Jepang. Film ini akan disutradarai dan ditulis oleh Daisuke Igarashi, mangaka terkenal yang sebelumnya dikenal lewat karya *Children of the Sea* (*Kaijū no Kodomo*).
 
 Teaser visual yang dirilis memperlihatkan seorang anak perempuan berambut panjang berdiri di tepi pantai sambil menatap laut. Nuansa surealis dan fantasi kental terasa dalam desain latar dan karakter, menegaskan gaya khas Igarashi yang dikenal dengan lukisan hidup dan atmosfer mendalam.
 
@@ -35,15 +35,15 @@ Menurut N-Lite, film ini akan mengeksplorasi tema manusia dan alam dengan pendek
 
 > “Igarashi dikenal karena kemampuannya menangkap keindahan alam dan tema manusia yang mendalam,” kata studio dalam pengumuman resminya.
 
-Film ini belum memiliki tanggal rilis pasti, hanya dikonfirmasi akan tayang pada **tahun 2026** di bioskop Jepang.
+Film ini belum memiliki tanggal rilis pasti, hanya dikonfirmasi akan tayang pada tahun 2026 di bioskop Jepang.
 
 {{< related-auto >}}
 
-**Catatan Produksi:**
-- **Judul:** Chiure: Child of the Sea
-- **Rilis:** Dijadwalkan 2026 di Jepang
-- **Studio:** N-Lite
-- **Sutradara & Penulis:** Daisuke Igarashi
-- **Genre (perkiraan):** Fantasi, Drama
+Catatan Produksi:
+- Judul: Chiure: Child of the Sea
+- Rilis: Dijadwalkan 2026 di Jepang
+- Studio: N-Lite
+- Sutradara & Penulis: Daisuke Igarashi
+- Genre (perkiraan): Fantasi, Drama
 
 {{< content-end >}}

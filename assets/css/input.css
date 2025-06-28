@@ -97,6 +97,9 @@
   strong {
     font-weight: 500;
   }
+  a {
+    text-underline-offset: 4px;
+  }
 }
 
 @layer components {
@@ -345,17 +348,17 @@
   .content-article h2,
   .content-article h3,
   .content-article h4 {
-    @apply uppercase tracking-wide my-4;
+    @apply uppercase tracking-wide my-3;
   }
   .content-article blockquote {
-    @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic text-gray-700 dark:text-gray-300 my-4;
-  }
-  .content-article p {
-    @apply text-justify;
+    @apply border-l-4 border-gray-400 dark:border-gray-600 pl-4 italic text-gray-700 dark:text-gray-300 my-4;
   }
 
   .content-article ul {
     @apply list-disc ml-8;
+  }
+  .content-article p {
+    @apply my-3;
   }
 
   @keyframes spin1 {

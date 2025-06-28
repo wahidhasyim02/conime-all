@@ -30,30 +30,30 @@ title = """Mendekati Star Rail — "Cipher: Kaya Raya dari Segala Arah!" | Honka
 source = "YouTube / Honkai: Star Rail"
 +++
 
-HoYoverse merilis program khusus **Interastral Peace Entertainment** berjudul:
+HoYoverse merilis program khusus Interastral Peace Entertainment berjudul:
 
-### **“Mendekati Star Rail — Cipher: Kaya Raya dari Segala Arah!”**
+### “Mendekati Star Rail — Cipher: Kaya Raya dari Segala Arah!”
 
-Program ini memperkenalkan Cipher dan rivalnya yang tak terduga, **Tuan 'Roh Pencuri' Bartholos**, dengan gaya komedi satir khas Honkai.
+Program ini memperkenalkan Cipher dan rivalnya yang tak terduga, Tuan 'Roh Pencuri' Bartholos, dengan gaya komedi satir khas Honkai.
 
 {{< related-auto >}}
-### **Ringkasan Episode**
+### Ringkasan Episode
 
-> Entah kalian sadar atau tidak — kepala Tuan *Roh Pencuri* Bartholos ternyata **berbentuk tetesan air**, mengikuti prinsip aerodinamika.
+> Entah kalian sadar atau tidak — kepala Tuan *Roh Pencuri* Bartholos ternyata berbentuk tetesan air, mengikuti prinsip aerodinamika.
 > Bandingkan dengan kepala Cipher, dan jawabannya jelas:
 >
-> - Cipher: **0 poin**
-> - Bartholos: **1 poin** (menang aerodinamika)
+> - Cipher: 0 poin
+> - Bartholos: 1 poin (menang aerodinamika)
 > - Bartholos menang telak tanpa perlawanan!
 
 Episode ini menyajikan komedi ringan dan lore karakter dengan cara tidak biasa, membuatnya menjadi tayangan yang menghibur bagi pemain.
 
-### **Pengisi Suara (CV Bahasa Inggris)**
+### Pengisi Suara (CV Bahasa Inggris)
 
-- **Owlbert** — Bill Butts
-- **"Roh Pencuri" Bartholos** — Ann Konkle
+- Owlbert — Bill Butts
+- "Roh Pencuri" Bartholos — Ann Konkle
 
 
-**Saksikan programnya di platform resmi HoYoverse dan ikuti kisah Cipher dalam versi terbaru Honkai: Star Rail.**
+Saksikan programnya di platform resmi HoYoverse dan ikuti kisah Cipher dalam versi terbaru Honkai: Star Rail.
 
 {{< content-end >}}

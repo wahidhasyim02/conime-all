@@ -30,43 +30,43 @@ url = "https://www.imdb.com/title/tt1979319/"
 studio = "Warner Bros. Japan"
 +++
 
-### **Informasi Film**
-- **Judul Internasional**: *Rurouni Kenshin Part I: Origins*
-- **Sutradara**: Keishi Ōtomo
-- **Pemeran Utama**:
+### Informasi Film
+- Judul Internasional: *Rurouni Kenshin Part I: Origins*
+- Sutradara: Keishi Ōtomo
+- Pemeran Utama:
   - Himura Kenshin – Takeru Satō
   - Kaoru Kamiya – Emi Takei
   - Sanosuke Sagara – Munetaka Aoki
   - Megumi Takani – Yū Aoi
-- **Durasi**: 135 menit
-- **Rilis Jepang**: 25 Agustus 2012
-- **Pendapatan Dunia**: ± \$37,7 juta
-- **Rating IMDb**: 7.4/10 (30.000+ penilaian)
+- Durasi: 135 menit
+- Rilis Jepang: 25 Agustus 2012
+- Pendapatan Dunia: ± \$37,7 juta
+- Rating IMDb: 7.4/10 (30.000+ penilaian)
 
-### **Kelebihan Film**
+### Kelebihan Film
 
-**1. Chemistry dan Casting**
+1. Chemistry dan Casting
 Takeru Satō sangat cocok memerankan Kenshin. Bahkan kreator asli memuji pemilihannya. Emi Takei sebagai Kaoru juga tampil dengan karakter yang kuat namun lembut—mereka membentuk pasangan yang harmonis.
 
-**2. Aksi Pedang yang Memukau**
+2. Aksi Pedang yang Memukau
 Koreografi bertarung dalam film ini luar biasa. Gerakan cepat dan penuh gaya membuat pertarungan terasa nyata dan menyenangkan untuk ditonton.
 
-**3. Tema Penebusan dan Emosi**
+3. Tema Penebusan dan Emosi
 Kenshin yang berjuang menebus masa lalunya sebagai Battōsai membawa beban emosional yang terasa dalam sepanjang film. Tanpa membunuh, ia tetap menjadi pelindung bagi yang lemah.
 
 
 {{< related-auto >}}
 
-### **Catatan Kecil**
+### Catatan Kecil
 
-**- Penjahat yang Terlalu Teatrikal**
+- Penjahat yang Terlalu Teatrikal
 Beberapa karakter seperti Takeda Kanryū atau Jin-e terasa agak berlebihan, dengan gaya bicara dan tampilan yang dramatis.
 
-**- Karakter Pendukung Kurang Mendalam**
+- Karakter Pendukung Kurang Mendalam
 Akibat keterbatasan durasi, latar belakang karakter pendukung seperti Megumi atau Sanosuke terasa lebih tipis dibanding versi manga/anime.
 
-### **Kutipan Penonton**
+### Kutipan Penonton
 
-“Pembuat adaptasi ini benar-benar memahami materi sumbernya—menyuguhkan aksi pedang cepat dan emosional yang tepat.” — *IMDb user 'H‑***'*
+“Pembuat adaptasi ini benar-benar memahami materi sumbernya—menyuguhkan aksi pedang cepat dan emosional yang tepat.” — *IMDb user 'H‑*'*
 
 {{< review-end >}}

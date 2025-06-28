@@ -10,7 +10,8 @@ summary = "CyberAgent dan Shochiku mengumumkan adaptasi anime dari *Kagurabachi*
 
 synopsis = "Anime <strong>Kagurabachi</strong> resmi diumumkan sebagai proyek adaptasi baru oleh CyberAgent dan Shochiku, diproduksi oleh CygamesPictures dengan cerita balas dendam yang kelam dan penuh sihir."
 
-cta = "Jangan lupa ikuti terus {{< site-title >}} untuk berita anime terbaru, pengumuman adaptasi, dan info rilis musim mendatang!"
+cta = "Ikuti terus {{< site-title >}} untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!"
+
 
 image = "/images/anime/kagurabachi-anime-announcement.webp"
 
@@ -31,15 +32,15 @@ url = "https://www.cbr.com/kagurabachi-anime-announcement-report/"
 +++
 
 
-CyberAgent dan Shochiku telah mengumumkan adaptasi anime dari *Kagurabachi*, manga aksi karya **Takeru Hokazono**.
+CyberAgent dan Shochiku telah mengumumkan adaptasi anime dari *Kagurabachi*, manga aksi karya Takeru Hokazono.
 
-### **Detail Produksi**
-Anime ini akan diproduksi oleh **CygamesPictures**, studio yang juga menggarap *The Summer Hikaru Died* untuk Netflix.
+### Detail Produksi
+Anime ini akan diproduksi oleh CygamesPictures, studio yang juga menggarap *The Summer Hikaru Died* untuk Netflix.
 
-Menurut laporan **CBR**, keputusan untuk memilih **CygamesPictures** dibandingkan studio besar seperti MAPPA atau Bones didasarkan pada strategi **desentralisasi produksi**. Dengan banyaknya proyek besar yang ditangani MAPPA, CyberAgent memilih studio yang lebih fleksibel untuk menghindari masalah produksi seperti yang terjadi pada *Jujutsu Kaisen*.
+Menurut laporan CBR, keputusan untuk memilih CygamesPictures dibandingkan studio besar seperti MAPPA atau Bones didasarkan pada strategi desentralisasi produksi. Dengan banyaknya proyek besar yang ditangani MAPPA, CyberAgent memilih studio yang lebih fleksibel untuk menghindari masalah produksi seperti yang terjadi pada *Jujutsu Kaisen*.
 
-### **Popularitas Manga**
-Sejak debutnya di **Weekly Shonen Jump**, *Kagurabachi* telah mencapai **1,3 juta kopi terjual** dan lebih dari **99 juta pembaca di MANGA Plus**.
+### Popularitas Manga
+Sejak debutnya di Weekly Shonen Jump, *Kagurabachi* telah mencapai 1,3 juta kopi terjual dan lebih dari 99 juta pembaca di MANGA Plus.
 
 > “A battle for vengeance, magic, and legendary swords begins.”
 > — [Kidscreen](https://kidscreen.com/2024/12/02/shueishas-kagurabachi-is-getting-an-anime-adaptation/)

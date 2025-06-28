@@ -12,7 +12,8 @@ synopsis = "Film anime Toritsukare Otoko diumumkan untuk tayang musim gugur 2025
 
 conclusion = "Adaptasi ini menjanjikan pengalaman musikal yang menyentuh dan penuh warna, dengan tema pengorbanan dan empati yang layak dinantikan di musim gugur 2025."
 
-cta = "Jangan lupa ikuti terus {{< site-title >}} untuk berita anime terbaru dan update rilis film musim mendatang!"
+cta = "Ikuti terus {{< site-title >}} untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!"
+
 
 image = "/images/anime/toritsukare-otoko.webp"
 tags = ["Toritsukare Otoko", "Adaptasi Anime", "Film Musikal", "Berita Anime", "Recommended"]
@@ -33,14 +34,14 @@ source = "YouTube / EMOTION Label Channel"
 +++
 
 
-Film anime *Toritsukare Otoko* diangkat dari novel musikal karya **Shinji Ishii**, yang akan digarap oleh studio **Shin-Ei Animation**. Teaser visual dan video perdana telah dirilis, memperlihatkan karakter utama Giuseppe dan Pechka dalam dunia penuh warna dan imajinasi. Film ini dijadwalkan tayang pada **musim gugur 2025** di Jepang.
+Film anime *Toritsukare Otoko* diangkat dari novel musikal karya Shinji Ishii, yang akan digarap oleh studio Shin-Ei Animation. Teaser visual dan video perdana telah dirilis, memperlihatkan karakter utama Giuseppe dan Pechka dalam dunia penuh warna dan imajinasi. Film ini dijadwalkan tayang pada musim gugur 2025 di Jepang.
 
-### **Detail Produksi:**
-- **Sutradara:** Wataru Takahashi (*Crayon Shin-chan Movie: Nazo Meki! Hana no Tenkasu Gakuen*)
-- **Penulis Naskah:** Naoyuki Miura (*Summer Film ni Notte*)
-- **Desain Karakter:** Masatsugu Arakawa (*Fuujin Monogatari*)
-- **Studio:** Shin-Ei Animation
-- **Distribusi:** Bandai Namco Filmworks
+### Detail Produksi:
+- Sutradara: Wataru Takahashi (*Crayon Shin-chan Movie: Nazo Meki! Hana no Tenkasu Gakuen*)
+- Penulis Naskah: Naoyuki Miura (*Summer Film ni Notte*)
+- Desain Karakter: Masatsugu Arakawa (*Fuujin Monogatari*)
+- Studio: Shin-Ei Animation
+- Distribusi: Bandai Namco Filmworks
 
 {{< related-auto >}}
 

@@ -25,11 +25,11 @@ name = "DC Official Site"
 url = "https://www.dc.com/blog/2025/05/14/all-the-amazing-things-we-found-in-the-superman-trailer"
 +++
 
-### **Wawancara Lois dan Clark**
+### Wawancara Lois dan Clark
 
-Trailer *Superman* garapan DC Studios mengusung pendekatan unik dengan menjadikan wawancara antara **Lois Lane** dan **Superman** sebagai inti narasi. Dalam sesi tanya jawab yang intens, Lois sebagai jurnalis kritis mengajukan pertanyaan sulit yang menggali sisi moral Clark Kent.
+Trailer *Superman* garapan DC Studios mengusung pendekatan unik dengan menjadikan wawancara antara Lois Lane dan Superman sebagai inti narasi. Dalam sesi tanya jawab yang intens, Lois sebagai jurnalis kritis mengajukan pertanyaan sulit yang menggali sisi moral Clark Kent.
 
-Chemistry antara **David Corenswet** dan **Rachel Brosnahan** menciptakan kedalaman emosional yang kuat, memperlihatkan konflik batin Superman yang mengutamakan keselamatan umat manusia.
+Chemistry antara David Corenswet dan Rachel Brosnahan menciptakan kedalaman emosional yang kuat, memperlihatkan konflik batin Superman yang mengutamakan keselamatan umat manusia.
 
 {{< image-caption
   src="/images/movies/20250514_DC_News_Interview.webp"
@@ -37,49 +37,49 @@ Chemistry antara **David Corenswet** dan **Rachel Brosnahan** menciptakan kedala
   sources="DC Official Site,https://www.dc.com/blog/2025/05/14/all-the-amazing-things-we-found-in-the-superman-trailer"
 >}}
 
-### **Karakter dan Aksi dalam Trailer**
+### Karakter dan Aksi dalam Trailer
 
 #### Beberapa karakter mencuri perhatian:
 
-- **Engineer**
-- **Mister Terrific**
-- **Krypto**
-- **Guy Gardner**
-- **Hawkgirl**
-- **Metamorpho**
-- **Maxwell Lord (indikasi)**
+- Engineer
+- Mister Terrific
+- Krypto
+- Guy Gardner
+- Hawkgirl
+- Metamorpho
+- Maxwell Lord (indikasi)
 
-### **Easter Eggs dan Referensi Menarik**
+### Easter Eggs dan Referensi Menarik
 
-Trailer *Superman* dipenuhi **easter eggs** yang mengisyaratkan dunia luas DC Studios:
+Trailer *Superman* dipenuhi easter eggs yang mengisyaratkan dunia luas DC Studios:
 
-- **LordTech**, perusahaan terkait Maxwell Lord, muncul pada alat perekam Lois Lane.
-- **Big Belly Burger**, restoran ikonik DC Universe, terlihat di Metropolis.
-- Logo **Smallville Giants**, tim sepak bola kampung halaman Clark, menghadirkan nostalgia bagi penggemar lama.
+- LordTech, perusahaan terkait Maxwell Lord, muncul pada alat perekam Lois Lane.
+- Big Belly Burger, restoran ikonik DC Universe, terlihat di Metropolis.
+- Logo Smallville Giants, tim sepak bola kampung halaman Clark, menghadirkan nostalgia bagi penggemar lama.
 
 {{< related-auto >}}
 
-### **Spekulasi dan Teori**
+### Spekulasi dan Teori
 
-Penggemar menduga **Metamorpho**, yang terlihat dalam adegan penjara bersama Superman, mungkin memegang peran penting. Salah satu detail menonjol adalah tangannya yang tampak berlapis **Kryptonite**, mengingatkan pada pertarungan klasik di komik *Justice League*.
+Penggemar menduga Metamorpho, yang terlihat dalam adegan penjara bersama Superman, mungkin memegang peran penting. Salah satu detail menonjol adalah tangannya yang tampak berlapis Kryptonite, mengingatkan pada pertarungan klasik di komik *Justice League*.
 
-Selain itu, kemunculan logo **LordTech** bisa menjadi petunjuk keterlibatan **Maxwell Lord** dalam cerita, meski belum jelas apakah dia sekutu atau musuh Superman.
+Selain itu, kemunculan logo LordTech bisa menjadi petunjuk keterlibatan Maxwell Lord dalam cerita, meski belum jelas apakah dia sekutu atau musuh Superman.
 
-### **Jadwal Tayang**
+### Jadwal Tayang
 
-Film *Superman* dijadwalkan rilis di bioskop dan IMAX pada **11 Juli 2025**.
+Film *Superman* dijadwalkan rilis di bioskop dan IMAX pada 11 Juli 2025.
 Tonton trailer lengkapnya di kanal resmi [DC Studios](https://www.dc.com).
 
-### **List Karakter Utama**
+### List Karakter Utama
 
-- **Superman / Clark Kent** – David Corenswet
-- **Lois Lane** – Rachel Brosnahan
-- **Engineer** – Belum diumumkan
-- **Krypto** – —
-- **Mister Terrific** – Belum diumumkan
-- **Guy Gardner** – Belum diumumkan
-- **Hawkgirl** – Belum diumumkan
-- **Metamorpho** – Belum diumumkan
-- **Maxwell Lord (indikasi)** – Belum dikonfirmasi
+- Superman / Clark Kent – David Corenswet
+- Lois Lane – Rachel Brosnahan
+- Engineer – Belum diumumkan
+- Krypto – —
+- Mister Terrific – Belum diumumkan
+- Guy Gardner – Belum diumumkan
+- Hawkgirl – Belum diumumkan
+- Metamorpho – Belum diumumkan
+- Maxwell Lord (indikasi) – Belum dikonfirmasi
 
 {{< content-end >}}

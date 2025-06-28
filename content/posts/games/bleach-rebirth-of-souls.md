@@ -38,17 +38,17 @@ source = "YouTube / Bandai Namco Entertainment"
 +++
 
 
-Bandai Namco resmi mengumumkan update besar untuk *Bleach: Rebirth of Souls*, menghadirkan **Ranked Matchmaking Mode** dan DLC **Ichigo Kurosaki (Thousand-Year Blood War Arc)**.
+Bandai Namco resmi mengumumkan update besar untuk *Bleach: Rebirth of Souls*, menghadirkan Ranked Matchmaking Mode dan DLC Ichigo Kurosaki (Thousand-Year Blood War Arc).
 
-### **Fitur Baru dalam Update**
-- **Ranked Matchmaking Mode**: Pemain bisa bertanding secara kompetitif dalam sistem peringkat.
-- **DLC Ichigo Kurosaki (Thousand-Year Blood War Arc)**: Hadir dengan teknik baru seperti *Getsuga Jujisho* dan transformasi *Merged Hollow Form*.
-- **Platform**: PlayStation 4, PlayStation 5, Xbox Series X|S, PC (Steam).
-- **Tanggal Rilis**: 10 Juni untuk pemilik Season Pass, 17 Juni untuk semua pemain.
+### Fitur Baru dalam Update
+- Ranked Matchmaking Mode: Pemain bisa bertanding secara kompetitif dalam sistem peringkat.
+- DLC Ichigo Kurosaki (Thousand-Year Blood War Arc): Hadir dengan teknik baru seperti *Getsuga Jujisho* dan transformasi *Merged Hollow Form*.
+- Platform: PlayStation 4, PlayStation 5, Xbox Series X|S, PC (Steam).
+- Tanggal Rilis: 10 Juni untuk pemilik Season Pass, 17 Juni untuk semua pemain.
 
 {{< related-auto >}}
 
-### **Ranked Matchmaking Mode**
+### Ranked Matchmaking Mode
 Mode ini memungkinkan pemain bertarung secara online dengan sistem peringkat, memberikan tantangan baru bagi komunitas game fighting.
 
 Pemain dapat melihat trailer resmi update ini di kanal [YouTube Bandai Namco](https://www.youtube.com/watch?v=5KG6lbPnKKQ) dan mengunjungi [situs resmi](https://en.bandainamcoent.eu/bleach/bleach-rebirth-of-souls) untuk informasi lebih lanjut.

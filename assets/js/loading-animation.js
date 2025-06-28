@@ -1,11 +1,10 @@
-// ====== LOADING SCREEN ======
-const MIN_LOADING_TIME = 1500; // minimum 1.5 detik
-const MAX_LOADING_TIME = 3000; // maksimum 3 detik
-const loading = $('#loading-screen');
-const header = $('header');
-const footer = $('footer');
-const menuMain = $('#main-menu');
-const main = $('main');
+const MIN_LOADING_TIME = 1500;
+const MAX_LOADING_TIME = 3000;
+const loading = document.getElementById('loading-screen');
+const header = document.querySelector('header');
+const footer = document.querySelector('footer');
+const menuMain = document.getElementById('main-menu');
+const main = document.querySelector('main');
 
 const showMainContent = () => {
   if (loading) {
@@ -27,7 +26,6 @@ const showMainContent = () => {
   console.log('✅ Konten dimunculkan');
 };
 
-// Cek apakah sebelumnya sudah pernah tampil loading
 if (localStorage.getItem('loadingShown') === 'true') {
   showMainContent();
 } else {
@@ -41,13 +39,15 @@ if (localStorage.getItem('loadingShown') === 'true') {
     showMainContent();
   };
 
-  // Saat load selesai
-  window.addEventListener('load', () => {
-    const elapsed = performance.now() - startTime;
-    const remainingTime = Math.max(0, MIN_LOADING_TIME - elapsed);
-    setTimeout(maybeShow, remainingTime);
-  });
+  if (document.readyState === 'complete') {
+    maybeShow();
+  } else {
+    window.addEventListener('load', () => {
+      const elapsed = performance.now() - startTime;
+      const remainingTime = Math.max(0, MIN_LOADING_TIME - elapsed);
+      setTimeout(maybeShow, remainingTime);
+    });
+  }
 
-  // Hard timeout: pastikan tidak lebih dari 3 detik
   setTimeout(maybeShow, MAX_LOADING_TIME);
 }

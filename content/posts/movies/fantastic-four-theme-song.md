@@ -30,23 +30,23 @@ title = "The Fantastic Four: First Steps Main Theme (Visualizer Video)"
 source = "YouTube / MarvelMusicVEVO"
 +++
 
-Marvel Studios dan Hollywood Records telah merilis **The Fantastic Four: First Steps Main Theme**, musik utama dari film *The Fantastic Four: First Steps*.
+Marvel Studios dan Hollywood Records telah merilis The Fantastic Four: First Steps Main Theme, musik utama dari film *The Fantastic Four: First Steps*.
 
-### **Tentang Musik**
-Michael Giacchino, yang sebelumnya menggarap musik untuk *Spider-Man: No Way Home* dan *Doctor Strange*, menciptakan komposisi ini dengan nuansa **retro-futuristik tahun 1960-an**. Lagu ini pertama kali diperkenalkan pada **D23 Expo 2024**, dan kini tersedia untuk streaming di **Spotify, Apple Music, Amazon Music**, dan **YouTube Music**.
+### Tentang Musik
+Michael Giacchino, yang sebelumnya menggarap musik untuk *Spider-Man: No Way Home* dan *Doctor Strange*, menciptakan komposisi ini dengan nuansa retro-futuristik tahun 1960-an. Lagu ini pertama kali diperkenalkan pada D23 Expo 2024, dan kini tersedia untuk streaming di Spotify, Apple Music, Amazon Music, dan YouTube Music.
 
 {{< related-auto >}}
-### **Versi Vinyl**
-Selain versi digital, Marvel juga merilis **vinyl koleksi Galactic Blue** yang berisi:
-- **Side A:** *The Fantastic Four: First Steps Main Theme* oleh Michael Giacchino
-- **Side B:** *Let Us Be Devoured* oleh Andrea Datzman (*Inside Out 2*)
+### Versi Vinyl
+Selain versi digital, Marvel juga merilis vinyl koleksi Galactic Blue yang berisi:
+- Side A: *The Fantastic Four: First Steps Main Theme* oleh Michael Giacchino
+- Side B: *Let Us Be Devoured* oleh Andrea Datzman (*Inside Out 2*)
 
-Vinyl ini tersedia untuk pre-order dan akan dirilis pada **25 Juli 2025**, bersamaan dengan perilisan film.
+Vinyl ini tersedia untuk pre-order dan akan dirilis pada 25 Juli 2025, bersamaan dengan perilisan film.
 
 > “I hope this theme captures the same spirit of wonder and limitless potential that I felt when I first discovered Fantastic Four as a kid.”
 > — Michael Giacchino, [Marvel](https://www.marvel.com/articles/movies/fantastic-four-first-steps-main-theme-music)
 
-Dengarkan lagu ini di [YouTube](https://www.youtube.com/watch?v=g2qteuFPdZQ) atau pre-order vinyl di **Disney Music Emporium**.
+Dengarkan lagu ini di [YouTube](https://www.youtube.com/watch?v=g2qteuFPdZQ) atau pre-order vinyl di Disney Music Emporium.
 
 
 {{< content-end >}}

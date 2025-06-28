@@ -11,7 +11,8 @@ summary = "Anime Gachiakuta akan tayang 6 Juli 2025. PV utama, lagu tema oleh Pa
 
 synopsis = "Anime Gachiakuta siap menembus pasar global lewat pemutaran perdana di berbagai negara dan menghadirkan tema musikal yang emosional."
 
-cta = "Jangan lupa ikuti terus {{< site-title >}} untuk berita anime terbaru, termasuk update penayangan dan rilisan musim mendatang!"
+cta = "Ikuti terus {{< site-title >}} untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!"
+
 
 
 image = "/images/anime/gachiakuta-world-takeover.webp"
@@ -42,30 +43,30 @@ source = "YouTube / 'GACHIAKUTA' Anime Official Channel"
 +++
 
 
-Anime *Gachiakuta* dijadwalkan tayang pada **6 Juli 2025** pukul 23:30 JST melalui jaringan **CBC/TBS** di Jepang. Pengumuman resmi dari situs anime menyertakan perilisan **PV utama**, **visual baru**, **informasi lagu tema**, dan pemutaran perdana di **15 negara** dalam kampanye bertajuk *Gachiakuta World Takeover*.
+Anime *Gachiakuta* dijadwalkan tayang pada 6 Juli 2025 pukul 23:30 JST melalui jaringan CBC/TBS di Jepang. Pengumuman resmi dari situs anime menyertakan perilisan PV utama, visual baru, informasi lagu tema, dan pemutaran perdana di 15 negara dalam kampanye bertajuk *Gachiakuta World Takeover*.
 
-### **Lagu Tema:**
+### Lagu Tema:
 
-- **Opening (OP):** "HUGs" oleh **Paledusk**
-- **Ending (ED):** "灯火 (Tomoshibi)" oleh **DUSTCELL**
+- Opening (OP): "HUGs" oleh Paledusk
+- Ending (ED): "灯火 (Tomoshibi)" oleh DUSTCELL
 
 Kedua lagu ditulis khusus untuk anime ini. Paledusk menyebut lirik mereka sebagai yang paling emosional, sementara DUSTCELL menggambarkan “Tomoshibi” sebagai lagu yang menyuarakan perjuangan melawan ketidakadilan dan pencarian makna hidup yang sejati.
 
-### **Karakter Baru & Seiyuu:**
+### Karakter Baru & Seiyuu:
 
-- **Regto** (ayah angkat Rudo): **Toshiyuki Morikawa**
-- **Jabber** (anggota organisasi "Arashiya"): **Yūki Shin**
+- Regto (ayah angkat Rudo): Toshiyuki Morikawa
+- Jabber (anggota organisasi "Arashiya"): Yūki Shin
 
 Keduanya mengekspresikan antusiasme mereka terhadap karakter masing-masing dan kedalaman emosi yang dibawakan dalam cerita.
 
 {{< related-auto >}}
 
-### **Penayangan Global: Gachiakuta World Takeover**
+### Penayangan Global: Gachiakuta World Takeover
 
 Pemutaran spesial akan digelar di 15 negara termasuk:
-- **Amerika Serikat (Anime Expo)**
-- **Prancis (Japan Expo)**
-- **Brasil, Italia, India, Meksiko, Jerman, Singapura, Thailand, Taiwan, Hong Kong, Filipina, Malaysia, Rusia**, dan **Jepang (Shinjuku Piccadilly, 4 Juli)**
+- Amerika Serikat (Anime Expo)
+- Prancis (Japan Expo)
+- Brasil, Italia, India, Meksiko, Jerman, Singapura, Thailand, Taiwan, Hong Kong, Filipina, Malaysia, Rusia, dan Jepang (Shinjuku Piccadilly, 4 Juli)
 
 Empat pengisi suara utama (Rudo, Enjin, Zanka, Riyou) akan hadir dalam event pemutaran perdana di Jepang.
 
