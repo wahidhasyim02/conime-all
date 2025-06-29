@@ -97,27 +97,35 @@
   {{ end }}
 
   <footer
-    class="text-sm ml-0 lg:ml-[15%] mt-12 sm:mt-6 {{ if .IsHome }}hidden{{ else }}flex{{ end }}  relative text-gray-800 dark:text-gray-300   items-center justify-center transition duration-300 ease-in-out px-6 sm:px-20 lg:px-32">
+  class="text-sm ml-0 sm:ml-auto mx-auto lg:ml-[15%] mt-12 sm:mt-6 {{ if .IsHome }}hidden{{ else }}block{{ end }} relative text-gray-800 dark:text-gray-300 transition duration-300 ease-in-out px-4 sm:px-6 lg:px-32">
 
-    <div
-      class="z-10 grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-2 p-4 lg:p-2 border-t border-conime-400 dark:border-conime-500">
+  <div class="z-10 border-t border-conime-400 dark:border-conime-500 py-6 sm:py-8">
 
-      <div class="col-span-1 col-span-1">
-        {{ partial "menu-footer.html" (dict "menuID" "main" "page" .) }}
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-6">
+
+      <!-- Menu -->
+      <div class="lg:col-span-2">
+        <div class="flex flex-col space-y-1">
+          {{ partial "menu-footer.html" (dict "menuID" "main" "page" .) }}
+        </div>
       </div>
-      <div class="text-start justify-center  text-sm  col-span-1 col-span-1 px-0 lg:px-6 py-2">
-        <p>All names, logos, images, and trademarks belong to their respective owners. Images used on this site are for
-          informational and editorial purposes only. No copyright infringement intended.
+
+      <!-- Disclaimer -->
+      <div class="lg:col-span-2">
+        <p class="text-start max-w-prose">
+          All names, logos, images, and trademarks belong to their respective owners.
+          Images used on this site are for informational and editorial purposes only.
+          No copyright infringement intended.
         </p>
       </div>
 
-      {{ partial "footer.html" . }}
-
     </div>
 
-    <!--
-<script src="/js/popular.js" defer></script>-->
-  </footer>
+    {{ partial "footer.html" . }}
+
+  </div>
+</footer>
+
 
   {{ end }}
 </body>
