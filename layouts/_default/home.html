@@ -2,9 +2,9 @@
 
 
 
-<div class="grid grid-cols-4 lg:grid-cols-12 w-full h-fit ">
+<div class="flex flex-col w-full h-fit ">
   <!-- Section Hero -->
-  <section class="col-span-4 lg:col-span-12 h-[560px] lg:h-[600px] relative">
+  <section class="flex justify-center items-center h-[780px] lg:h-[600px] relative">
     {{ $recommendedPages := where .Site.RegularPages "Params.tags" "intersect" (slice "Recommended") }}
     {{ $sortedRecommended := sort $recommendedPages "Date" "desc" }}
 
@@ -29,8 +29,8 @@
 </section> -->
 
   <!-- Section Latest Posts -->
-  <section class="relative w-full col-span-4 lg:col-span-12 flex flex-col  items-center rounded-3xl h-fit mt-10">
-    <h2 class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">Latest Posts
+  <section class="relative w-full col-span-4 lg:col-span-12 flex flex-col  items-center rounded-3xl h-fit mt-10 lg:mt-10">
+    <h2 data-aos="fade-up" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">Latest Posts
     </h2>
     <div
       class="grid grid-cols-1 lg:grid-cols-3 lg:[&>*:nth-child(1)]:col-span-2 lg:[&>*:nth-child(7)]:col-span-2 lg:[&>*:nth-child(11)]:col-span-2 gap-3  py-2 w-full h-fit">
@@ -54,23 +54,27 @@
       {{ end }}
       {{ end }}
 
-      {{ range sort $all "Date" "desc" }}
-      {{ $categories := .Params.categories }}
-      {{ $isReview := in $categories "Review" }}
+      {{ range $i, $post := sort $all "Date" "desc" }}
+  {{ $categories := $post.Params.categories }}
+  {{ $isReview := in $categories "Review" }}
 
+  {{/* Tentukan label kategori utama */}}
+  {{ $label := "" }}
+  {{ if $isReview }}
+    {{ $label = "Review" }}
+  {{ else }}
+    {{ $path := replace $post.File.Path "\\" "/" }}
+    {{ $label = index (split $path "/") 1 }}
+  {{ end }}
 
-      {{/* Tentukan label kategori utama */}}
-      {{ $label := "" }}
-      {{ if $isReview }}
-      {{ $label = "Review" }}
-      {{ else }}
-      {{ $path := replace .File.Path "\\" "/" }}
-      {{ $label = index (split $path "/") 1 }} {{/* ambil "anime" dari posts/anime/slug.md */}}
-      {{ end }}
-      <div class="relative group flex flex-col justify-center w-full h-auto">
-        {{ partial "card-latest.html" . }}
-      </div>
-      {{ end }}
+  <div
+    data-aos="fade-up"
+    data-aos-delay="{{ mul $i 100 }}"
+    class="relative group flex flex-col justify-center w-full h-auto">
+    {{ partial "card-latest.html" $post }}
+  </div>
+{{ end }}
+
     </div>
     <a href="/posts/"
       class="inline-flex group items-center gap-2 text-sm font-medium text-gray-800 dark:text-gray-300 hover:text-gray-950 hover:dark:text-white border-b border-gray-800 dark:border-gray-400 hover:border-gray-950 hover:dark:border-white transition">

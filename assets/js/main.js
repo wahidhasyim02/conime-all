@@ -26,15 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (images.length === 0) return;
 
     let current = 0;
-    images[current].classList.add("active");
+    images[current].setAttribute("data-active", "true");
 
     setInterval(() => {
-      images[current].classList.remove("active");
+      images[current].removeAttribute("data-active");
       current = (current + 1) % images.length;
-      images[current].classList.add("active");
+      images[current].setAttribute("data-active", "true");
     }, 5000);
   });
 });
+
 
 
 // ========== FALLBACK GAMBAR ==========

@@ -1,8 +1,0 @@
-{{ $url := .Destination | safeURL }}
-{{ if strings.HasPrefix $url "http" }}
-  {{/* eksternal */}}
-  <a href="{{ $url }}" class="hover:text-conime-400 hover:dark:text-conime-400 underline" target="_blank" rel="noopener">{{ .Text | safeHTML }}</a>
-{{ else }}
-  {{/* internal */}}
-  <a href="{{ $url }}">{{ .Text | safeHTML }}</a>
-{{ end }}

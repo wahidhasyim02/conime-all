@@ -298,23 +298,6 @@
     opacity: 1;
   }
 
-  /* Animation for slide images */
-  .slide-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: all 700ms;
-  }
-  .slide-img.active {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  img {
-    will-change: transform;
-  }
   /* Loading Gooey dots */
   .gooey-container {
     width: 70px;

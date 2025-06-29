@@ -31,6 +31,15 @@
 <!-- Umami Analytics -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="fabe1eb6-5122-4712-b095-5ec2ab778540"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+  duration: 1200,  // semua elemen default 1200ms
+  delay: 0,
+});
+
+</script>
+
 
 <!-- ============= LIBRARY EXTERNAL ============= -->
 <script src="https://unpkg.com/@popperjs/core@2"></script>
@@ -65,10 +74,10 @@
   {{ $loading := resources.Get "js/loading-animation.js" | resources.Minify }}
   <script src="{{ $loading.RelPermalink }}" defer></script>
 
-  {{ $hoverInit := resources.Get "js/hover-init.js" | resources.Minify }}
-  <script src="{{ $hoverInit.RelPermalink }}" defer></script>
-{{ end }}
 
+{{ end }}
+ {{ $hoverInit := resources.Get "js/hover-init.js" | resources.Minify }}
+  <script src="{{ $hoverInit.RelPermalink }}" defer></script>
 
 <!-- Inisialisasi Tippy untuk SEMUA elemen -->
 <script>
