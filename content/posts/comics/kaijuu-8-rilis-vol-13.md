@@ -3,7 +3,7 @@ title = "Kaiju No. 8 Volume 13 Rilis di VIZ, Kafka Hadapi Ancaman Baru"
 nameComic = "Kaiju No. 8"
 slug = "kaiju-no-8-volume-13-rilis-viz-20250604"
 date = 2025-06-04T08:00:00+07:00
-author = "Megumi"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "VIZ Media resmi merilis *Kaiju No. 8* volume 13, menghadirkan aksi intens saat Kafka menghadapi ancaman baru dari Kaiju No. 9 di kota Tachikawa."

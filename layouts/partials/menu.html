@@ -22,27 +22,33 @@ Renders a menu for the given menu ID.
 
 {{- define "partials/inline/menu/walk.html" }}
 {{- $page := .page }}
-{{- range .menuEntries }}
-{{- $attrs := dict "href" .URL }}
-{{- if $page.IsMenuCurrent .Menu . }}
+{{- $entries := .menuEntries }}
+{{- range $index, $entry := $entries }}
+{{- $attrs := dict "href" $entry.URL }}
+{{- if $page.IsMenuCurrent $entry.Menu $entry }}
 {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-{{- else if $page.HasMenuCurrent .Menu .}}
+{{- else if $page.HasMenuCurrent $entry.Menu $entry }}
 {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
 {{- end }}
 {{- $isActive := in ($attrs.class | default "") "active" }}
 {{- $isAncestor := in ($attrs.class | default "") "ancestor" }}
 
-{{- $name := .Name }}
-{{- with .Identifier }}
+{{- $name := $entry.Name }}
+{{- with $entry.Identifier }}
 {{- with T . }}
 {{- $name = . }}
 {{- end }}
 {{- end }}
-<li class="
+
+<li
+  data-aos="fade-up"
+  data-aos-delay="{{ mul $index 200 }}"
+  data-aos-duration="2000"
+  class="
   group pointer-events-auto min-w-12 w-full h-full flex justify-center items-center
-  {{ if eq .Identifier "notifBtn" }}
-  fixed bottom-20 right-2
-  !w-12 !h-12 !rounded-full
+  {{ if eq $entry.Identifier "notifBtn" }}
+  fixed bottom-20 right-4
+  !w-12 !h-12 !rounded-xl
   !bg-white dark:!bg-gray-800
 
   lg:relative
@@ -54,10 +60,10 @@ Renders a menu for the given menu ID.
   lg:!bg-white/0 lg:dark:!bg-gray-950/0
 {{ else }}
   relative
-{{ end }}
+{{ end }}">
 
-">
-<a class="px-2 py-1 lg:px-3 sm:py-3 h-full lg:h-fit flex flex-col lg:flex-row gap-0 lg:gap-4 w-full justify-center {{ if eq .Identifier "notifBtn" }}!backdrop-blur-none !rounded-full lg:!backdrop-blur-sm lg:!rounded-xl{{ end }} lg:justify-start items-center hover:shadow hover:bg-gray-300 hover:dark:bg-gray-800/50 {{ if or $isActive $isAncestor }}bg-conime-500 dark:bg-conime-500 group-hover:bg-conime-500 group-hover:dark:bg-conime-500 text-white dark:text-white group-hover:text-white group-hover:dark:text-white{{ else }}bg-white/0 dark:bg-gray-950/0 text-gray-700 dark:text-gray-400  group-hover:text-conime-400  dark:group-hover:text-conime-500{{ end }} backdrop-blur-sm   transition duration-500 ease-in-out rounded-xl"
+
+<a class="px-2 py-1 lg:px-3 sm:py-3 h-full lg:h-fit flex flex-col lg:flex-row gap-0 lg:gap-4 w-full justify-center {{ if eq .Identifier "notifBtn" }}!backdrop-blur-none !rounded-xl lg:!backdrop-blur-sm lg:!rounded-xl{{ end }} lg:justify-start items-center hover:shadow hover:bg-gray-300 hover:dark:bg-gray-800/50 {{ if or $isActive $isAncestor }}bg-conime-500 dark:bg-conime-500 group-hover:bg-conime-500 group-hover:dark:bg-conime-500 text-white dark:text-white group-hover:text-white group-hover:dark:text-white{{ else }}bg-white/0 dark:bg-gray-950/0 text-gray-700 dark:text-gray-400  group-hover:text-conime-400  dark:group-hover:text-conime-500{{ end }} backdrop-blur-sm   transition duration-500 ease-in-out rounded-xl"
     {{- with .Identifier }} id="{{ . }}" {{- end }} {{- range $k, $v :=$attrs }} {{- with $v }} {{- printf " %s=%q" $k
     $v | safeHTMLAttr }} {{- end }} {{- end -}}>
     <span class="block h-fit py-1 group-hover:scale-110 transition duration-500 ease-in-out">

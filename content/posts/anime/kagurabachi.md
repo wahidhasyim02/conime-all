@@ -3,7 +3,7 @@ title = "Kagurabachi Resmi Dapatkan Adaptasi Anime oleh CyberAgent dan Shochiku"
 slug = "kagurabachi-anime-adaptation-20241202"
 date = 2024-12-03T06:00:00+07:00
 nameAnime = "Kagurabachi"
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "CyberAgent dan Shochiku mengumumkan adaptasi anime dari *Kagurabachi*, manga aksi populer karya Takeru Hokazono. Produksi oleh CygamesPictures dijadwalkan menghadirkan duel sihir dan balas dendam yang mendebarkan."

@@ -2,7 +2,7 @@
 title = "Mobile Legends: Bang Bang Hadirkan Hero Baru Wu Zetian, Sang Phoenix Empress"
 slug = "mlbb-hero-wu-zetian-phoenix-empress-20250613"
 date = 2025-06-13T17:20:00+07:00
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 nameGame = "Mobile Legends: Bang Bang"
 

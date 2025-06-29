@@ -3,7 +3,7 @@ title = "Review Zenshuu: Perjalanan Natsuko dalam Dunia Animasi, Takdir, dan Cin
 nameAnime = "Zenshuu"
 slug = "review-Zenshuu-anime-20250611"
 date = 2025-06-11T20:33:00+07:00
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "Anime *Zenshuu* menghadirkan kisah unik tentang Natsuko Hirose, seorang animator muda yang terjebak dalam dunia film favoritnya. Dengan visual memukau, musik yang menghidupkan suasana, dan kisah cinta pertama yang menggemaskan, serial ini berhasil menciptakan pengalaman yang emosional dan penuh kejutan."

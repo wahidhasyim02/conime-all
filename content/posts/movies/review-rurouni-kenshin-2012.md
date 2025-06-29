@@ -3,7 +3,7 @@ title = "Review Rurouni Kenshin (2012): Samurai Penebus Dosa dan Chemistry Menge
 nameMovie = "Rurouni Kenshin (Live‑Action 2012)"
 slug = "review-rurouni-kenshin-2012-liveaction-20250601"
 date = 2025-06-01T20:00:00+07:00
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "Adaptasi live‑action manga populer, *Rurouni Kenshin* (2012) berhasil menghadirkan aksi samurai yang intens, chemistry kuat antar pemain, dan kisah penebusan yang emosional."
@@ -37,7 +37,7 @@ studio = "Warner Bros. Japan"
   - Himura Kenshin – Takeru Satō
   - Kaoru Kamiya – Emi Takei
   - Sanosuke Sagara – Munetaka Aoki
-  - Megumi Takani – Yū Aoi
+  - Koni si Co-Bot Takani – Yū Aoi
 - Durasi: 135 menit
 - Rilis Jepang: 25 Agustus 2012
 - Pendapatan Dunia: ± \$37,7 juta
@@ -63,7 +63,7 @@ Kenshin yang berjuang menebus masa lalunya sebagai Battōsai membawa beban emosi
 Beberapa karakter seperti Takeda Kanryū atau Jin-e terasa agak berlebihan, dengan gaya bicara dan tampilan yang dramatis.
 
 - Karakter Pendukung Kurang Mendalam
-Akibat keterbatasan durasi, latar belakang karakter pendukung seperti Megumi atau Sanosuke terasa lebih tipis dibanding versi manga/anime.
+Akibat keterbatasan durasi, latar belakang karakter pendukung seperti Koni si Co-Bot atau Sanosuke terasa lebih tipis dibanding versi manga/anime.
 
 ### Kutipan Penonton
 

@@ -3,7 +3,7 @@ title = "Dragon Ball: Sparking! ZERO Hadirkan DLC Dragon Ball DAIMA Pack 1 denga
 nameGame = "Dragon Ball: Sparking"
 slug = "dragon-ball-sparking-zero-daima-dlc-pack1-20250424"
 date = 2025-04-24T19:00:00+07:00
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 
 

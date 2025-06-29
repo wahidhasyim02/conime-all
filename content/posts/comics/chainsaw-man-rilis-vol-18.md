@@ -3,7 +3,7 @@ title = "Chainsaw Man Volume 18 Rilis di VIZ, Denji dan Nayuta Hadapi Ancaman Ch
 nameComic = "Chainsaw Man"
 slug = "chainsaw-man-volume-18-rilis-viz-20250605"
 date = 2025-06-05T08:00:00+07:00
-author = "Megumi"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "VIZ Media resmi merilis volume ke-18 dari *Chainsaw Man*, menampilkan konflik baru antara Denji, Nayuta, dan organisasi Chainsaw Man Church yang berusaha menguasai dunia."

@@ -3,7 +3,7 @@ title = "DC Ungkap Detail Baru dalam Trailer Superman"
 nameMovie = "Superman"
 slug = "dc-superman-trailer-breakdown-20250520"
 date = 2025-05-20T18:22:00+07:00
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "Trailer terbaru Superman dari DC menghadirkan berbagai elemen menarik, termasuk wawancara Lois dan Clark, aksi Krypto, serta kehadiran Engineer sebagai ancaman baru."

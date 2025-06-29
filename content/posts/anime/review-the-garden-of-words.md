@@ -3,7 +3,7 @@ title = "Review Kotonoha no Niwa (2013): Keheningan yang Menghubungkan Dua Jiwa"
 nameAnime = "Kotonoha no Niwa"
 slug = "review-kotonoha-no-niwa-20250617"
 date = 2025-06-17T17:53:00+07:00
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "*Kotonoha no Niwa* adalah film pendek karya Makoto Shinkai yang mengisahkan pertemuan tak terduga antara dua jiwa yang sama-sama kehilangan arah. Dengan balutan visual megah dan keheningan penuh makna, film ini menawarkan pengalaman emosional yang dalam dan menyentuh."

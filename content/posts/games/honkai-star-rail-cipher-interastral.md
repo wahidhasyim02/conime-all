@@ -2,7 +2,7 @@
 title = "Cipher: Kaya Raya dari Segala Arah! — Honkai: Star Rail Tampilkan Episode Khusus"
 slug = "honkai-star-rail-cipher-interastral-entertainment-20250603"
 date = 2025-06-03T17:50:00+07:00
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 nameGame = "Honkai: Star Rail"
 

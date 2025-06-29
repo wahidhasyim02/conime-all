@@ -3,7 +3,7 @@ title = "The Bugle Call: Song of War Volume 1 Rilis di VIZ, Kisahkan Perang, Mus
 nameComic = "The Bugle Call"
 slug = "bugle-call-song-of-war-volume-1-rilis-viz-20250604"
 date = 2025-06-04T08:00:00+07:00
-author = "Megumi"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "VIZ Media resmi merilis *The Bugle Call: Song of War* volume 1, manga fantasi karya Mozuku Sora dan Higoro Toumori yang memadukan musik, strategi, dan kekuatan supranatural."

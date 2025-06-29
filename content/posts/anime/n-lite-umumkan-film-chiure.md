@@ -2,7 +2,7 @@
 title = "N-Lite Umumkan Film Animasi Original Chiure: Child of the Sea untuk 2026"
 slug = "chiure-child-of-the-sea-announcement-20250626"
 date = 2025-06-26T08:00:00+07:00
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 nameAnime = "Chiure: Child of the Sea"
 summary = "Studio N-Lite resmi mengumumkan film animasi original *Chiure: Child of the Sea*, disutradarai dan ditulis oleh Daisuke Igarashi. Film dijadwalkan rilis di Jepang pada 2026, dengan teaser visual yang menampilkan nuansa surealis dan fantasi."

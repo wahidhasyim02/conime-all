@@ -4,7 +4,7 @@ typeContent = "anime"
 nameAnime = "Gachiakuta"
 slug = "anime-gachiakuta-penayangan-global-lagu-tema-karakter-baru-20250606"
 date = 2025-06-25T06:00:00+07:00
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "Anime Gachiakuta akan tayang 6 Juli 2025. PV utama, lagu tema oleh Paledusk dan DUSTCELL, serta pemutaran global di 15 negara telah diumumkan."

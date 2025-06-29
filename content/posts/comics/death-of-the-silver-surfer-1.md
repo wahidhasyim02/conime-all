@@ -3,7 +3,7 @@ title = "Death of the Silver Surfer #1 Rilis di Marvel, Perjalanan Terakhir Norr
 nameComic = "Death of the Silver Surfer"
 slug = "death-of-the-silver-surfer-1-rilis-marvel-20250607"
 date = 2025-06-07T08:00:00+07:00
-author = "Megumi"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "Marvel Comics resmi merilis *Death of the Silver Surfer #1*, komik baru yang menampilkan perjalanan terakhir Norrin Radd. Ditulis Greg Pak dengan ilustrasi Sumit Kumar."

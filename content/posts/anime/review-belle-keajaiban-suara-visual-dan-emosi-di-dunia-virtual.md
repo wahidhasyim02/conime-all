@@ -3,7 +3,7 @@ title = "Review Belle: Keajaiban Suara, Visual, dan Emosi di Dunia Virtual"
 nameAnime = "Ryuu to Sobakasu no Hime (Belle)"
 slug = "review-belle-anime-20250611"
 date = 2025-06-26T17:22:00+07:00
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "Film *Belle* (Ryuu to Sobakasu no Hime) karya Mamoru Hosoda menggabungkan visual memukau, musik yang menyentuh, dan cerita emosional yang menggali tema kehilangan, identitas, dan keberanian untuk menyembuhkan luka."

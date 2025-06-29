@@ -2,7 +2,7 @@
 title = "Dragon Ball Xenoverse 2 Hadirkan Dragon Ball DAIMA Pack dengan Goku SS4 & Vegeta SS3"
 slug = "dragon-ball-xenoverse-2-daima-pack-20250522"
 date = 2025-05-22T06:00:00+07:00
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 nameGame = "Dragon Ball Xenoverse 2"
 summary = "Dragon Ball DAIMA Pack untuk Dragon Ball Xenoverse 2 kini tersedia, menambahkan karakter Super Saiyan 4 Goku (DAIMA) dan Super Saiyan 3 Vegeta (DAIMA), plus kostum, aksesoris, parallel quest, Super Souls, dan loading screen baru."

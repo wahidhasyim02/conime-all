@@ -2,7 +2,7 @@
 title = "Kaiju No. 8 Season 2 Ungkap Trailer Teaser dan Visual Gen Narumi"
 slug = "kaiju-no-8-season-2-teaser-gen-narumi-20250324"
 date = 2025-03-24T08:00:00+07:00
-author = "Eins"
+author = "Koni si Co-Bot"
 draft = false
 nameAnime = "Kaiju No. 8"
 

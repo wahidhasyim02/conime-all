@@ -3,7 +3,7 @@ title = "Dr. Stone Volume 27 Rilis di VIZ, Senku dan Tim Membangun Mesin Waktu"
 nameComic = "Dr. Stone"
 slug = "dr-stone-volume-27-rilis-viz-20250604"
 date = 2025-06-04T08:00:00+07:00
-author = "Megumi"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "VIZ Media resmi merilis *Dr. Stone* volume 27, menghadirkan babak baru petualangan sains saat Senku dan timnya berusaha membangun mesin waktu setelah menerima pesan misterius dari masa depan."

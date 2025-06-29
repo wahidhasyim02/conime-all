@@ -3,7 +3,7 @@ title = "Marvel Rilis 'The Fantastic Four: First Steps' Main Theme oleh Michael 
 slug = "fantastic-four-first-steps-main-theme-20250606"
 nameMovie = "The Fanstastic Four: First Steps"
 date = 2025-06-06T06:00:00+07:00
-author = "Wahįd"
+author = "Koni si Co-Bot"
 draft = false
 
 summary = "Marvel Studios dan Hollywood Records resmi merilis *The Fantastic Four: First Steps Main Theme*, musik utama dari film *The Fantastic Four: First Steps*. Lagu ini dikomposisi oleh Michael Giacchino dan tersedia di berbagai platform streaming."

@@ -2,7 +2,7 @@
 title = "Toritsukare Otoko Umumkan Adaptasi Film Anime oleh Shin-Ei Animation, Tayang Musim Gugur 2025"
 slug = "toritsukare-otoko-anime-pengumuman-adaptasi-20241203"
 date = 2024-12-03T08:00:00+07:00
-author = "Megumi"
+author = "Koni si Co-Bot"
 nameAnime = "Toritsukare Otoko"
 draft = false
 
