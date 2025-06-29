@@ -58,23 +58,58 @@
         <!-- Gambar Utama -->
         {{ with .Params.image }}
           <figure class="w-full flex flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl">
-            <img src="{{ . | relURL }}" alt="Gambar {{ $.Title }}" class="post-img h-96 sm:h-auto w-full rounded-t-3xl object-cover" />
+            <img src="{{ . | relURL }}" alt="Gambar {{ $.Title }}" class="post-img h-96 sm:h-auto w-full rounded-3xl object-cover" />
             <figcaption class="text-sm font-light dark:font-extralight text-left italic flex flex-wrap gap-2 px-4 py-4">
               {{ with $.Params.imageSources }}
-                <span>
-                  Image:
-                  {{ $total := len . }}
-                  {{ range $index, $source := . }}
-                    {{ if gt $index 0 }}, {{ end }}
-                    <a href="{{ $source.url }}" class="hover:underline underline-offset-4 hover:text-conime-400 hover:dark:text-conime-500 inline" target="_blank" rel="noopener noreferrer">{{ $source.name }}</a>
-                  {{ end }}
-                </span>
-              {{ else }}
-                <span>Image used for illustration purposes only.</span>
-              {{ end }}
+              <span>
+                Image:
+                {{ $total := len . }}
+                {{ range $index, $source := . }}
+                  {{ if and (gt $index 0) (eq $index (sub $total 1)) }} and {{ else if gt $index 0 }},             {{ end }}
+                  <a href="{{ $source.url }}" class="hover:underline underline-offset-4             hover:text-conime-400 hover:dark:text-conime-500 inline" target="_blank" rel="noopener             noreferrer">{{ $source.name }}</a>
+                {{ end }}. Used for editorial purposes only.
+                {{ else }}
+                  <span>Image used for illustration purposes only.</span>
+        {{ end }}
+
             </figcaption>
           </figure>
         {{ end }}
+
+
+
+<div class="mt-4 mb-6 w-full">
+  {{ with .Params.twitterEmbed }}
+    {{ $tw := trim . " " }}
+    {{ if ne $tw "" }}
+      {{ with $.Params.twitterEmbedTitle }}
+        {{ $twTitle := trim . " " }}
+        {{ if ne $twTitle "" }}
+          <h3 class="mb-2">{{ $twTitle }}</h3>
+        {{ end }}
+      {{ end }}
+      <blockquote class="twitter-tweet">
+        <a href="{{ $tw }}"></a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    {{ end }}
+  {{ end }}
+
+  {{ with .Params.instagramEmbed }}
+    {{ $ig := trim . " " }}
+    {{ if ne $ig "" }}
+      {{ with $.Params.instagramEmbedTitle }}
+        {{ $igTitle := trim . " " }}
+        {{ if ne $igTitle "" }}
+          <h3 class="mb-2">{{ $igTitle }}</h3>
+        {{ end }}
+      {{ end }}
+      <blockquote class="instagram-media" data-instgrm-permalink="{{ $ig }}" data-instgrm-version="14"></blockquote>
+      <script async defer src="//www.instagram.com/embed.js"></script>
+    {{ end }}
+  {{ end }}
+</div>
+
 
         <!-- Konten Artikel -->
         <div class="flex flex-col">

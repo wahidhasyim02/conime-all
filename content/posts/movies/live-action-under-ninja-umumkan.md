@@ -1,6 +1,7 @@
 +++
 title = "Film Live-Action Under Ninja Umumkan Pemeran Utama & Jadwal Tayang"
 slug = "under-ninja-live-action-announcement-20240407"
+nameMovie = "Live-Action Under Ninja"
 date = 2024-04-07T10:00:00+07:00
 author = "Eins"
 draft = false

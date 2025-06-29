@@ -11,8 +11,6 @@ synopsis = """<p>Di tengah hujan pagi Tokyo, Takao, seorang siswa SMA yang berci
 
 conclusion = """<p><em>Kotonoha no Niwa</em> bukan sekadar film romantis, melainkan potret keheningan yang menyembuhkan. Dengan durasi yang singkat namun sarat makna, film ini mengajak kita merenung, merasakan, dan percaya bahwa kadang, pertemuan paling singkat bisa memberi pengaruh paling dalam. Ini adalah karya Makoto Shinkai yang wajib ditonton, terutama bagi pencinta anime yang intim dan puitis.</p>"""
 
-cta = "Ikuti terus {{< site-title >}} untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!"
-
 image = "/images/anime/kotonoha_no_niwa.webp"
 
 tags = ["Makoto Shinkai", "Romantis", "Drama", "Kana Hanazawa", "Puisi", "Review"]

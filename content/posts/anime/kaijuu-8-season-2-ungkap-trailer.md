@@ -4,6 +4,7 @@ slug = "kaiju-no-8-season-2-teaser-gen-narumi-20250324"
 date = 2025-03-24T08:00:00+07:00
 author = "Eins"
 draft = false
+nameAnime = "Kaiju No. 8"
 
 summary = "Kaiju No. 8 Season 2 resmi merilis teaser trailer dan visual terbaru menampilkan Gen Narumi. Studio Production I.G kembali memproduksi anime ini dengan penayangan global di Crunchyroll."
 

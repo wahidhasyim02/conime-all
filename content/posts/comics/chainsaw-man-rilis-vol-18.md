@@ -12,8 +12,6 @@ synopsis = "Volume 18 membawa babak baru penuh aksi dan ketegangan, saat Denji d
 
 conclusion = "Dengan ilustrasi khas dan cerita intens, volume ke-18 menjadi titik balik penting bagi Denji, cocok untuk penggemar aksi-horor Tatsuki Fujimoto."
 
-cta = "Ikuti terus {{< site-title >}} untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!"
-
 
 image = "/images/comics/chainsaw-man-vol18.webp"
 tags = ["Chainsaw Man", "Manga Baru", "VIZ Media", "Tatsuki Fujimoto", "Aksi", "Horor", "Rilis Manga"]

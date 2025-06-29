@@ -12,8 +12,6 @@ synopsis = "Death of the Silver Surfer #1 memulai kisah gelap penuh konflik saat
 
 conclusion = "Dengan visual memukau dan ketegangan yang terjaga, Death of the Silver Surfer #1 menjadi awal epik dari akhir perjalanan Norrin Radd yang wajib diikuti penggemar Marvel."
 
-cta = "Ikuti terus {{< site-title >}} untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!"
-
 
 image = "/images/comics/death-of-the-silver-surfer-1.webp"
 tags = ["Death of the Silver Surfer", "Marvel Comics", "Silver Surfer", "Greg Pak", "Sumit Kumar", "Galactus", "Fantastic Four", "Rilis Komik"]

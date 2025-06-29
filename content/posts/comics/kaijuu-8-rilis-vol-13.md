@@ -12,8 +12,6 @@ synopsis = "Kaiju No. 8 Volume 13 membawa pertarungan sengit Kafka melawan Kaiju
 
 conclusion = "Dengan ilustrasi dinamis dan alur menegangkan, Kaiju No. 8 Volume 13 menghadirkan aksi epik dan pengungkapan baru yang mengguncang dunia Kaiju."
 
-cta = "Jangan lupa ikuti terus {{< site-title >}} untuk berita manga terbaru dan update rilisan VIZ Media lainnya!"
-
 image = "/images/comics/kaiju-no-8-vol13.webp"
 
 tags = ["Kaiju No. 8", "Manga Baru", "VIZ Media", "Naoya Matsumoto", "Aksi", "Fantasi", "Rilis Manga"]

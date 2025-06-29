@@ -68,7 +68,7 @@
       {{ $label = index (split $path "/") 1 }} {{/* ambil "anime" dari posts/anime/slug.md */}}
       {{ end }}
       <div class="relative group flex flex-col justify-center w-full h-auto">
-        {{ partial "card.html" . }}
+        {{ partial "card-latest.html" . }}
       </div>
       {{ end }}
     </div>

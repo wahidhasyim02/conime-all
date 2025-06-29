@@ -10,8 +10,6 @@ summary = "VIZ Media resmi merilis *The Bugle Call: Song of War* volume 1, manga
 
 synopsis = "The Bugle Call: Song of War Vol. 1 menghadirkan Luca, bugler muda yang terjebak dalam perang global memperebutkan Spires kuno dan kekuatan magis."
 
-cta = "Jangan lupa ikuti terus {{< site-title >}} untuk berita manga terbaru dan update rilisan VIZ Media lainnya!"
-
 conclusion = "Dengan visual memukau dan dunia yang penuh intrik, The Bugle Call: Song of War Vol. 1 menghadirkan kisah fantasi epik tentang pengorbanan, musik, dan pertarungan demi masa depan."
 
 image = "/images/comics/bugle-call-song-of-war-vol1.webp"

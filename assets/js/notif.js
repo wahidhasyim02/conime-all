@@ -37,15 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
       fireEl?.classList.add("opacity-0", "hidden");
     }
 
-    // label hanya bergantung ke waktu
     if (diff < 10800) {
       labelEl?.classList.remove("opacity-0", "hidden");
     } else {
       labelEl?.classList.add("opacity-0", "hidden");
     }
 
-
-    // Notifikasi
     if (diff < 10800) {
       const isUnread = !isRead;
       if (isUnread) unreadCount++;
@@ -67,22 +64,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Simpan state baca
   const updateToggleState = () => {
     const isAllRead = unreadCount === 0;
     localStorage.setItem("notif-all-read", isAllRead.toString());
+
     if (isAllRead) {
-      toggleBall.classList.remove("-translate-x-[85%]");
-      toggleBall.classList.add("translate-x-[85%]", "bg-gray-500", "dark:bg-gray-500");
-      toggleBall.classList.remove("bg-conime-500", "dark:bg-conime-500");
-      markText.innerText = "Mark all as unread";
-      notifBadge?.classList.add("hidden");
-    } else {
       toggleBall.classList.remove("translate-x-[85%]");
-      toggleBall.classList.add("-translate-x-[85%]", "bg-conime-500", "dark:bg-conime-500");
+      toggleBall.classList.add("-translate-x-[85%]", "bg-gray-500", "dark:bg-gray-500");
+      toggleBall.classList.remove("-bg-conime-500", "dark:bg-conime-500");
+      markText.innerText = "Mark all as unread";
+      markText.setAttribute("data-tippy-content", "Mark all as unread");
+    } else {
+      toggleBall.classList.remove("-translate-x-[85%]");
+      toggleBall.classList.add("translate-x-[85%]", "bg-conime-500", "dark:bg-conime-500");
       toggleBall.classList.remove("bg-gray-500", "dark:bg-gray-500");
       markText.innerText = "Mark all as read";
+      markText.setAttribute("data-tippy-content", "Mark all as read");
+    }
+  };
+
+  const checkNotifBadge = () => {
+    const markAllRead = localStorage.getItem("notif-all-read") === "true";
+    let hasRecentUnread = false;
+
+    posts.forEach(post => {
+      const isRead = localStorage.getItem(`notif-read:${post.dataset.url}`) === "true";
+      const diff = (now - new Date(post.dataset.date)) / 1000;
+
+      if (diff < 10800 && !isRead) {
+        hasRecentUnread = true;
+      }
+    });
+
+    if (hasRecentUnread && !markAllRead) {
       notifBadge?.classList.remove("hidden");
+    } else {
+      notifBadge?.classList.add("hidden");
     }
   };
 
@@ -105,9 +122,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       const fireEl = document.querySelector(`.fire-new[data-url="${slug}"]`);
       fireEl?.classList.add("opacity-0", "hidden");
+      notifBadge?.classList.add("hidden");
 
       unreadCount--;
       updateToggleState();
+      checkNotifBadge();
     });
   });
 
@@ -143,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     unreadCount = newToggle === "true" ? 0 : posts.length;
     updateToggleState();
+    checkNotifBadge();
   });
 
   const openModal = () => {
@@ -173,4 +193,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   updateToggleState();
+  checkNotifBadge();
 });

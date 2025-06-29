@@ -11,9 +11,6 @@ summary = "Anime Gachiakuta akan tayang 6 Juli 2025. PV utama, lagu tema oleh Pa
 
 synopsis = "Anime Gachiakuta siap menembus pasar global lewat pemutaran perdana di berbagai negara dan menghadirkan tema musikal yang emosional."
 
-cta = "Ikuti terus {{< site-title >}} untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!"
-
-
 
 image = "/images/anime/gachiakuta-world-takeover.webp"
 tags = ["Gachiakuta", "Anime Baru", "Bones", "Paledusk", "DUSTCELL", "Recommended", "Pemutaran Global", "Anime Musim Panas 2025"]

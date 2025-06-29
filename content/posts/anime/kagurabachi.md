@@ -10,8 +10,6 @@ summary = "CyberAgent dan Shochiku mengumumkan adaptasi anime dari *Kagurabachi*
 
 synopsis = "Anime <strong>Kagurabachi</strong> resmi diumumkan sebagai proyek adaptasi baru oleh CyberAgent dan Shochiku, diproduksi oleh CygamesPictures dengan cerita balas dendam yang kelam dan penuh sihir."
 
-cta = "Ikuti terus {{< site-title >}} untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!"
-
 
 image = "/images/anime/kagurabachi-anime-announcement.webp"
 

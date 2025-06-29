@@ -1,6 +1,6 @@
 +++
 title = "Review Rurouni Kenshin (2012): Samurai Penebus Dosa dan Chemistry Mengena"
-nameAnime = "Rurouni Kenshin (Live‑Action 2012)"
+nameMovie = "Rurouni Kenshin (Live‑Action 2012)"
 slug = "review-rurouni-kenshin-2012-liveaction-20250601"
 date = 2025-06-01T20:00:00+07:00
 author = "Eins"

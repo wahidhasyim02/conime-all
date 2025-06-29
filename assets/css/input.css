@@ -25,16 +25,20 @@
 
 /* =============== CUSTOM KEYFRAMES =============== */
 @keyframes flicker {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
     transform: scale(1);
   }
   50% {
     opacity: 0.75;
-    transform: scale(1.1) translateY(-3px);
+    transform: scale(1.10) translateY(-3px);
   }
 }
+
+.animate-flicker {
+  animation: flicker 1s infinite ease-in-out;
+}
+
 
 @keyframes scroll {
   0% {
@@ -359,6 +363,9 @@
   }
   .content-article p {
     @apply my-3;
+  }
+  .content-article .noMy {
+    @apply my-0;
   }
 
   @keyframes spin1 {

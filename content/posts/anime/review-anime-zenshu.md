@@ -15,8 +15,6 @@ synopsis = """
 
 conclusion = """<p>Dengan kombinasi cerita yang mendalam, desain karakter yang unik, musik yang memperkuat emosi, dan kisah cinta pertama yang berkembang secara alami, <strong>Zenshuu</strong> menjadi salah satu anime yang patut ditonton. Meskipun ada beberapa elemen yang terasa aneh, seperti rambut Natsuko yang sering menutupi wajahnya, keindahan visual dan pengembangan karakter membuatnya tetap menarik.</p>"""
 
-cta = "Ikuti terus {{< site-title >}} untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!"
-
 
 image = "/images/anime/Zenshuu-review.webp"
 

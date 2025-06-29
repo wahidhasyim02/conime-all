@@ -12,8 +12,6 @@ synopsis = "Film anime Toritsukare Otoko diumumkan untuk tayang musim gugur 2025
 
 conclusion = "Adaptasi ini menjanjikan pengalaman musikal yang menyentuh dan penuh warna, dengan tema pengorbanan dan empati yang layak dinantikan di musim gugur 2025."
 
-cta = "Ikuti terus {{< site-title >}} untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!"
-
 
 image = "/images/anime/toritsukare-otoko.webp"
 tags = ["Toritsukare Otoko", "Adaptasi Anime", "Film Musikal", "Berita Anime", "Recommended"]

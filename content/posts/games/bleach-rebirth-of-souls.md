@@ -4,12 +4,11 @@ slug = "bleach-rebirth-of-souls-ranked-mode-dlc-ichigo-20250609"
 date = 2025-06-09T08:00:00+07:00
 author = "Megumi"
 draft = false
+nameGame = "Bleach: Rebirth of Souls"
 
 summary = "Bandai Namco resmi mengumumkan update besar untuk Bleach: Rebirth of Souls, termasuk mode Ranked Matchmaking dan DLC Ichigo Kurosaki (Thousand-Year Blood War Arc). Pemilik Season Pass bisa mengaksesnya mulai 10 Juni, sementara perilisan umum dijadwalkan pada 17 Juni 2025."
 
 synopsis = "Bleach: Rebirth of Souls menambah Ranked Mode dan DLC Ichigo Kurosaki untuk memperkuat persaingan online dan menghadirkan pengalaman pertarungan baru."
-
-cta = "Jangan lupa ikuti terus {{< site-title >}} untuk berita game terbaru dan update DLC lainnya!"
 
 conclusion = """<p>Dengan hadirnya mode <strong>Ranked Matchmaking</strong> dan DLC <strong>Ichigo Kurosaki</strong>, <strong>Bleach: Rebirth of Souls</strong> semakin memperkuat posisinya sebagai game fighting berbasis anime yang kompetitif. Pemain kini bisa menguji kemampuan mereka dalam pertarungan online, sementara penggemar <strong>Bleach</strong> dapat menikmati karakter terbaru dengan kekuatan penuh.</p>"""
 

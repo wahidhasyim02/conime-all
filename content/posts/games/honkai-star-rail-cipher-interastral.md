@@ -4,6 +4,7 @@ slug = "honkai-star-rail-cipher-interastral-entertainment-20250603"
 date = 2025-06-03T17:50:00+07:00
 author = "Eins"
 draft = false
+nameGame = "Honkai: Star Rail"
 
 summary = "HoYoverse merilis episode spesial Interastral Peace Entertainment bertajuk 'Cipher: Kaya Raya dari Segala Arah!', yang menyoroti Cipher dan karakter unik 'Roh Pencuri' Bartholos dalam gaya presentasi kocak dan satir."
 

@@ -52,16 +52,20 @@
 {{ $name := "" }}
 {{ $action := "" }}
 
+
 {{ if in $categories "Anime" }}
   {{ $name = .Page.Params.nameAnime }}
   {{ $action = "tonton" }}
-{{ else if in $categories "Movies" }}
+{{ else if in $categories "Film" }}
   {{ $name = .Page.Params.nameMovie }}
   {{ $action = "tonton" }}
 {{ else if in $categories "Game" }}
   {{ $name = .Page.Params.nameGame }}
   {{ $action = "mainkan" }}
 {{ else if in $categories "Manga" }}
+  {{ $name = .Page.Params.nameComic }}
+  {{ $action = "baca" }}
+{{ else if in $categories "Komik" }}
   {{ $name = .Page.Params.nameComic }}
   {{ $action = "baca" }}
 {{ else }}
@@ -71,7 +75,7 @@
 
 {{ if and $action $name }}
 <p class="my-4 font-medium dark:font-light">
-  Ikuti terus <span class="text-conime-500">{{ .Site.Title }}</span> untuk berita dan ulasan terbaru, dan {{ $action }} {{ $name }} di platform resmi favoritmu!
+  Ikuti terus <span class="text-conime-500">{{ .Site.Title }}</span> untuk berita dan ulasan terbaru, dan {{ $action }} <span class="italic">{{ $name }}</span> di platform resmi favoritmu!
 </p>
 {{ else }}
 <p class="my-4 font-medium dark:font-light">
@@ -102,10 +106,10 @@
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
   </iframe>
   {{ with .title }}
-  <p class="text-sm text-left font-light dark:font-extralight italic mt-2 px-4">{{ . }}</p>
+  <p class="text-sm text-left font-light dark:font-extralight italic noMy mt-2 px-4">{{ . }}</p>
   {{ end }}
   {{ with .source }}
-  <p class="text-sm text-left font-light dark:font-extralight italic mb-2 px-4">Source Video: {{ . }}</p>
+  <p class="text-sm text-left font-light dark:font-extralight italic noMy mb-2 px-4">Source Video: {{ . }}</p>
   {{ end }}
 </div>
 {{ end }}

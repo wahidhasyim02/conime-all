@@ -1,5 +1,6 @@
 +++
 title = "DC Ungkap Detail Baru dalam Trailer Superman"
+nameMovie = "Superman"
 slug = "dc-superman-trailer-breakdown-20250520"
 date = 2025-05-20T18:22:00+07:00
 author = "Eins"

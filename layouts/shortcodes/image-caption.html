@@ -7,7 +7,7 @@
   {{ if not $image }}
     <img src="/images/default.png" alt="{{ $alt }}" class="post-img h-96 w-full rounded-t-3xl object-cover" />
   {{ end }}
-  <img src="{{ $image | relURL }}" alt="{{ $alt }}" class="post-img  h-96 w-full rounded-t-3xl  object-cover" />
+  <img src="{{ $image | relURL }}" alt="{{ $alt }}" class="post-img  h-96 w-full rounded-3xl  object-cover" />
   <figcaption class="text-sm font-light dark:font-extralight text-left italic flex gap-2 px-4 py-4">
     Image:
     {{ if $sources }}
