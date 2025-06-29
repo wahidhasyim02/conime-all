@@ -25,10 +25,9 @@
 {{ $relatedFiltered := where $relatedCombined "RelPermalink" "ne" $currentPage.RelPermalink }}
 
 {{ if gt (len $relatedFiltered) 0 }}
-  <div class="flex gap-3 mx-2 my-4 h-fit bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm ">
-   <div class="w-1 min-h-20 max-h-28 bg-conime-500 dark:bg-conime-500"></div>
-    <div class="h-full p-2">
-      <p class="font-medium">Also read:</p>
+  <div class="border-l-4 border-conime-500 dark:border-conime-500 pl-4 text-gray-700 dark:text-gray-300 my-4">
+    <div class="h-full p-0">
+      <p class="font-medium my-0">Also read:</p>
     {{ range first 1 $relatedFiltered }}
       <a href="{{ .RelPermalink }}"  data-tippy-content="Baca juga: '{{ .Title }}'" class="text-conime-400 dark:text-conime-500 font-normal dark:font-light hover:underline line-clamp-2">
         {{ .Title }}

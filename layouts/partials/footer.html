@@ -1,7 +1,6 @@
 <div class="col-span-1 col-span-2 p-4 w-full text-center border-t border-gray-300 dark:border-gray-800/50">
   <p>&copy; Copyright {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
 </div>
-
 {{ if ne .Kind "404" }}
   {{ partial "notif-data.html" . }}
 {{ end }}
@@ -32,13 +31,24 @@
 <!-- Umami Analytics -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="fabe1eb6-5122-4712-b095-5ec2ab778540"></script>
 
-<!-- Tippy -->
+
+<!-- ============= LIBRARY EXTERNAL ============= -->
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
 <script>
   tippy('[data-tippy-content]');
 </script>
-<!-- ============= MAIN BUNDLE UNTUK SEMUA HALAMAN ============= -->
+
+{{ $three := resources.Get "js/three.min.js" | resources.Minify }}
+<script src="{{ $three.RelPermalink }}" defer></script>
+
+{{ $gsap := resources.Get "js/gsap.min.js" | resources.Minify }}
+<script src="{{ $gsap.RelPermalink }}" defer></script>
+
+{{ $hoverUMD := resources.Get "js/hover-effect.umd.js" | resources.Minify }}
+<script src="{{ $hoverUMD.RelPermalink }}" defer></script>
+
+
 <!-- ============= MAIN BUNDLE UNTUK SEMUA HALAMAN ============= -->
 {{ $main := resources.Get "js/main.js" | resources.Minify }}
 <script src="{{ $main.RelPermalink }}" defer></script>
@@ -48,17 +58,6 @@
 
 {{ $last := resources.Get "js/last-view.js" | resources.Minify }}
 <script src="{{ $last.RelPermalink }}" defer></script>
-
-
-<!-- ============= LIBRARY EXTERNAL ============= -->
-{{ $three := resources.Get "js/three.min.js" | resources.Minify }}
-<script src="{{ $three.RelPermalink }}" defer></script>
-
-{{ $gsap := resources.Get "js/gsap.min.js" | resources.Minify }}
-<script src="{{ $gsap.RelPermalink }}" defer></script>
-
-{{ $hoverUMD := resources.Get "js/hover-effect.umd.js" | resources.Minify }}
-<script src="{{ $hoverUMD.RelPermalink }}" defer></script>
 
 
 <!-- ============= KHUSUS HOMEPAGE ============= -->
@@ -71,7 +70,10 @@
 {{ end }}
 
 
-
+<!-- Inisialisasi Tippy untuk SEMUA elemen -->
+<script>
+  tippy('[data-tippy-content]');
+</script>
 {{ if hugo.IsServer }}
 <!--
 
