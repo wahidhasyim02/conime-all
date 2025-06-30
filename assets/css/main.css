@@ -584,9 +584,6 @@
   .table {
     display: table;
   }
-  .\!h-20 {
-    height: calc(var(--spacing) * 20) !important;
-  }
   .\!h-fit {
     height: fit-content !important;
   }
@@ -727,9 +724,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .\!w-20 {
-    width: calc(var(--spacing) * 20) !important;
   }
   .\!w-fit {
     width: fit-content !important;
@@ -2520,19 +2514,9 @@
       bottom: auto;
     }
   }
-  .lg\:\!left-\[20\%\] {
-    @media (width >= 64rem) {
-      left: 20% !important;
-    }
-  }
   .lg\:\!left-\[21\%\] {
     @media (width >= 64rem) {
       left: 21% !important;
-    }
-  }
-  .lg\:\!left-\[22\%\] {
-    @media (width >= 64rem) {
-      left: 22% !important;
     }
   }
   .lg\:-left-10 {
@@ -2603,11 +2587,6 @@
   .lg\:mb-0 {
     @media (width >= 64rem) {
       margin-bottom: calc(var(--spacing) * 0);
-    }
-  }
-  .lg\:ml-\[15\%\] {
-    @media (width >= 64rem) {
-      margin-left: 15%;
     }
   }
   .lg\:ml-\[20\%\] {
@@ -2689,21 +2668,6 @@
   .lg\:w-\[0\.1px\] {
     @media (width >= 64rem) {
       width: 0.1px;
-    }
-  }
-  .lg\:w-\[15\%\] {
-    @media (width >= 64rem) {
-      width: 15%;
-    }
-  }
-  .lg\:w-\[16\%\] {
-    @media (width >= 64rem) {
-      width: 16%;
-    }
-  }
-  .lg\:w-\[18\%\] {
-    @media (width >= 64rem) {
-      width: 18%;
     }
   }
   .lg\:w-\[20\%\] {
@@ -2857,11 +2821,6 @@
       }
     }
   }
-  .lg\:px-2 {
-    @media (width >= 64rem) {
-      padding-inline: calc(var(--spacing) * 2);
-    }
-  }
   .lg\:px-3 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 3);
@@ -2943,6 +2902,11 @@
     @media (width >= 64rem) {
       --tw-tracking: 3em;
       letter-spacing: 3em;
+    }
+  }
+  .lg\:\!text-gray-700 {
+    @media (width >= 64rem) {
+      color: var(--color-gray-700) !important;
     }
   }
   .lg\:opacity-0 {
@@ -3664,6 +3628,13 @@
       }
     }
   }
+  .lg\:dark\:\!text-gray-400 {
+    @media (width >= 64rem) {
+      &:where(.dark, .dark *) {
+        color: var(--color-gray-400) !important;
+      }
+    }
+  }
   .dark\:lg\:opacity-100 {
     &:where(.dark, .dark *) {
       @media (width >= 64rem) {
@@ -3844,6 +3815,20 @@
   .\[\&\>svg\]\:\!w-8 {
     &>svg {
       width: calc(var(--spacing) * 8) !important;
+    }
+  }
+  .\[\&\>svg\]\:lg\:\!h-6 {
+    &>svg {
+      @media (width >= 64rem) {
+        height: calc(var(--spacing) * 6) !important;
+      }
+    }
+  }
+  .\[\&\>svg\]\:lg\:\!w-6 {
+    &>svg {
+      @media (width >= 64rem) {
+        width: calc(var(--spacing) * 6) !important;
+      }
     }
   }
   .\[\&\>time\]\:text-sm {

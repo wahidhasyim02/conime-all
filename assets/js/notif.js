@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = post.dataset.title || "Notifikasi baru";
     const isRead = localStorage.getItem(`notif-read:${slug}`) === "true";
 
-    // Fire & Label
     const fireEl = document.querySelector(`.fire-new[data-url="${slug}"]`);
     const labelEl = document.querySelector(`.label-new[data-url="${slug}"]`);
     if (diff < 10800 && !isRead) {
@@ -107,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
     notifContainer.innerHTML = newNotifs.length > 0
       ? newNotifs.join("")
       : `<div class="text-center text-sm py-4 text-gray-500 dark:text-gray-400">Tidak ada notifikasi baru.</div>`;
-
     notifContainer.classList.remove("hidden");
   }
 
@@ -179,7 +177,20 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => notifModal?.classList.add("hidden"), 300);
   };
 
-  notifBtn?.addEventListener("click", openModal);
+  const toggleModal = () => {
+    const isOpen = notifModal &&
+      notifModal.classList.contains("scale-100") &&
+      notifModal.classList.contains("opacity-100") &&
+      notifModal.classList.contains("translate-y-0");
+
+    if (isOpen) {
+      closeModal();
+    } else {
+      openModal();
+    }
+  };
+
+  notifBtn?.addEventListener("click", toggleModal);
   closeBtn?.addEventListener("click", closeModal);
 
   document.addEventListener("click", (e) => {
