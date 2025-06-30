@@ -68,6 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.getElementById('navMenuLeft');
+    setTimeout(() => {
+      nav.classList.add('md:overflow-y-auto', 'overflow-style-custom-y');
+    }, 2000);
+  });
 
 // ========== NONAKTIFKAN FITUR LAIN (DIBIARKAN UNTUK REFERENSI) ==========
 

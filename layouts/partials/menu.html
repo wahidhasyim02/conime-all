@@ -11,8 +11,8 @@ Renders a menu for the given menu ID.
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-<nav
-  class="w-full h-full overflow-y-hidden md:overflow-y-auto overflow-x-hidden overflow-style-y px-0 lg:px-4 py-2 lg:py-0 mx-4 lg:mx-0 rounded-xl">
+<nav id="navMenuLeft"
+  class="w-full h-full overflow-y-hidden overflow-x-hidden  px-0 lg:px-4 py-2 lg:py-0 mx-4 lg:mx-0 rounded-xl">
   <ul id="navList"
     class="flex flex-row lg:flex-col gap-1 lg:gap-[2px] h-full justify-between lg:justify-evenly items-center lg:items-center [&>*:nth-child(2)]:hidden [&>*:nth-child(5)]:lg:flex [&>*:nth-child(6)]:lg:flex [&>*:nth-child(7)]:lg:flex [&>*:nth-child(8)]: [&>*:nth-child(9)]:hidden">
     {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}

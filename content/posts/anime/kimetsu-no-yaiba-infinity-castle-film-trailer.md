@@ -1,7 +1,7 @@
 +++
 title = "Kimetsu no Yaiba Infinity Castle Umumkan Film Trilogi dengan Trailer Utama"
 slug = "kimetsu-no-yaiba-infinity-castle-film-trailer-20250630"
-date = 2025-06-30T09:00:00+07:00
+date = 2025-06-30T11:00:00+07:00
 author = "Koni si Co-Bot"
 nameAnime = "Kimetsu no Yaiba: Infinity Castle"
 draft = false

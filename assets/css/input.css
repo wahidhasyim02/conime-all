@@ -185,32 +185,32 @@
   }
 
   /* Scrollbar styles (pure CSS) */
-  .overflow-style-y::-webkit-scrollbar {
+  .overflow-style-custom-y::-webkit-scrollbar {
     width: 6px;
     background-color: #f9fafb; /* gray-50 */
   }
-  .dark .overflow-style-y::-webkit-scrollbar {
+  .dark .overflow-style-custom-y::-webkit-scrollbar {
     background-color: #374151; /* gray-700 */
   }
-  .overflow-style-y::-webkit-scrollbar-thumb {
+  .overflow-style-custom-y::-webkit-scrollbar-thumb {
     background-color: #ff1545; /* conime-500 */
   }
-  .overflow-style-y::-webkit-scrollbar-track {
+  .overflow-style-custom-y::-webkit-scrollbar-track {
     background-color: #030712; /* gray-950 */
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
 
-  .overflow-style-x::-webkit-scrollbar {
+  .overflow-style-custom-x::-webkit-scrollbar {
     height: 6px;
     background-color: #f9fafb;
   }
-  .dark .overflow-style-x::-webkit-scrollbar {
+  .dark .overflow-style-custom-x::-webkit-scrollbar {
     background-color: #374151;
   }
-  .overflow-style-x::-webkit-scrollbar-thumb {
+  .overflow-style-custom-x::-webkit-scrollbar-thumb {
     background-color: #ff1545;
   }
-  .overflow-style-x::-webkit-scrollbar-track {
+  .overflow-style-custom-x::-webkit-scrollbar-track {
     background-color: #111827;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
